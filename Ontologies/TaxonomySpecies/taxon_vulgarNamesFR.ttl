@@ -1,0 +1,58 @@
+@prefix ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+@prefix vfo: <http://virtualforests.gsic.uva.es/> .
+
+vfo:Family53 ifn:vulgarName "Altingiaceae"@fr .
+
+vfo:GenusCALOC ifn:vulgarName "Cèdre"@fr .
+vfo:GenusCUNNI ifn:vulgarName "Araucaria"@fr .
+vfo:GenusLIQUI ifn:vulgarName "Liquidambar"@fr .
+vfo:GenusSEQUA ifn:vulgarName "Séquoia"@fr .
+
+vfo:VarietyPINUS_BRU_ELD
+        ifn:vulgarName  "Pin de Turquie eldarica"@fr .
+vfo:SpeciesPSDTS_MEN  ifn:vulgarName  "Sapin de Douglas"@fr .
+vfo:SpeciesROBIN_PSE  ifn:vulgarName  "Robinier faux-acacia"@fr .
+vfo:SpeciesCALOC_DEC  ifn:vulgarName  "Cèdre a encens"@fr , "Calocèdre"@fr .
+vfo:SubspeciesPINUS_NIG_LAR
+        ifn:vulgarName  "Pin de Corse"@fr .
+vfo:SpeciesQUERC_SUB  ifn:vulgarName  "Chêne-liège"@fr .
+vfo:SpeciesQUERC_RUB  ifn:vulgarName  "Chêne rouge d'Amérique"@fr .
+vfo:SpeciesCEDRU_ATL  ifn:vulgarName  "Cèdre de l'Atlas"@fr .
+vfo:HybridEUCAL_GDA  ifn:vulgarName  "Eucalyptus gundal"@fr .
+vfo:SpeciesPINUS_PNS  ifn:vulgarName  "Pin des Landes"@fr , "Pin maritime"@fr .
+vfo:SpeciesEUCAL_DAL  ifn:vulgarName  "Eucalyptus blanc des montagnes"@fr .
+vfo:SpeciesCUNNI_LAN  ifn:vulgarName  "Araucaria de Chine"@fr .
+vfo:SpeciesQUERC_PET  ifn:vulgarName  "Chêne rouvre"@fr , "Chêne sessile"@fr .
+vfo:SpeciesSEQUA_SEM  ifn:vulgarName  "Séquoia à feuilles d'if"@fr .
+vfo:SpeciesPINUS_SYL  ifn:vulgarName  "Pin sylvestre"@fr .
+vfo:SpeciesFAGUS_ORI  ifn:vulgarName  "Hêtre commun Orientale"@fr .
+vfo:SpeciesPINUS_PNA  ifn:vulgarName  "Pin parasol"@fr .
+vfo:SpeciesCASTA_SAT  ifn:vulgarName  "Châtaignier commun"@fr .
+vfo:SpeciesPINUS_TAE  ifn:vulgarName  "Pin taeda"@fr .
+vfo:VarietyCEDRU_LIB_BRE
+        ifn:vulgarName  "Le cèdre de Chypre"@fr .
+vfo:SpeciesBETUL_PEN  ifn:vulgarName  "Bouleau verruqueux"@fr .
+vfo:SpeciesFAGUS_SYL  ifn:vulgarName  "Hêtre commun"@fr .
+vfo:SpeciesCEDRU_LIB  ifn:vulgarName  "cèdre du Liban"@fr .
+vfo:SpeciesPINUS_BRU  ifn:vulgarName  "Pin de Turquie"@fr , "Pin de Calabre"@fr .
+vfo:SpeciesCUPRE_SEM  ifn:vulgarName  "Cyprès commun"@fr .
+vfo:SpeciesEUCAL_GLO  ifn:vulgarName  "Eucalyptus commun"@fr .
+vfo:SpeciesPINUS_PON  ifn:vulgarName  "Pin ponderosa"@fr .
+vfo:SpeciesQUERC_SHU  ifn:vulgarName  "Chêne de Shumard"@fr .
+vfo:SpeciesPINUS_NIG  ifn:vulgarName  "Pin noir"@fr .
+vfo:SpeciesQUERC_ROT  ifn:vulgarName  "Chêne vert"@fr .
+vfo:SpeciesLARIX_DEC  ifn:vulgarName  "Mélèze d'Europe"@fr .
+vfo:SpeciesEUCAL_GUN  ifn:vulgarName  "Eucalyptus gunnii"@fr .
+vfo:SpeciesCERTN_SIL  ifn:vulgarName  "Caroubier"@fr .
+vfo:SpeciesPINUS_CAR  ifn:vulgarName  "Le pin caraïbe"@fr .
+vfo:SpeciesPINUS_ELL  ifn:vulgarName  "Pin d'Elliott"@fr .
+vfo:SpeciesTHUJA_PLI  ifn:vulgarName  "Thuya géant"@fr .
+vfo:SpeciesQUERC_ROB  ifn:vulgarName  "Chêne pédonculé"@fr .
+vfo:SpeciesEUCAL_NIT  ifn:vulgarName  "Eucalyptus nitens"@fr .
+vfo:SubspeciesPINUS_NIG_SAL
+        ifn:vulgarName  "Pin de Salzmann"@fr .
+vfo:SpeciesLIQUI_STY  ifn:vulgarName  "Copalme d'Amérique"@fr .
+vfo:SpeciesPINUS_PEU  ifn:vulgarName  "Pin de Macédoine"@fr .
+vfo:SpeciesACERR_PSE  ifn:vulgarName  "Érable sycomore"@fr .
+vfo:VarietyPINUS_CAR_HOND
+        ifn:vulgarName  "Le pin caraïbe"@fr .

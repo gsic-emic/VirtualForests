@@ -1,0 +1,134 @@
+@prefix smo: <http://crossforest.eu/measures/ontology/> .
+@prefix unit: <http://crossforest.eu/measures/data/unit/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#################################################################
+#    Extension SMO 
+#################################################################
+
+<http://crossforest.eu/measures/data/unit/CentimetersPerYear>  a owl:NamedIndividual , smo:Unit ;
+  rdfs:label "Centimeters per year"@en , "Centímetros por año"@es ;
+  rdfs:comment "Centimiters per year (cm/year) as a unit of measure"@en , "Centímetros por año (cm/año) como unidad de medida"@es ;
+  rdfs:isDefinedBy smo: .
+
+<http://crossforest.eu/measures/data/unit/DegreesCelsius>  a owl:NamedIndividual , smo:Unit ;
+  rdfs:label "Degrees Celsius"@en , "Grados Celsius"@es ;
+  rdfs:comment "The degree Celsius is a unit of temperature derived in the International System Unit which symbol is °C."@en , "El grado Celsius es una unidad de temperatura derivada del Sistema Internacional de Unidades cuyo símbolo es °C."@es ;
+  rdfs:isDefinedBy smo: .
+
+<http://crossforest.eu/measures/data/unit/SquareRootDegreesCelsiusDayPerMilimeter>  a owl:NamedIndividual , smo:Unit ;
+  rdfs:label "Square root Degrees Celsius day per milimeter"@en , "Raíz cuadrada de Grados Celsius día por milímetro"@es ;
+  rdfs:comment "The square root Degree Celsius day per milimeter in a complex unit which symbol is  √°Cd/mm."@en , "La raíz cuadrada de grado Celsius día por milímtero es una unidad compleja cuyo símbolo es  √°Cd/mm."@es ;
+  rdfs:isDefinedBy smo: .
+
+<http://crossforest.eu/measures/data/unit/DegreesCelsiusDay>  a owl:NamedIndividual , smo:Unit ;
+  rdfs:label "Degrees Celsius day"@en , "Grados Celsius día"@es ;
+  rdfs:comment "Degrees Celsius day (°Cd) as a unit of measure"@en , "Grados Celsiu día (°Cd) como unidad de medida"@es ;
+  rdfs:isDefinedBy smo: .
+
+
+smo:MeasurableEntityInCentimetersPerYear a owl:Class , rdfs:Class ;
+  rdfs:label "Measurable Entity in centimeters per year"@en , "Entidad medible en centímetros por año"@es ;
+  rdfs:comment "Entity from which a measure in centimeters per year is taken"@en , "Entidad de la cual se toma una medida en centímetros por año"@es ;
+  owl:equivalentClass
+    [
+      a owl:Restriction ;
+      owl:onProperty smo:hasMeasure ;
+      owl:someValuesFrom smo:MeasureInCentimetersPerYear
+    ] ;
+  rdfs:isDefinedBy smo: .
+
+smo:MeasurableEntityInDegreesCelsius a owl:Class , rdfs:Class ;
+  rdfs:label "Measurable Entity in degrees Celsius"@en , "Entidad medible en grados Celsius"@es ;
+  rdfs:comment "Entity from which a measure in degrees Celsius is taken"@en , "Entidad de la cual se toma una medida en grados Celsius"@es ;
+  owl:equivalentClass
+    [
+      a owl:Restriction ;
+      owl:onProperty smo:hasMeasure ;
+      owl:someValuesFrom smo:MeasureInDegreesCelsius
+    ] ;
+  rdfs:isDefinedBy smo: .
+
+smo:MeasurableEntityInSquareRootDegreesCelsiusDayPerMilimeter a owl:Class , rdfs:Class ;
+  rdfs:label "Measurable Entity in square root degrees Celsius day per milimeter"@en , "Entidad medible en raíz cuadrada de grados Celsius día por milímetro"@es ;
+  rdfs:comment "Entity from which a measure in square root degrees Celsius day per milimeter is taken"@en , "Entidad de la cual se toma una medida en raíz cuadrada de grados Celsius día por milímetro"@es ;
+  owl:equivalentClass
+    [
+      a owl:Restriction ;
+      owl:onProperty smo:hasMeasure ;
+      owl:someValuesFrom smo:MeasureInSquareRootDegreesCelsiusDayPerMilimeter
+    ] ;
+  rdfs:isDefinedBy smo: .
+
+smo:MeasurableEntityInDegreesCelsiusDay a owl:Class , rdfs:Class ;
+  rdfs:label "Measurable Entity in degrees Celsius day"@en , "Entidad medible en grados Celsius día"@es ;
+  rdfs:comment "Entity from which a measure in degrees Celsius day is taken"@en , "Entidad de la cual se toma una medida en grados Celsius día"@es ;
+  owl:equivalentClass
+    [
+      a owl:Restriction ;
+      owl:onProperty smo:hasMeasure ;
+      owl:someValuesFrom smo:MeasureInDegreesCelsiusDay
+    ] ;
+  rdfs:isDefinedBy smo: .
+
+smo:MeasureInCentimetersPerYear a owl:Class , rdfs:Class ;
+  rdfs:subClassOf smo:Measure ;
+  owl:equivalentClass [
+    a owl:Restriction ;
+    owl:onProperty smo:hasUnit ;
+    owl:hasValue unit:CentimetersPerYear ] ;
+  rdfs:isDefinedBy smo: .
+
+smo:MeasureInDegreesCelsius a owl:Class , rdfs:Class ;
+  rdfs:subClassOf smo:Measure ;
+  owl:equivalentClass [
+    a owl:Restriction ;
+    owl:onProperty smo:hasUnit ;
+    owl:hasValue unit:DegreesCelsius ] ;
+  rdfs:isDefinedBy smo: .
+
+smo:MeasureInSquareRootDegreesCelsiusDayPerMilimeter a owl:Class , rdfs:Class ;
+  rdfs:subClassOf smo:Measure ;
+  owl:equivalentClass [
+    a owl:Restriction ;
+    owl:onProperty smo:hasUnit ;
+    owl:hasValue unit:SquareRootDegreesCelsiusDayPerMilimeter ] ;
+  rdfs:isDefinedBy smo: .
+
+smo:MeasureInDegreesCelsiusDay a owl:Class , rdfs:Class ;
+  rdfs:subClassOf smo:Measure ;
+  owl:equivalentClass [
+    a owl:Restriction ;
+    owl:onProperty smo:hasUnit ;
+    owl:hasValue unit:DegreesCelsiusDay ] ;
+  rdfs:isDefinedBy smo: .
+
+smo:hasMeasureInCentimetersPerYear a owl:DatatypeProperty , rdf:Property ;
+  rdfs:subPropertyOf smo:hasMeasureLiteral ;
+  rdfs:label "value in centimeters per year"@en , "valor en centímetros por año"@es ;
+  rdfs:comment "value of a measure in centimeters per year"@en , "valor de una medida en centímetros por año"@es ;
+  rdfs:domain smo:MeasurableEntityInCentimetersPerYear ;
+  rdfs:isDefinedBy smo: .
+
+smo:hasMeasureInDegreesCelsius a owl:DatatypeProperty , rdf:Property ;
+  rdfs:subPropertyOf smo:hasMeasureLiteral ;
+  rdfs:label "value in degrees Celsius"@en , "valor en grados Celsius"@es ;
+  rdfs:comment "value of a measure in degrees Celsius"@en , "valor de una medida en grados Celsius"@es ;
+  rdfs:domain smo:MeasurableEntityInDegreesCelsius ;
+  rdfs:isDefinedBy smo: .
+
+smo:hasMeasureInSquareRootDegreesCelsiusDayPerMilimeter a owl:DatatypeProperty , rdf:Property ;
+  rdfs:subPropertyOf smo:hasMeasureLiteral ;
+  rdfs:label "value in square root degrees Celsius day per milimeter"@en , "valor en raíz cuadrada de grados Celsius día por milímetro"@es ;
+  rdfs:comment "value of a measure in square root degrees Celsius day per milimeter"@en , "valor de una medida en raíz cuadrada de grados Celsius día por milímetro"@es ;
+  rdfs:domain smo:MeasurableEntityInSquareRootDegreesCelsiusDayPerMilimeter ;
+  rdfs:isDefinedBy smo: .
+
+smo:hasMeasureInDegreesCelsiusDay a owl:DatatypeProperty , rdf:Property ;
+  rdfs:subPropertyOf smo:hasMeasureLiteral ;
+  rdfs:label "value in degrees Celsius day"@en , "valor en grados Celsius día"@es ;
+  rdfs:comment "value of a measure in degrees Celsius day"@en , "valor de una medida en grados Celsius día"@es ;
+  rdfs:domain smo:MeasurableEntityInDegreesCelsiusDay ;
+  rdfs:isDefinedBy smo: .

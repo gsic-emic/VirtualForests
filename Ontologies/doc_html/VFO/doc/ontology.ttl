@@ -1,0 +1,3105 @@
+@prefix : <http://virtualforests.gsic.uva.es/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://virtualforests.gsic.uva.es/> .
+
+<http://virtualforests.gsic.uva.es/> rdf:type owl:Ontology ;
+                                      <http://purl.org/dc/elements/1.1/abstract> "The Virtual Forests Ontology includes all the vocabulary needed to describe Virtual Forests and REINFFORCE datasets using W3C RDF Schema (RDFS) and the Web Ontology Language (OWL). The vocabulary provides data publishers to include detailed metadata about species taxonomy and their different provenances, specialization, arboretum sites, location, climatic conditions, survival and growth rates of trees."@en ;
+                                      <http://purl.org/dc/elements/1.1/contributor> "Cristóbal Ordóñez, Rémi Borelle, Felipe Bravo, Irene Ruano, José Miguel Giménez, Christophe Orazio, ..." ;
+                                      <http://purl.org/dc/elements/1.1/creator> _:genid1 ,
+                                                                                _:genid2 ;
+                                      <http://purl.org/dc/elements/1.1/title> "Ontología Virtual Forests (VFO)"@es ,
+                                                                              "Virtual Forests Ontology (VFO) "@en ;
+                                      <http://purl.org/dc/terms/created> "2022-02-17"^^xsd:date ;
+                                      <http://purl.org/dc/terms/issued> "2022-05-23"^^xsd:date ;
+                                      <http://purl.org/dc/terms/modified> "2022-05-19"^^xsd:date ;
+                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "vfo" ;
+                                      rdfs:seeAlso <https://github.com/gsic-emic/VirtualForests> ;
+                                      owl:priorVersion 0.4 ;
+                                      owl:versionInfo 0.5 .
+
+_:genid1 <http://xmlns.com/foaf/0.1/mbox> <mailto:cmayo@gsic.uva.es> ;
+          <http://xmlns.com/foaf/0.1/name> "Cristina Mayo Sarmiento" .
+
+_:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://www.gsic.uva.es/personal/guiveg> ;
+          <http://xmlns.com/foaf/0.1/mbox> <mailto:guiveg@gsic.uva.es> ;
+          <http://xmlns.com/foaf/0.1/name> "Guillermo Vega-Gorgojo" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/sameAs
+<http://schema.org/sameAs> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikiSpeciesPage
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikiSpeciesPage> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> rdf:type owl:AnnotationProperty .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.geonames.org/ontology#countryCode
+<https://www.geonames.org/ontology#countryCode> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://crossforest.eu/measures/ontology/hasMeasure
+<http://crossforest.eu/measures/ontology/hasMeasure> rdf:type owl:ObjectProperty .
+
+
+###  http://virtualforests.gsic.uva.es/hasADI
+:hasADI rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf <http://crossforest.eu/measures/ontology/hasMeasure> ;
+        rdfs:range :AnnualDrynessIndex ;
+        rdfs:comment "comme indice d'aridité"@fr ,
+                     "has annual dryness index"@en ,
+                     "tiene índice de aridez anual"@es ;
+        rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+        rdfs:label "comme ADI"@fr ,
+                   "has ADI"@en ,
+                   "tiene ADI"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasAnnualGrowthRate
+:hasAnnualGrowthRate rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://crossforest.eu/measures/ontology/hasMeasure> ;
+                     rdfs:range :AnnualGrowthRate ;
+                     rdfs:comment "a un accroissement annuel de la hauteur"@fr ,
+                                  "has annual height increment"@en ,
+                                  "tiene incremento anual de altura"@es ;
+                     rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                     rdfs:label "comme taux de croissance annuel"@fr ,
+                                "has annual growth rate"@en ,
+                                "tiene ratio de crecimiento anual"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasAnnualPrecipitation
+:hasAnnualPrecipitation rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf <http://crossforest.eu/measures/ontology/hasMeasure> ;
+                        rdfs:range :AnnualPrecipitation ;
+                        rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                        rdfs:label "comme Précipitation annuel"@fr ,
+                                   "has annual precipitation"@en ,
+                                   "tiene precipitación anual"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasArboretumProvenance
+:hasArboretumProvenance rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Arboretum ;
+                        rdfs:range :Provenance ;
+                        rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                        rdfs:label "comme provenance de l'arboretum"@fr ,
+                                   "has arboretum provenance"@en ,
+                                   "tiene procedencia del arboreto"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasArboretumTaxon
+:hasArboretumTaxon rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Arboretum ;
+                   rdfs:range <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Taxon> ;
+                   rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                   rdfs:label "comme taxon de l'arboretum"@fr ,
+                              "has arboretum taxon"@en ,
+                              "tiene taxón del arboreto"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasGSDD
+:hasGSDD rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf <http://crossforest.eu/measures/ontology/hasMeasure> ;
+         rdfs:range :GrowingSeasonDegreeDays ;
+         rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+         rdfs:label "has growing season degree days > 5°C"@en ,
+                    "tiene grados día de crecimiento > 5°C"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasIntervalTime
+:hasIntervalTime rdf:type owl:ObjectProperty ;
+                 rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                 rdfs:label "comme intervalle de temps"@fr ,
+                            "has interval time"@en ,
+                            "tiene intervalo temporal"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasMeanAnnualTemperature
+:hasMeanAnnualTemperature rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://crossforest.eu/measures/ontology/hasMeasure> ;
+                          rdfs:range :MeanAnnualTemperature ;
+                          rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                          rdfs:label "comme moyenne température annuel"@fr ,
+                                     "has mean annual temperature"@en ,
+                                     "tiene temperatura media anual"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasParentTaxon
+:hasParentTaxon rdf:type owl:ObjectProperty ;
+                rdfs:range <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Taxon> ;
+                rdfs:comment "Especifica los progenitores de un híbrido"@es ,
+                             "Il spécifie les parents d'un hybride"@fr ,
+                             "It specifies the progenitors of a hybrid"@en ;
+                rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                rdfs:label "comme Taxon parent"@fr ,
+                           "has parent taxon"@en ,
+                           "tiene taxón progenitor"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasProvenance
+:hasProvenance rdf:type owl:ObjectProperty ;
+               rdfs:domain :ArboretumProvenance ;
+               rdfs:range :Provenance ;
+               rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+               rdfs:label "comme provenance"@fr ,
+                          "has provenance"@en ,
+                          "tiene procedencia"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasSlope
+:hasSlope rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://crossforest.eu/measures/ontology/hasMeasure> ;
+          rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+          rdfs:label "comme pente"@fr ,
+                     "has slope"@en ,
+                     "tiene pendiente"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasSurvivalRate
+:hasSurvivalRate rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf <http://crossforest.eu/measures/ontology/hasMeasure> ;
+                 rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                 rdfs:label "comme taux de survie"@fr ,
+                            "has survival rate"@en ,
+                            "tiene ratio de supervivencia"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasTaxon
+:hasTaxon rdf:type owl:ObjectProperty ;
+          rdfs:range <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Taxon> ;
+          rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+          rdfs:label "comme taxon"@fr ,
+                     "has taxon"@en ,
+                     "tiene taxón"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasTree
+:hasTree rdf:type owl:ObjectProperty ;
+         rdfs:range <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Tree> ;
+         rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+         rdfs:label "comme arbre"@fr ,
+                    "has tree"@en ,
+                    "tiene árbol"@es .
+
+
+###  http://virtualforests.gsic.uva.es/isInArboretum
+:isInArboretum rdf:type owl:ObjectProperty ;
+               rdfs:range :Arboretum ;
+               rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+               rdfs:label "está en arboreto"@es ,
+                          "is in arboretum"@en ,
+                          "si Dans l'arboretum"@fr .
+
+
+###  http://virtualforests.gsic.uva.es/isInCountry
+:isInCountry rdf:type owl:ObjectProperty ;
+             rdfs:label "está en el país"@es ,
+                        "is in country"@en ,
+                        "si Dans le pays"@fr .
+
+
+###  http://virtualforests.gsic.uva.es/isSubregionOf
+:isSubregionOf rdf:type owl:ObjectProperty ;
+               rdfs:label "es subregión de"@es ,
+                          "is subregion of"@en ,
+                          "si c'est la sous-région de"@fr .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://crossforest.eu/measures/ontology/hasMeasureinDegrees
+<http://crossforest.eu/measures/ontology/hasMeasureinDegrees> rdf:type owl:DatatypeProperty .
+
+
+###  http://virtualforests.gsic.uva.es/hasISO3166-2
+:hasISO3166-2 rdf:type owl:DatatypeProperty ;
+              rdfs:comment "Code des principales subdivisions des pays codés en ISO 3166-2"@fr ,
+                           "Country subdivision codes from ISO 3166-2"@en ,
+                           "Código de las principales subdivisiones de los países codificados en ISO 3166-2"@es ;
+              rdfs:label "Code ISO 3166-2"@fr ,
+                         "Código ISO 3166-2"@es ,
+                         "ISO 3166-2 code"@en .
+
+
+###  http://virtualforests.gsic.uva.es/hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter rdf:type owl:DatatypeProperty ;
+                                                     rdfs:comment "derniere valeur de l'indice d'aridité en √°Cd/mm"@fr ,
+                                                                  "last numeric value of annual dryness index in √°Cd/mm"@en ,
+                                                                  "valor numérico más reciente del índice de sequedad anual en √°Cd/mm"@es ;
+                                                     rdfs:label "Dernier ADI en √°Cd/mm"@fr ,
+                                                                "Last ADI in √°Cd/mm"@en ,
+                                                                "Último ADI en √°Cd/mm"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasLastAnnualGrowthRateInCentimetersPerYear
+:hasLastAnnualGrowthRateInCentimetersPerYear rdf:type owl:DatatypeProperty ;
+                                             rdfs:comment "incremento anual de altura en cm/año más reciente"@es ,
+                                                          "le dernier accroissement annuel de la hauteur en cm/an"@fr ,
+                                                          "the latest annual height increment in cm/year"@en ;
+                                             rdfs:label "Dernier taux de croissance annuel en centimètres par an"@fr ,
+                                                        "Last annual growth rate in centimeters per year"@en ,
+                                                        "Último ratio de crecimiento anual en centímetros por año"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasLastAnnualPrecipitationInMilimeters
+:hasLastAnnualPrecipitationInMilimeters rdf:type owl:DatatypeProperty ;
+                                        rdfs:comment "dernière valeur de la précipitation annuel en mm"@fr ,
+                                                     "last numeric value of annual precipitation in mm"@en ,
+                                                     "valor numérico más reciente de la precipitación anual en mm"@es ;
+                                        rdfs:label "Dernière précipitation annuel en mm"@fr ,
+                                                   "Last annual precipitation in mm"@en ,
+                                                   "Última precipitación anual en mm"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasLastGSDDInCelsiusDay
+:hasLastGSDDInCelsiusDay rdf:type owl:DatatypeProperty ;
+                         rdfs:comment "last numeric value of growing season degree days above 5°C in °Cd"@en ,
+                                      "valor numérico más reciente de grados día de crecimiento por encima de 5°C en °Cd"@es ;
+                         rdfs:label "Last GSDD > 5°C in °Cd"@en ,
+                                    "Último GSDD > 5°C en °Cd"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasLastMeanAnnualTempInDegreesCelsius
+:hasLastMeanAnnualTempInDegreesCelsius rdf:type owl:DatatypeProperty ;
+                                       rdfs:comment "derniere valeur de la moyenne température annuel en °C"@fr ,
+                                                    "last numeric value of mean annual temperature in °C"@en ,
+                                                    "valor numérico más reciente de la temperatura media anual en °C"@es ;
+                                       rdfs:label "Derniere moyenne température annuel en °C"@fr ,
+                                                  "Last mean annual temperature in °C"@en ,
+                                                  "Última temperatura media anual en °C"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasLastSurvivalRate
+:hasLastSurvivalRate rdf:type owl:DatatypeProperty ;
+                     rdfs:label "Dernier taux de survie"@fr ,
+                                "Last survival rate"@en ,
+                                "Último ratio de supervivencia"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasLocalName
+:hasLocalName rdf:type owl:DatatypeProperty ;
+              rdfs:comment "Local name arboretum site"@en ,
+                           "Nom local de l'arboretum"@fr ,
+                           "Nombre local del sitio del arboreto"@es ;
+              rdfs:label "Local name"@en ,
+                         "Nom local"@fr ,
+                         "Nombre local"@es .
+
+
+###  http://virtualforests.gsic.uva.es/hasProvenanceCode
+:hasProvenanceCode rdf:type owl:DatatypeProperty ;
+                   rdfs:label "Comme code provenance"@fr ,
+                              "Código de procedencia"@es ,
+                              "Provenance code"@en .
+
+
+###  http://virtualforests.gsic.uva.es/hasSlopeInDegrees
+:hasSlopeInDegrees rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf <http://crossforest.eu/measures/ontology/hasMeasureinDegrees> ;
+                   rdfs:label "Pendiente en grados"@es ,
+                              "Pente en degrée"@fr ,
+                              "Slope in degrees"@en .
+
+
+###  http://virtualforests.gsic.uva.es/hasUPOVCode
+:hasUPOVCode rdf:type owl:DatatypeProperty ;
+             rdfs:comment "Code system choosen to enhance the usefulness of the forest database by overcoming the problem of synonyms for plant taxa"@en ,
+                          "Sistema de codificación que mejora la usabiilidad de la base de datos forestal superando los problemas de colisiones en la taxonomía"@es ,
+                          "Système de codes choisi pour améliorer l'utilité de la base de données forestière en surmontant le problème des synonymes pour les taxons végétaux"@fr ;
+             rdfs:label "Code UPOV"@fr ,
+                        "Código UPOV"@es ,
+                        "UPOV code"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://crossforest.eu/measures/ontology/Measure
+<http://crossforest.eu/measures/ontology/Measure> rdf:type owl:Class .
+
+
+###  http://crossforest.eu/position/ontology/SpatialEntity
+<http://crossforest.eu/position/ontology/SpatialEntity> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/123597
+<http://purl.bioontology.org/ontology/NCBITAXON/123597> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/13387
+<http://purl.bioontology.org/ontology/NCBITAXON/13387> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/13469
+<http://purl.bioontology.org/ontology/NCBITAXON/13469> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/196626
+<http://purl.bioontology.org/ontology/NCBITAXON/196626> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/20340
+<http://purl.bioontology.org/ontology/NCBITAXON/20340> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/21020
+<http://purl.bioontology.org/ontology/NCBITAXON/21020> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/262619
+<http://purl.bioontology.org/ontology/NCBITAXON/262619> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/28930
+<http://purl.bioontology.org/ontology/NCBITAXON/28930> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/28977
+<http://purl.bioontology.org/ontology/NCBITAXON/28977> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/28980
+<http://purl.bioontology.org/ontology/NCBITAXON/28980> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/3316
+<http://purl.bioontology.org/ontology/NCBITAXON/3316> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/3346
+<http://purl.bioontology.org/ontology/NCBITAXON/3346> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/3349
+<http://purl.bioontology.org/ontology/NCBITAXON/3349> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/3352
+<http://purl.bioontology.org/ontology/NCBITAXON/3352> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/3357
+<http://purl.bioontology.org/ontology/NCBITAXON/3357> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/34317
+<http://purl.bioontology.org/ontology/NCBITAXON/34317> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/3505
+<http://purl.bioontology.org/ontology/NCBITAXON/3505> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/3512
+<http://purl.bioontology.org/ontology/NCBITAXON/3512> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/35938
+<http://purl.bioontology.org/ontology/NCBITAXON/35938> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/38865
+<http://purl.bioontology.org/ontology/NCBITAXON/38865> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/38942
+<http://purl.bioontology.org/ontology/NCBITAXON/38942> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/3933
+<http://purl.bioontology.org/ontology/NCBITAXON/3933> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/400568
+<http://purl.bioontology.org/ontology/NCBITAXON/400568> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/4026
+<http://purl.bioontology.org/ontology/NCBITAXON/4026> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/42064
+<http://purl.bioontology.org/ontology/NCBITAXON/42064> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/4400
+<http://purl.bioontology.org/ontology/NCBITAXON/4400> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/501391
+<http://purl.bioontology.org/ontology/NCBITAXON/501391> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/55062
+<http://purl.bioontology.org/ontology/NCBITAXON/55062> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/58042
+<http://purl.bioontology.org/ontology/NCBITAXON/58042> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/58331
+<http://purl.bioontology.org/ontology/NCBITAXON/58331> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/70929
+<http://purl.bioontology.org/ontology/NCBITAXON/70929> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/71402
+<http://purl.bioontology.org/ontology/NCBITAXON/71402> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/71646
+<http://purl.bioontology.org/ontology/NCBITAXON/71646> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/71647
+<http://purl.bioontology.org/ontology/NCBITAXON/71647> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/87668
+<http://purl.bioontology.org/ontology/NCBITAXON/87668> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/87674
+<http://purl.bioontology.org/ontology/NCBITAXON/87674> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/88726
+<http://purl.bioontology.org/ontology/NCBITAXON/88726> rdf:type owl:Class .
+
+
+###  http://purl.bioontology.org/ontology/NCBITAXON/93692
+<http://purl.bioontology.org/ontology/NCBITAXON/93692> rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/AnnualDrynessIndex
+:AnnualDrynessIndex rdf:type owl:Class ;
+                    rdfs:subClassOf <http://crossforest.eu/measures/ontology/Measure> ;
+                    rdfs:comment "Annual Dryness Index is calculated as the square root of the sum of °C above 5°C per day for each year and growing season divided by annual precipitation. The units are √°Cd/mm."@en ,
+                                 "El índice de aridez anual se calcula como la raíz cuadrada de la suma de los valores de temperatura en grados °C por encima de 5°C para cada día del año y estación de crecimiento divido por la precipitación anual. Las unidades son √°Cd/mm."@es ,
+                                 "Indicateurs quantitatif du degré de sècheresse pour une région précise. Cet indice prend en compte la Température, la pluviométrie et le degree d'évaporation"@fr ;
+                    rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                    rdfs:label "Annual Dryness Index (ADI)"@en ,
+                               "Indice de Sècheress Annuel / Inddice d'aridité"@fr ,
+                               "Índice de aridez anual (ADI)"@es .
+
+
+###  http://virtualforests.gsic.uva.es/AnnualGrowthRate
+:AnnualGrowthRate rdf:type owl:Class ;
+                  rdfs:subClassOf <http://crossforest.eu/measures/ontology/Measure> ;
+                  rdfs:comment "El ratio de crecicimiento se refiere al incremento anual de altura"@es ,
+                               "The growth rate refers to annual height increment"@en ;
+                  rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                  rdfs:label "Annual growth rate"@en ,
+                             "Ratio de crecimiento anual"@es ,
+                             "Taux de croissance annuel"@fr .
+
+
+###  http://virtualforests.gsic.uva.es/AnnualPrecipitation
+:AnnualPrecipitation rdf:type owl:Class ;
+                     rdfs:subClassOf <http://crossforest.eu/measures/ontology/Measure> ;
+                     rdfs:comment "Annual precipitation in mm"@en ,
+                                  "Precipitación anual en mm"@es ,
+                                  "Précipitation Annuel en mm"@fr ;
+                     rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                     rdfs:label "Annual precipitation"@en ,
+                                "Precipitación anual"@es ,
+                                "Précipitation Annuel"@fr .
+
+
+###  http://virtualforests.gsic.uva.es/Arboretum
+:Arboretum rdf:type owl:Class ;
+           rdfs:subClassOf <http://crossforest.eu/position/ontology/SpatialEntity> ;
+           rdfs:comment "Botanical garden or plot of land with different species"@en ,
+                        "Jardin botanique ou parcelle de terrain avec différentes espèces"@fr ,
+                        "Jardín botánico o parcela de terreno con diferentes especies"@es ;
+           rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+           rdfs:label "Arboreto"@es ,
+                      "Arboretum"@en ,
+                      "Arboretum"@fr .
+
+
+###  http://virtualforests.gsic.uva.es/ArboretumProvenance
+:ArboretumProvenance rdf:type owl:Class ;
+                     rdfs:comment ""@en ,
+                                  ""@es ;
+                     rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                     rdfs:label "Arboretum provenance"@en ,
+                                "Procedencia del arboreto"@es ,
+                                "Provenance de l'arboretum"@fr .
+
+
+###  http://virtualforests.gsic.uva.es/ArboretumTaxon
+:ArboretumTaxon rdf:type owl:Class ;
+                rdfs:comment ""@en ,
+                             ""@es ;
+                rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                rdfs:label "Arboretum taxon"@en ,
+                           "Taxon dans l'arboretum"@fr ,
+                           "Taxón del arboreto"@es .
+
+
+###  http://virtualforests.gsic.uva.es/Country
+:Country rdf:type owl:Class ;
+         rdfs:comment ""@en ,
+                      ""@es ;
+         rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+         rdfs:label "Country"@en ,
+                    "Pays"@fr ,
+                    "País"@es .
+
+
+###  http://virtualforests.gsic.uva.es/CountrySubdivision
+:CountrySubdivision rdf:type owl:Class ;
+                    rdfs:comment ""@en ,
+                                 ""@es ;
+                    rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                    rdfs:label "Country subdivision"@es ,
+                               "Région / Département"@fr ,
+                               "Subdivisión de país"@es .
+
+
+###  http://virtualforests.gsic.uva.es/Family53
+:Family53 rdf:type owl:Class ;
+          rdfs:subClassOf <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Class1> .
+
+
+###  http://virtualforests.gsic.uva.es/GenusACERR
+:GenusACERR rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusBETUL
+:GenusBETUL rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCALOC
+:GenusCALOC rdf:type owl:Class ;
+            rdfs:subClassOf <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family22> .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCASTA
+:GenusCASTA rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCEDRU
+:GenusCEDRU rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCERTN
+:GenusCERTN rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCUNNI
+:GenusCUNNI rdf:type owl:Class ;
+            rdfs:subClassOf <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family22> .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCUPRE
+:GenusCUPRE rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusEUCAL
+:GenusEUCAL rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusFAGUS
+:GenusFAGUS rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusLARIX
+:GenusLARIX rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusLIQUI
+:GenusLIQUI rdf:type owl:Class ;
+            rdfs:subClassOf :Family53 .
+
+
+###  http://virtualforests.gsic.uva.es/GenusPINUS
+:GenusPINUS rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusPSDTS
+:GenusPSDTS rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusQUERC
+:GenusQUERC rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusROBIN
+:GenusROBIN rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GenusSEQUA
+:GenusSEQUA rdf:type owl:Class ;
+            rdfs:subClassOf <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family22> .
+
+
+###  http://virtualforests.gsic.uva.es/GenusTHUJA
+:GenusTHUJA rdf:type owl:Class .
+
+
+###  http://virtualforests.gsic.uva.es/GrowingSeasonDegreeDays
+:GrowingSeasonDegreeDays rdf:type owl:Class ;
+                         rdfs:subClassOf <http://crossforest.eu/measures/ontology/Measure> ;
+                         rdfs:comment "Grados día de crecimiento por encima de 5°C en °Cd"@es ,
+                                      "Growing season degree days above 5°C in °Cd"@en ;
+                         rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                         rdfs:label "Grados día de crecimiento > 5°C"@es ,
+                                    "Growing season degree days > 5°C"@en .
+
+
+###  http://virtualforests.gsic.uva.es/Hybrid
+:Hybrid rdf:type owl:Class ;
+        rdfs:subClassOf <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ,
+                        <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Taxon> ;
+        rdfs:comment ""@en ,
+                     ""@es ;
+        rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+        rdfs:label "Hybrid"@en ,
+                   "Hybride"@fr ,
+                   "Híbrido"@es .
+
+
+###  http://virtualforests.gsic.uva.es/HybridEUCAL_GDA
+:HybridEUCAL_GDA rdf:type owl:Class ;
+                 rdfs:subClassOf :GenusEUCAL ,
+                                 <http://www.wikidata.org/entity/Q16467654> .
+
+
+###  http://virtualforests.gsic.uva.es/IntervalTime
+:IntervalTime rdf:type owl:Class ;
+              rdfs:comment ""@en ,
+                           ""@es ;
+              rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+              rdfs:label "Interval time"@en ,
+                         "Intervalle de Temps"@fr ,
+                         "Intervalo temporal"@es .
+
+
+###  http://virtualforests.gsic.uva.es/MeanAnnualTemperature
+:MeanAnnualTemperature rdf:type owl:Class ;
+                       rdfs:subClassOf <http://crossforest.eu/measures/ontology/Measure> ;
+                       rdfs:comment "Mean annual temperature in °C"@en ,
+                                    "Moyenne température annuel en °C"@fr ,
+                                    "Temperatura media anual en °C"@es ;
+                       rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+                       rdfs:label "Mean annual temperature"@en ,
+                                  "Moyenne température annuel"@fr ,
+                                  "Temperatura media anual"@es .
+
+
+###  http://virtualforests.gsic.uva.es/Provenance
+:Provenance rdf:type owl:Class ;
+            rdfs:comment ""@en ,
+                         ""@es ;
+            rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+            rdfs:label "Procedencia"@es ,
+                       "Provenance"@en ,
+                       "Provenance"@fr .
+
+
+###  http://virtualforests.gsic.uva.es/Slope
+:Slope rdf:type owl:Class ;
+       rdfs:subClassOf <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Pendiente> ;
+       rdfs:comment ""@en ,
+                    ""@es ;
+       rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+       rdfs:label "Pendiente"@es ,
+                  "Pente"@fr ,
+                  "Slope"@en .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesACERR_PSE
+:SpeciesACERR_PSE rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/4026> ,
+                                  :GenusACERR ,
+                                  <http://www.wikidata.org/entity/Q156944> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesBETUL_PEN
+:SpeciesBETUL_PEN rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/3505> ,
+                                  :GenusBETUL ,
+                                  <http://www.wikidata.org/entity/Q156895> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCALOC_DEC
+:SpeciesCALOC_DEC rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/13387> ,
+                                  :GenusCALOC ,
+                                  <http://www.wikidata.org/entity/Q1399164> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCASTA_SAT
+:SpeciesCASTA_SAT rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/21020> ,
+                                  :GenusCASTA ,
+                                  <http://www.wikidata.org/entity/Q22699> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCEDRU_ATL
+:SpeciesCEDRU_ATL rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/123597> ,
+                                  :GenusCEDRU ,
+                                  <http://www.wikidata.org/entity/Q623489> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCEDRU_LIB
+:SpeciesCEDRU_LIB rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/93692> ,
+                                  :GenusCEDRU ,
+                                  <http://www.wikidata.org/entity/Q61105> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCERTN_SIL
+:SpeciesCERTN_SIL rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/20340> ,
+                                  :GenusCERTN ,
+                                  <http://www.wikidata.org/entity/Q68763> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCUNNI_LAN
+:SpeciesCUNNI_LAN rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/28977> ,
+                                  :GenusCUNNI ,
+                                  <http://www.wikidata.org/entity/Q149115> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCUPRE_SEM
+:SpeciesCUPRE_SEM rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/13469> ,
+                                  :GenusCUPRE ,
+                                  <http://www.wikidata.org/entity/Q147513> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_DAL
+:SpeciesEUCAL_DAL rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/87668> ,
+                                  :GenusEUCAL ,
+                                  <http://www.wikidata.org/entity/Q159839> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_GLO
+:SpeciesEUCAL_GLO rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/34317> ,
+                                  :GenusEUCAL ,
+                                  <http://www.wikidata.org/entity/Q159528> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_GUN
+:SpeciesEUCAL_GUN rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/3933> ,
+                                  :GenusEUCAL ,
+                                  <http://www.wikidata.org/entity/Q163788> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_NIT
+:SpeciesEUCAL_NIT rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/87674> ,
+                                  :GenusEUCAL ,
+                                  <http://www.wikidata.org/entity/Q2512644> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesFAGUS_ORI
+:SpeciesFAGUS_ORI rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/196626> ,
+                                  :GenusFAGUS ,
+                                  <http://www.wikidata.org/entity/Q1543749> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesFAGUS_SYL
+:SpeciesFAGUS_SYL rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/28930> ,
+                                  :GenusFAGUS ,
+                                  <http://www.wikidata.org/entity/Q146149> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesLARIX_DEC
+:SpeciesLARIX_DEC rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/71402> ,
+                                  :GenusLARIX ,
+                                  <http://www.wikidata.org/entity/Q146048> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesLIQUI_STY
+:SpeciesLIQUI_STY rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/4400> ,
+                                  :GenusLIQUI ,
+                                  <http://www.wikidata.org/entity/Q469652> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_BRU
+:SpeciesPINUS_BRU rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/88726> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q628329> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_CAR
+:SpeciesPINUS_CAR rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/70929> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q2900918> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_ELL
+:SpeciesPINUS_ELL rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/42064> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q1249109> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_NIG
+:SpeciesPINUS_NIG rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/58042> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q145954> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PEU
+:SpeciesPINUS_PEU rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/71646> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q146021> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PNA
+:SpeciesPINUS_PNA rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/3346> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q106094> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PNS
+:SpeciesPINUS_PNS rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/71647> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q271582> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PON
+:SpeciesPINUS_PON rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/55062> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q460523> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_SYL
+:SpeciesPINUS_SYL rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/3349> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q133128> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_TAE
+:SpeciesPINUS_TAE rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/3352> ,
+                                  :GenusPINUS ,
+                                  <http://www.wikidata.org/entity/Q368248> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPSDTS_MEN
+:SpeciesPSDTS_MEN rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/3357> ,
+                                  :GenusPSDTS ,
+                                  <http://www.wikidata.org/entity/Q156687> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_PET
+:SpeciesQUERC_PET rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/38865> ,
+                                  :GenusQUERC ,
+                                  <http://www.wikidata.org/entity/Q158608> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_ROB
+:SpeciesQUERC_ROB rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/38942> ,
+                                  :GenusQUERC ,
+                                  <http://www.wikidata.org/entity/Q165145> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_ROT
+:SpeciesQUERC_ROT rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/501391> ,
+                                  :GenusQUERC ,
+                                  <http://www.wikidata.org/entity/Q220715> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_RUB
+:SpeciesQUERC_RUB rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/3512> ,
+                                  :GenusQUERC ,
+                                  <http://www.wikidata.org/entity/Q147525> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_SHU
+:SpeciesQUERC_SHU rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/262619> ,
+                                  :GenusQUERC ,
+                                  <http://www.wikidata.org/entity/Q4112184> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_SUB
+:SpeciesQUERC_SUB rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/58331> ,
+                                  :GenusQUERC ,
+                                  <http://www.wikidata.org/entity/Q156137> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesROBIN_PSE
+:SpeciesROBIN_PSE rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/35938> ,
+                                  :GenusROBIN ,
+                                  <http://www.wikidata.org/entity/Q157417> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesSEQUA_SEM
+:SpeciesSEQUA_SEM rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/28980> ,
+                                  :GenusSEQUA ,
+                                  <http://www.wikidata.org/entity/Q150129> .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesTHUJA_PLI
+:SpeciesTHUJA_PLI rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/3316> ,
+                                  :GenusTHUJA ,
+                                  <http://www.wikidata.org/entity/Q147417> .
+
+
+###  http://virtualforests.gsic.uva.es/Subspecies
+:Subspecies rdf:type owl:Class ;
+            rdfs:subClassOf <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Taxon> ;
+            rdfs:comment ""@en ,
+                         ""@es ;
+            rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+            rdfs:label "Sous-espèce"@fr ,
+                       "Subespecie"@es ,
+                       "Subspecies"@en .
+
+
+###  http://virtualforests.gsic.uva.es/SubspeciesPINUS_NIG_LAR
+:SubspeciesPINUS_NIG_LAR rdf:type owl:Class ;
+                         rdfs:subClassOf :GenusPINUS ,
+                                         :SpeciesPINUS_NIG ,
+                                         <http://www.wikidata.org/entity/Q3905334> .
+
+
+###  http://virtualforests.gsic.uva.es/SubspeciesPINUS_NIG_SAL
+:SubspeciesPINUS_NIG_SAL rdf:type owl:Class ;
+                         rdfs:subClassOf :GenusPINUS ,
+                                         :SpeciesPINUS_NIG ,
+                                         <http://www.wikidata.org/entity/Q20722203> .
+
+
+###  http://virtualforests.gsic.uva.es/SurvivalRate
+:SurvivalRate rdf:type owl:Class ;
+              rdfs:subClassOf <http://crossforest.eu/measures/ontology/Measure> ;
+              rdfs:comment ""@en ,
+                           ""@es ;
+              rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+              rdfs:label "Ratio de supervivencia"@es ,
+                         "Survival rate"@en ,
+                         "Taux de survie"@fr .
+
+
+###  http://virtualforests.gsic.uva.es/Variety
+:Variety rdf:type owl:Class ;
+         rdfs:subClassOf <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Taxon> ;
+         rdfs:comment ""@en ,
+                      ""@es ;
+         rdfs:isDefinedBy <http://virtualforests.gsic.uva.es/> ;
+         rdfs:label "Variedad"@es ,
+                    "Variety"@en ,
+                    "Variété"@fr .
+
+
+###  http://virtualforests.gsic.uva.es/VarietyCEDRU_LIB_BRE
+:VarietyCEDRU_LIB_BRE rdf:type owl:Class ;
+                      rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/400568> ,
+                                      :GenusCEDRU ,
+                                      :SpeciesCEDRU_LIB ,
+                                      <http://www.wikidata.org/entity/Q26037256> .
+
+
+###  http://virtualforests.gsic.uva.es/VarietyPINUS_BRU_ELD
+:VarietyPINUS_BRU_ELD rdf:type owl:Class ;
+                      rdfs:subClassOf :GenusPINUS ,
+                                      :SpeciesPINUS_BRU ,
+                                      <https://www.wikidata.org/wiki/Q24764435> .
+
+
+###  http://virtualforests.gsic.uva.es/VarietyPINUS_CAR_HOND
+:VarietyPINUS_CAR_HOND rdf:type owl:Class ;
+                       rdfs:subClassOf :GenusPINUS ,
+                                       :SpeciesPINUS_CAR ,
+                                       <http://www.wikidata.org/entity/Q37950446> .
+
+
+###  http://www.wikidata.org/entity/Q106094
+<http://www.wikidata.org/entity/Q106094> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q1249109
+<http://www.wikidata.org/entity/Q1249109> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q133128
+<http://www.wikidata.org/entity/Q133128> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q1399164
+<http://www.wikidata.org/entity/Q1399164> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q145954
+<http://www.wikidata.org/entity/Q145954> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q146021
+<http://www.wikidata.org/entity/Q146021> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q146048
+<http://www.wikidata.org/entity/Q146048> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q146149
+<http://www.wikidata.org/entity/Q146149> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q147417
+<http://www.wikidata.org/entity/Q147417> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q147513
+<http://www.wikidata.org/entity/Q147513> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q147525
+<http://www.wikidata.org/entity/Q147525> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q149115
+<http://www.wikidata.org/entity/Q149115> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q150129
+<http://www.wikidata.org/entity/Q150129> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q1543749
+<http://www.wikidata.org/entity/Q1543749> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q156137
+<http://www.wikidata.org/entity/Q156137> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q156687
+<http://www.wikidata.org/entity/Q156687> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q156895
+<http://www.wikidata.org/entity/Q156895> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q156944
+<http://www.wikidata.org/entity/Q156944> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q157417
+<http://www.wikidata.org/entity/Q157417> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q158608
+<http://www.wikidata.org/entity/Q158608> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q159528
+<http://www.wikidata.org/entity/Q159528> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q159839
+<http://www.wikidata.org/entity/Q159839> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q163788
+<http://www.wikidata.org/entity/Q163788> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q16467654
+<http://www.wikidata.org/entity/Q16467654> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q165145
+<http://www.wikidata.org/entity/Q165145> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q20722203
+<http://www.wikidata.org/entity/Q20722203> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q220715
+<http://www.wikidata.org/entity/Q220715> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q22699
+<http://www.wikidata.org/entity/Q22699> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q2512644
+<http://www.wikidata.org/entity/Q2512644> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q26037256
+<http://www.wikidata.org/entity/Q26037256> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q271582
+<http://www.wikidata.org/entity/Q271582> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q2900918
+<http://www.wikidata.org/entity/Q2900918> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q368248
+<http://www.wikidata.org/entity/Q368248> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q37950446
+<http://www.wikidata.org/entity/Q37950446> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q3905334
+<http://www.wikidata.org/entity/Q3905334> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q4112184
+<http://www.wikidata.org/entity/Q4112184> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q460523
+<http://www.wikidata.org/entity/Q460523> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q469652
+<http://www.wikidata.org/entity/Q469652> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q61105
+<http://www.wikidata.org/entity/Q61105> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q623489
+<http://www.wikidata.org/entity/Q623489> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q628329
+<http://www.wikidata.org/entity/Q628329> rdf:type owl:Class .
+
+
+###  http://www.wikidata.org/entity/Q68763
+<http://www.wikidata.org/entity/Q68763> rdf:type owl:Class .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> rdf:type owl:Class .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Class1
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Class1> rdf:type owl:Class .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family> rdf:type owl:Class .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family22
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family22> rdf:type owl:Class .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Genus
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Genus> rdf:type owl:Class .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Pendiente
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Pendiente> rdf:type owl:Class .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> rdf:type owl:Class .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Taxon
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Taxon> rdf:type owl:Class .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Tree
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Tree> rdf:type owl:Class .
+
+
+###  https://www.wikidata.org/wiki/Q24764435
+<https://www.wikidata.org/wiki/Q24764435> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/Acer_pseudoplatanus
+<http://dbpedia.org/resource/Acer_pseudoplatanus> rdf:type owl:NamedIndividual ;
+                                                  owl:sameAs :SpeciesACERR_PSE .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesACERR_PSE
+
+###  http://dbpedia.org/resource/Altingiaceae
+<http://dbpedia.org/resource/Altingiaceae> rdf:type owl:NamedIndividual ;
+                                           owl:sameAs :Family53 .
+
+
+###  http://virtualforests.gsic.uva.es/Family53
+
+###  http://dbpedia.org/resource/Betula_pendula
+<http://dbpedia.org/resource/Betula_pendula> rdf:type owl:NamedIndividual ;
+                                             owl:sameAs :SpeciesBETUL_PEN .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesBETUL_PEN
+
+###  http://dbpedia.org/resource/Calocedrus
+<http://dbpedia.org/resource/Calocedrus> rdf:type owl:NamedIndividual ;
+                                         owl:sameAs :GenusCALOC .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCALOC
+
+###  http://dbpedia.org/resource/Calocedrus_decurrens
+<http://dbpedia.org/resource/Calocedrus_decurrens> rdf:type owl:NamedIndividual ;
+                                                   owl:sameAs :SpeciesCALOC_DEC .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCALOC_DEC
+
+###  http://dbpedia.org/resource/Caribbean_pine
+<http://dbpedia.org/resource/Caribbean_pine> rdf:type owl:NamedIndividual ;
+                                             owl:sameAs :SpeciesPINUS_CAR .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_CAR
+
+###  http://dbpedia.org/resource/Castanea_sativa
+<http://dbpedia.org/resource/Castanea_sativa> rdf:type owl:NamedIndividual ;
+                                              owl:sameAs :SpeciesCASTA_SAT .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCASTA_SAT
+
+###  http://dbpedia.org/resource/Cedrus_atlantica
+<http://dbpedia.org/resource/Cedrus_atlantica> rdf:type owl:NamedIndividual ;
+                                               owl:sameAs :SpeciesCEDRU_ATL .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCEDRU_ATL
+
+###  http://dbpedia.org/resource/Cedrus_libani
+<http://dbpedia.org/resource/Cedrus_libani> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :SpeciesCEDRU_LIB .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCEDRU_LIB
+
+###  http://dbpedia.org/resource/Ceratonia_siliqua
+<http://dbpedia.org/resource/Ceratonia_siliqua> rdf:type owl:NamedIndividual ;
+                                                owl:sameAs :SpeciesCERTN_SIL .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCERTN_SIL
+
+###  http://dbpedia.org/resource/Cunninghamia
+<http://dbpedia.org/resource/Cunninghamia> rdf:type owl:NamedIndividual ;
+                                           owl:sameAs :GenusCUNNI .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCUNNI
+
+###  http://dbpedia.org/resource/Cunninghamia_lanceolata
+<http://dbpedia.org/resource/Cunninghamia_lanceolata> rdf:type owl:NamedIndividual ;
+                                                      owl:sameAs :SpeciesCUNNI_LAN .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCUNNI_LAN
+
+###  http://dbpedia.org/resource/Cupressus_sempervirens
+<http://dbpedia.org/resource/Cupressus_sempervirens> rdf:type owl:NamedIndividual ;
+                                                     owl:sameAs :SpeciesCUPRE_SEM .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCUPRE_SEM
+
+###  http://dbpedia.org/resource/Douglas_fir
+<http://dbpedia.org/resource/Douglas_fir> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs :SpeciesPSDTS_MEN .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPSDTS_MEN
+
+###  http://dbpedia.org/resource/Eucalyptus_dalrympleana
+<http://dbpedia.org/resource/Eucalyptus_dalrympleana> rdf:type owl:NamedIndividual ;
+                                                      owl:sameAs :SpeciesEUCAL_DAL .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_DAL
+
+###  http://dbpedia.org/resource/Eucalyptus_globulus
+<http://dbpedia.org/resource/Eucalyptus_globulus> rdf:type owl:NamedIndividual ;
+                                                  owl:sameAs :SpeciesEUCAL_GLO .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_GLO
+
+###  http://dbpedia.org/resource/Eucalyptus_gunnii
+<http://dbpedia.org/resource/Eucalyptus_gunnii> rdf:type owl:NamedIndividual ;
+                                                owl:sameAs :SpeciesEUCAL_GUN .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_GUN
+
+###  http://dbpedia.org/resource/Eucalyptus_nitens
+<http://dbpedia.org/resource/Eucalyptus_nitens> rdf:type owl:NamedIndividual ;
+                                                owl:sameAs :SpeciesEUCAL_NIT .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_NIT
+
+###  http://dbpedia.org/resource/Fagus_orientalis
+<http://dbpedia.org/resource/Fagus_orientalis> rdf:type owl:NamedIndividual ;
+                                               owl:sameAs :SpeciesFAGUS_ORI .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesFAGUS_ORI
+
+###  http://dbpedia.org/resource/Fagus_sylvatica
+<http://dbpedia.org/resource/Fagus_sylvatica> rdf:type owl:NamedIndividual ;
+                                              owl:sameAs :SpeciesFAGUS_SYL .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesFAGUS_SYL
+
+###  http://dbpedia.org/resource/Larix_decidua
+<http://dbpedia.org/resource/Larix_decidua> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :SpeciesLARIX_DEC .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesLARIX_DEC
+
+###  http://dbpedia.org/resource/Liquidambar
+<http://dbpedia.org/resource/Liquidambar> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs :GenusLIQUI .
+
+
+###  http://virtualforests.gsic.uva.es/GenusLIQUI
+
+###  http://dbpedia.org/resource/Liquidambar_styraciflua
+<http://dbpedia.org/resource/Liquidambar_styraciflua> rdf:type owl:NamedIndividual ;
+                                                      owl:sameAs :SpeciesLIQUI_STY .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesLIQUI_STY
+
+###  http://dbpedia.org/resource/Pinus_brutia
+<http://dbpedia.org/resource/Pinus_brutia> rdf:type owl:NamedIndividual ;
+                                           owl:sameAs :SpeciesPINUS_BRU .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_BRU
+
+###  http://dbpedia.org/resource/Pinus_elliottii
+<http://dbpedia.org/resource/Pinus_elliottii> rdf:type owl:NamedIndividual ;
+                                              owl:sameAs :SpeciesPINUS_ELL .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_ELL
+
+###  http://dbpedia.org/resource/Pinus_nigra
+<http://dbpedia.org/resource/Pinus_nigra> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs :SpeciesPINUS_NIG .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_NIG
+
+###  http://dbpedia.org/resource/Pinus_peuce
+<http://dbpedia.org/resource/Pinus_peuce> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs :SpeciesPINUS_PEU .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PEU
+
+###  http://dbpedia.org/resource/Pinus_pinaster
+<http://dbpedia.org/resource/Pinus_pinaster> rdf:type owl:NamedIndividual ;
+                                             owl:sameAs :SpeciesPINUS_PNS .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PNS
+
+###  http://dbpedia.org/resource/Pinus_ponderosa
+<http://dbpedia.org/resource/Pinus_ponderosa> rdf:type owl:NamedIndividual ;
+                                              owl:sameAs :SpeciesPINUS_PON .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PON
+
+###  http://dbpedia.org/resource/Pinus_taeda
+<http://dbpedia.org/resource/Pinus_taeda> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs :SpeciesPINUS_TAE .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_TAE
+
+###  http://dbpedia.org/resource/Quercus_petraea
+<http://dbpedia.org/resource/Quercus_petraea> rdf:type owl:NamedIndividual ;
+                                              owl:sameAs :SpeciesQUERC_PET .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_PET
+
+###  http://dbpedia.org/resource/Quercus_robur
+<http://dbpedia.org/resource/Quercus_robur> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :SpeciesQUERC_ROB .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_ROB
+
+###  http://dbpedia.org/resource/Quercus_rotundifolia
+<http://dbpedia.org/resource/Quercus_rotundifolia> rdf:type owl:NamedIndividual ;
+                                                   owl:sameAs :SpeciesQUERC_ROT .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_ROT
+
+###  http://dbpedia.org/resource/Quercus_rubra
+<http://dbpedia.org/resource/Quercus_rubra> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :SpeciesQUERC_RUB .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_RUB
+
+###  http://dbpedia.org/resource/Quercus_shumardii
+<http://dbpedia.org/resource/Quercus_shumardii> rdf:type owl:NamedIndividual ;
+                                                owl:sameAs :SpeciesQUERC_SHU .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_SHU
+
+###  http://dbpedia.org/resource/Quercus_suber
+<http://dbpedia.org/resource/Quercus_suber> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :SpeciesQUERC_SUB .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_SUB
+
+###  http://dbpedia.org/resource/Robinia_pseudoacacia
+<http://dbpedia.org/resource/Robinia_pseudoacacia> rdf:type owl:NamedIndividual ;
+                                                   owl:sameAs :SpeciesROBIN_PSE .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesROBIN_PSE
+
+###  http://dbpedia.org/resource/Scots_pine
+<http://dbpedia.org/resource/Scots_pine> rdf:type owl:NamedIndividual ;
+                                         owl:sameAs :SpeciesPINUS_SYL .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_SYL
+
+###  http://dbpedia.org/resource/Sequoia
+<http://dbpedia.org/resource/Sequoia> rdf:type owl:NamedIndividual ;
+                                      owl:sameAs :GenusSEQUA .
+
+
+###  http://virtualforests.gsic.uva.es/GenusSEQUA
+
+###  http://dbpedia.org/resource/Sequoia_sempervirens
+<http://dbpedia.org/resource/Sequoia_sempervirens> rdf:type owl:NamedIndividual ;
+                                                   owl:sameAs :SpeciesSEQUA_SEM .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesSEQUA_SEM
+
+###  http://dbpedia.org/resource/Stone_pine
+<http://dbpedia.org/resource/Stone_pine> rdf:type owl:NamedIndividual ;
+                                         owl:sameAs :SpeciesPINUS_PNA .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PNA
+
+###  http://dbpedia.org/resource/Thuja_plicata
+<http://dbpedia.org/resource/Thuja_plicata> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs :SpeciesTHUJA_PLI .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesTHUJA_PLI
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameFamily53
+:AcceptedNameFamily53 rdf:type owl:NamedIndividual ,
+                               <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Altingiaceae"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameGenus225
+:AcceptedNameGenus225 rdf:type owl:NamedIndividual ,
+                               <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Calocedrus"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameGenusCUNNI
+:AcceptedNameGenusCUNNI rdf:type owl:NamedIndividual ,
+                                 <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                        <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Cunninghamia"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameGenusLIQUI
+:AcceptedNameGenusLIQUI rdf:type owl:NamedIndividual ,
+                                 <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                        <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Liquidambar"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameGenusSEQUA
+:AcceptedNameGenusSEQUA rdf:type owl:NamedIndividual ,
+                                 <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                        <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Sequoia"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameHybridEUCAL_GDA
+:AcceptedNameHybridEUCAL_GDA rdf:type owl:NamedIndividual ,
+                                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                             <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Eucalyptus gunii x Eucalyptus dalrympleana"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesACERR_PSE
+:AcceptedNameSpeciesACERR_PSE rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Acer pseudoplatanus"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesBETUL_PEN
+:AcceptedNameSpeciesBETUL_PEN rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Roth" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Betula pendula"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCALOC_DEC
+:AcceptedNameSpeciesCALOC_DEC rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(Torr.) Florin" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Calocedrus decurrens"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCASTA_SAT
+:AcceptedNameSpeciesCASTA_SAT rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Mill." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Castanea sativa"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCEDRU_ATL
+:AcceptedNameSpeciesCEDRU_ATL rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(Endl.) Manetti ex Carrière" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Cedrus atlantica"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCEDRU_LIB
+:AcceptedNameSpeciesCEDRU_LIB rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "A.Rich." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Cedrus libani"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCERTN_SIL
+:AcceptedNameSpeciesCERTN_SIL rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Ceratonia siliqua"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCUNNI_LAN
+:AcceptedNameSpeciesCUNNI_LAN rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(Lamb.) Hook." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Cunninghamia lanceolata"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCUPRE_SEM
+:AcceptedNameSpeciesCUPRE_SEM rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Cupressus sempervirens"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_DAL
+:AcceptedNameSpeciesEUCAL_DAL rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Maiden" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Eucalyptus dalrympleana"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_GLO
+:AcceptedNameSpeciesEUCAL_GLO rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Labill." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Eucalyptus globulus"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_GUN
+:AcceptedNameSpeciesEUCAL_GUN rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Hook.f." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Eucalyptus gunnii"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_NIT
+:AcceptedNameSpeciesEUCAL_NIT rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(H.Deane & Maiden) Maiden" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Eucalyptus nitens"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesFAGUS_ORI
+:AcceptedNameSpeciesFAGUS_ORI rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Lipsky" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Fagus orientalis"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesFAGUS_SYL
+:AcceptedNameSpeciesFAGUS_SYL rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Fagus sylvatica"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesLARIX_DEC
+:AcceptedNameSpeciesLARIX_DEC rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Mill." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Larix decidua"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesLIQUI_STY
+:AcceptedNameSpeciesLIQUI_STY rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Liquidambar styraciflua"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_BRU
+:AcceptedNameSpeciesPINUS_BRU rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Ten." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus brutia"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_CAR
+:AcceptedNameSpeciesPINUS_CAR rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Morelet" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus caribaea"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_ELL
+:AcceptedNameSpeciesPINUS_ELL rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Engelm." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus elliottii"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_NIG
+:AcceptedNameSpeciesPINUS_NIG rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "J.F.Arnold" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus nigra"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_PEU
+:AcceptedNameSpeciesPINUS_PEU rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Griseb." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus peuce"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_PNA
+:AcceptedNameSpeciesPINUS_PNA rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus pinea"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_PNS
+:AcceptedNameSpeciesPINUS_PNS rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Aiton" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus pinaster"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_PON
+:AcceptedNameSpeciesPINUS_PON rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Douglas ex C.Lawson" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus ponderosa"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_SYL
+:AcceptedNameSpeciesPINUS_SYL rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus sylvestris"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_TAE
+:AcceptedNameSpeciesPINUS_TAE rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus taeda"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPSDTS_MEN
+:AcceptedNameSpeciesPSDTS_MEN rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(Mirb.) Franco" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pseudotsuga menziesii"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_PET
+:AcceptedNameSpeciesQUERC_PET rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(Matt.) Liebl." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Quercus petraea"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_ROB
+:AcceptedNameSpeciesQUERC_ROB rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Quercus robur"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_ROT
+:AcceptedNameSpeciesQUERC_ROT rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Lam." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Quercus rotundifolia"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_RUB
+:AcceptedNameSpeciesQUERC_RUB rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Quercus rubra"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_SHU
+:AcceptedNameSpeciesQUERC_SHU rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Buckley" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Quercus shumardii"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_SUB
+:AcceptedNameSpeciesQUERC_SUB rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Quercus suber"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesROBIN_PSE
+:AcceptedNameSpeciesROBIN_PSE rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "L." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Robinia pseudoacacia"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesSEQUA_SEM
+:AcceptedNameSpeciesSEQUA_SEM rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(D.Don) Endl." ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Sequoia sempervirens"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSpeciesTHUJA_PLI
+:AcceptedNameSpeciesTHUJA_PLI rdf:type owl:NamedIndividual ,
+                                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Donn ex D.Don" ;
+                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Thuja plicata"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSubspeciesPINUS_NIG_LAR
+:AcceptedNameSubspeciesPINUS_NIG_LAR rdf:type owl:NamedIndividual ,
+                                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                                     <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Maire" ;
+                                     <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus nigra subsp. laricio"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameSubspeciesPINUS_NIG_SAL
+:AcceptedNameSubspeciesPINUS_NIG_SAL rdf:type owl:NamedIndividual ,
+                                              <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                                     <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(Dunal) Franco" ;
+                                     <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus nigra subsp. salzmannii"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameVarietyCEDRU_LIB_BRE
+:AcceptedNameVarietyCEDRU_LIB_BRE rdf:type owl:NamedIndividual ,
+                                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "Hook.f." ;
+                                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Cedrus libani var. brevifolia"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameVarietyPINUS_BRU_ELD
+:AcceptedNameVarietyPINUS_BRU_ELD rdf:type owl:NamedIndividual ,
+                                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(Medw.) Silba" ;
+                                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus brutia var. eldarica"@la .
+
+
+###  http://virtualforests.gsic.uva.es/AcceptedNameVarietyPINUS_CAR_HOND
+:AcceptedNameVarietyPINUS_CAR_HOND rdf:type owl:NamedIndividual ,
+                                            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName> ;
+                                   <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/author> "(Sénécl.) W.H.Barrett & Golfari" ;
+                                   <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/name> "Pinus caribaea var. hondurensis"@la .
+
+
+###  http://virtualforests.gsic.uva.es/Family53
+:Family53 rdf:type owl:NamedIndividual ,
+                   <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family> .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCALOC
+:GenusCALOC rdf:type owl:NamedIndividual ,
+                     <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Genus> ;
+            :hasUPOVCode "CALOC" .
+
+
+###  http://virtualforests.gsic.uva.es/GenusCUNNI
+:GenusCUNNI rdf:type owl:NamedIndividual ,
+                     <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Genus> ;
+            :hasUPOVCode "CUNNI" .
+
+
+###  http://virtualforests.gsic.uva.es/GenusLIQUI
+:GenusLIQUI rdf:type owl:NamedIndividual ,
+                     <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Genus> ;
+            :hasUPOVCode "LIQUI" .
+
+
+###  http://virtualforests.gsic.uva.es/GenusSEQUA
+:GenusSEQUA rdf:type owl:NamedIndividual ,
+                     <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Genus> ;
+            :hasUPOVCode "SEQUA" .
+
+
+###  http://virtualforests.gsic.uva.es/HybridEUCAL_GDA
+:HybridEUCAL_GDA rdf:type owl:NamedIndividual ,
+                          :Hybrid ;
+                 :hasParentTaxon :SpeciesEUCAL_DAL ,
+                                 :SpeciesEUCAL_GUN ;
+                 :hasUPOVCode "EUCAL_GDA" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesACERR_PSE
+:SpeciesACERR_PSE rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species576> ;
+                  :hasUPOVCode "ACERR_PSE" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species576
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species576> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesBETUL_PEN
+:SpeciesBETUL_PEN rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species373> ;
+                  :hasUPOVCode "BETUL_PEN" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species373
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species373> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCALOC_DEC
+:SpeciesCALOC_DEC rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "CALOC_DEC" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCASTA_SAT
+:SpeciesCASTA_SAT rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species72> ;
+                  :hasUPOVCode "CASTA_SAT" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species72
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species72> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCEDRU_ATL
+:SpeciesCEDRU_ATL rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species17> ;
+                  :hasUPOVCode "CEDRU_ATL" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species17
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species17> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCEDRU_LIB
+:SpeciesCEDRU_LIB rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species317> ;
+                  :hasUPOVCode "CEDRU_LIB" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species317
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species317> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCERTN_SIL
+:SpeciesCERTN_SIL rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species67> ;
+                  :hasUPOVCode "CERTN_SIL" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species67
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species67> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCUNNI_LAN
+:SpeciesCUNNI_LAN rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "CUNNI_LAN" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesCUPRE_SEM
+:SpeciesCUPRE_SEM rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species36> ;
+                  :hasUPOVCode "CUPRE_SEM" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species36
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species36> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_DAL
+:SpeciesEUCAL_DAL rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "EUCAL_DAL" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_GLO
+:SpeciesEUCAL_GLO rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species61> ;
+                  :hasUPOVCode "EUCAL_GLO" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species61
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species61> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_GUN
+:SpeciesEUCAL_GUN rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "EUCAL_GUN" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesEUCAL_NIT
+:SpeciesEUCAL_NIT rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species64> ;
+                  :hasUPOVCode "EUCAL_NIT" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species64
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species64> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesFAGUS_ORI
+:SpeciesFAGUS_ORI rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "FAGUS_ORI" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesFAGUS_SYL
+:SpeciesFAGUS_SYL rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species71> ;
+                  :hasUPOVCode "FAGUS_SYL" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species71
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species71> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesLARIX_DEC
+:SpeciesLARIX_DEC rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species235> ;
+                  :hasUPOVCode "LARIX_DEC" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species235
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species235> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesLIQUI_STY
+:SpeciesLIQUI_STY rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "LIQUI_STY" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_BRU
+:SpeciesPINUS_BRU rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "PINUS_BRU" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_CAR
+:SpeciesPINUS_CAR rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "PINUS_CAR" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_ELL
+:SpeciesPINUS_ELL rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "PINUS_ELL" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_NIG
+:SpeciesPINUS_NIG rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species25> ;
+                  :hasUPOVCode "PINUS_NIG" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species25
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species25> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PEU
+:SpeciesPINUS_PEU rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "PINUS_PEU" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PNA
+:SpeciesPINUS_PNA rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species23> ;
+                  :hasUPOVCode "PINUS_PNA" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species23
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species23> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PNS
+:SpeciesPINUS_PNS rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species26> ;
+                  :hasUPOVCode "PINUS_PNS" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species26
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species26> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_PON
+:SpeciesPINUS_PON rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "PINUS_PON" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_SYL
+:SpeciesPINUS_SYL rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species21> ;
+                  :hasUPOVCode "PINUS_SYL" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species21
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species21> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPINUS_TAE
+:SpeciesPINUS_TAE rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "PINUS_TAE" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesPSDTS_MEN
+:SpeciesPSDTS_MEN rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species34> ;
+                  :hasUPOVCode "PSDTS_MEN" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species34
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species34> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_PET
+:SpeciesQUERC_PET rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species42> ;
+                  :hasUPOVCode "QUERC_PET" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species42
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species42> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_ROB
+:SpeciesQUERC_ROB rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species41> ;
+                  :hasUPOVCode "QUERC_ROB" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species41
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species41> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_ROT
+:SpeciesQUERC_ROT rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species45> ;
+                  :hasUPOVCode "QUERC_ROT" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species45
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species45> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_RUB
+:SpeciesQUERC_RUB rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species48> ;
+                  :hasUPOVCode "QUERC_RUB" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species48
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species48> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_SHU
+:SpeciesQUERC_SHU rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "QUERC_SHU" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesQUERC_SUB
+:SpeciesQUERC_SUB rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species46> ;
+                  :hasUPOVCode "QUERC_SUB" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species46
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species46> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesROBIN_PSE
+:SpeciesROBIN_PSE rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  owl:sameAs <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species92> ;
+                  :hasUPOVCode "ROBIN_PSE" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species92
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species92> rdf:type owl:NamedIndividual .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesSEQUA_SEM
+:SpeciesSEQUA_SEM rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "SEQUA_SEM" .
+
+
+###  http://virtualforests.gsic.uva.es/SpeciesTHUJA_PLI
+:SpeciesTHUJA_PLI rdf:type owl:NamedIndividual ,
+                           <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species> ;
+                  :hasUPOVCode "THUJA_PLI" .
+
+
+###  http://virtualforests.gsic.uva.es/SubspeciesPINUS_NIG_LAR
+:SubspeciesPINUS_NIG_LAR rdf:type owl:NamedIndividual ,
+                                  :Subspecies ;
+                         :hasUPOVCode "PINUS_NIG_LAR" .
+
+
+###  http://virtualforests.gsic.uva.es/SubspeciesPINUS_NIG_SAL
+:SubspeciesPINUS_NIG_SAL rdf:type owl:NamedIndividual ,
+                                  :Subspecies ;
+                         :hasUPOVCode "PINUS_NIG_SAL" .
+
+
+###  http://virtualforests.gsic.uva.es/VarietyCEDRU_LIB_BRE
+:VarietyCEDRU_LIB_BRE rdf:type owl:NamedIndividual ,
+                               :Variety ;
+                      :hasUPOVCode "CEDRU_LIB_BRE" .
+
+
+###  http://virtualforests.gsic.uva.es/VarietyPINUS_BRU_ELD
+:VarietyPINUS_BRU_ELD rdf:type owl:NamedIndividual ,
+                               :Variety ;
+                      :hasUPOVCode "PINUS_BRU_ELD" .
+
+
+###  http://virtualforests.gsic.uva.es/VarietyPINUS_CAR_HOND
+:VarietyPINUS_CAR_HOND rdf:type owl:NamedIndividual ,
+                                :Variety ;
+                       :hasUPOVCode "PINUS_CAR_HOND" .
+
+
+###  http://virtualforests.gsic.uva.es/Country/ES
+<http://virtualforests.gsic.uva.es/Country/ES> rdf:type owl:NamedIndividual ,
+                                                        :Country ;
+                                               rdfs:label "Espagne"@fr ,
+                                                          "España"@es ,
+                                                          "Spain"@en ;
+                                               <https://www.geonames.org/ontology#countryCode> "ES" .
+
+
+###  http://virtualforests.gsic.uva.es/Country/FR
+<http://virtualforests.gsic.uva.es/Country/FR> rdf:type owl:NamedIndividual ,
+                                                        :Country ;
+                                               rdfs:label "France"@en ,
+                                                          "France"@fr ,
+                                                          "Francia"@es ;
+                                               <https://www.geonames.org/ontology#countryCode> "FR" .
+
+
+###  http://virtualforests.gsic.uva.es/Country/GB
+<http://virtualforests.gsic.uva.es/Country/GB> rdf:type owl:NamedIndividual ,
+                                                        :Country ;
+                                               rdfs:label "Gran Bretaña"@es ,
+                                                          "Grande-Bretagne"@fr ,
+                                                          "Great Britain"@en ;
+                                               <https://www.geonames.org/ontology#countryCode> "GB" .
+
+
+###  http://virtualforests.gsic.uva.es/Country/GB-ENG
+<http://virtualforests.gsic.uva.es/Country/GB-ENG> rdf:type owl:NamedIndividual ,
+                                                            :CountrySubdivision ;
+                                                   :isSubregionOf <http://virtualforests.gsic.uva.es/Country/GB> ;
+                                                   :hasISO3166-2 "GB-ENG" ;
+                                                   rdfs:label "Angleterre"@fr ,
+                                                              "England"@en ,
+                                                              "Inglaterra"@es ;
+                                                   <https://www.geonames.org/ontology#countryCode> "GB" .
+
+
+###  http://virtualforests.gsic.uva.es/Country/GB-SCT
+<http://virtualforests.gsic.uva.es/Country/GB-SCT> rdf:type owl:NamedIndividual ,
+                                                            :CountrySubdivision ;
+                                                   :isSubregionOf <http://virtualforests.gsic.uva.es/Country/GB> ;
+                                                   :hasISO3166-2 "GB-SCT" ;
+                                                   rdfs:label "Ecosse"@fr ,
+                                                              "Escocia"@es ,
+                                                              "Scotland"@en ;
+                                                   <https://www.geonames.org/ontology#countryCode> "GB" .
+
+
+###  http://virtualforests.gsic.uva.es/Country/GB-WLS
+<http://virtualforests.gsic.uva.es/Country/GB-WLS> rdf:type owl:NamedIndividual ,
+                                                            :CountrySubdivision ;
+                                                   :isSubregionOf <http://virtualforests.gsic.uva.es/Country/GB> ;
+                                                   :hasISO3166-2 "GB-WLS" ;
+                                                   rdfs:label "Gales"@es ,
+                                                              "Pays de Galles"@fr ,
+                                                              "Wales"@en ;
+                                                   <https://www.geonames.org/ontology#countryCode> "GB" .
+
+
+###  http://virtualforests.gsic.uva.es/Country/PT
+<http://virtualforests.gsic.uva.es/Country/PT> rdf:type owl:NamedIndividual ,
+                                                        :Country ;
+                                               rdfs:label "Portugal"@en ,
+                                                          "Portugal"@es ,
+                                                          "Portugal"@fr ;
+                                               <https://www.geonames.org/ontology#countryCode> "PT" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species17
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species17> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species21
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species21> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species23
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species23> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species235
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species235> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species25
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species25> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species26
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species26> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species317
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species317> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species34
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species34> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species36
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species36> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species373
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species373> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species41
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species41> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species42
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species42> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species45
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species45> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species46
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species46> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species48
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species48> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species576
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species576> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species61
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species61> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species64
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species64> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species67
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species67> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species71
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species71> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species72
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species72> rdf:type owl:NamedIndividual .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species92
+<https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species92> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Family53 <http://schema.org/sameAs> <http://dbpedia.org/resource/Altingiaceae> ;
+          <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Altingiaceae"@la ;
+          <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameFamily53 ;
+          <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-7000000016"^^xsd:anyURI ;
+          <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikiSpeciesPage> "https://species.wikimedia.org/wiki/Altingiaceae"^^xsd:anyURI ;
+          <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Altingiaceae"^^xsd:anyURI ;
+          <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Altingiaceae"@fr ,
+                                                                                    "Altingiaceas"@es ,
+                                                                                    "Sweet gums"@en .
+
+
+:GenusCALOC <http://schema.org/sameAs> <http://dbpedia.org/resource/Calocedrus> ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Altingiaceae"@la ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameGenus225 ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-4000006133"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikiSpeciesPage> "https://species.wikimedia.org/wiki/Calocedrus"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Calocedrus"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Calocedrus"@es ,
+                                                                                      "Cèdre"@fr ,
+                                                                                      "Incense-cedar"@en .
+
+
+:GenusCUNNI <http://schema.org/sameAs> <http://dbpedia.org/resource/Cunninghamia> ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Cunninghamia"@la ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameGenusCUNNI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-4000010046"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikiSpeciesPage> "https://species.wikimedia.org/wiki/Cunninghamia"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Cunninghamia"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Araucaria"@fr ,
+                                                                                      "Cunninghamia"@en ,
+                                                                                      "Cunninghamia"@es .
+
+
+:GenusLIQUI <http://schema.org/sameAs> <http://dbpedia.org/resource/Liquidambar> ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Liquidambar"@la ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameGenusLIQUI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-4000010046"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikiSpeciesPage> "https://species.wikimedia.org/wiki/Liquidambar"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Liquidambar"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Liquidambar"@es ,
+                                                                                      "Liquidambar"@fr ,
+                                                                                      "Sweetgum"@en .
+
+
+:GenusSEQUA <http://schema.org/sameAs> <http://dbpedia.org/resource/Sequoia> ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Sequoia"@la ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameGenusSEQUA ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-4000035099"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikiSpeciesPage> "https://species.wikimedia.org/wiki/Sequoia"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Sequoia"^^xsd:anyURI ;
+            <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Coast Redwood"@en ,
+                                                                                      "Secuoya"@es ,
+                                                                                      "Séquoia"@fr .
+
+
+:HybridEUCAL_GDA <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Eucalyptus gunii x Eucalyptus dalrympleana"@la ;
+                 <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameHybridEUCAL_GDA ;
+                 <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Eucalipto gundal"@es ,
+                                                                                           "Eucalyptus gundal"@fr ,
+                                                                                           "Gundal gum"@en .
+
+
+:SpeciesACERR_PSE <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Acer_pseudoplatanus"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Acer pseudoplatanus L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Acer pseudoplatanus"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesACERR_PSE ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000514908"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Acer_pseudoplatanus"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Arce seudoplátano"@es ,
+                                                                                            "Sycamore"@en ,
+                                                                                            "Érable sycomore"@fr .
+
+
+:SpeciesBETUL_PEN <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Betula_pendula"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Betula pendula Roth"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Betula pendula"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesBETUL_PEN ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000335449"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Betula_pendula"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Betula hispanica"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Abedul péndula"@es ,
+                                                                                            "Bouleau verruqueux"@fr ,
+                                                                                            "European white birch"@en .
+
+
+:SpeciesCALOC_DEC <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Calocedrus_decurrens"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Calocedrus decurrens (Torr.) Florin"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Calocedrus decurrens"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesCALOC_DEC ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000580852"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Calocedrus_decurrens"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "California Incense-cedar"@en ,
+                                                                                            "Calocèdre"@fr ,
+                                                                                            "Cedro de incienso"@es ,
+                                                                                            "Cèdre a encens"@fr .
+
+
+:SpeciesCASTA_SAT <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Castanea_sativa"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Castanea sativa Mill."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Castanea sativa"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesCASTA_SAT ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000812271"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Castanea_sativa"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Castanea vesca"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Castaño"@es ,
+                                                                                            "Châtaignier commun"@fr ,
+                                                                                            "Sweet chestnut"@en .
+
+
+:SpeciesCEDRU_ATL <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Cedrus_atlantica"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Cedrus atlantica (Endl.) Manetti ex Carrière"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Cedrus atlantica"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesCEDRU_ATL ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000592525"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Cedrus_atlantica"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Cedar"@en ,
+                                                                                            "Cedro"@es ,
+                                                                                            "Cèdre de l'Atlas"@fr .
+
+
+:SpeciesCEDRU_LIB <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Cedrus_libani_subsp._libani"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Cedrus libani A.Rich."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Cedrus libani"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesCEDRU_LIB ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000592537"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Cedrus_libani"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Cedrus libani subsp. libani"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Cedro del Líbano"@es ,
+                                                                                            "Lebanon Cedar"@en ,
+                                                                                            "cèdre du Liban"@fr .
+
+
+:SpeciesCERTN_SIL <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Ceratonia_siliqua"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Ceratonia siliqua L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Ceratonia siliqua"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesCERTN_SIL ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000165151"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Ceratonia_siliqua"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Algarrobo"@es ,
+                                                                                            "Carob tree"@en ,
+                                                                                            "Caroubier"@fr .
+
+
+:SpeciesCUNNI_LAN <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Cunninghamia_lanceolata"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Cunninghamia lanceolata (Lamb.) Hook."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Cunninghamia lanceolata"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesCUNNI_LAN ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000629338"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Cunninghamia_lanceolata"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Araucaria de Chine"@fr ,
+                                                                                            "Chinese Fir"@en ,
+                                                                                            "Cunninghamia"@es .
+
+
+:SpeciesCUPRE_SEM <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Cupressus_sempervirens"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Cupressus sempervirens L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Cupressus sempervirens"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesCUPRE_SEM ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000630789"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Cupressus_sempervirens"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Ciprés"@es ,
+                                                                                            "Cypress"@en ,
+                                                                                            "Cyprès commun"@fr .
+
+
+:SpeciesEUCAL_DAL <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://www.wikidata.org/wiki/Q159839"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Eucalyptus dalrympleana Maiden"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Eucalyptus dalrympleana"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesEUCAL_DAL ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "https://wfoplantlist.org/plant-list/taxon/wfo-0000954771-2021-12"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Eucalyptus_dalrympleana"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Eucalipto blanco de montaña"@es ,
+                                                                                            "Eucalyptus blanc des montagnes"@fr ,
+                                                                                            "Mountain white gum"@en ,
+                                                                                            "White gum"@en .
+
+
+:SpeciesEUCAL_GLO <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Eucalyptus_globulus"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Eucalyptus globulus Labill."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Eucalyptus globulus"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesEUCAL_GLO ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000954998"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Eucalyptus_globulus"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Eucalipto globulus"@es ,
+                                                                                            "Eucalyptus commun"@fr ,
+                                                                                            "Tasmanian blue gum"@en .
+
+
+:SpeciesEUCAL_GUN <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://www.wikidata.org/wiki/Q163788"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Eucalyptus gunnii Hook.f."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Eucalyptus gunnii"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesEUCAL_GUN ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "https://wfoplantlist.org/plant-list/taxon/wfo-0000955055-2021-12"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Eucalyptus_gunnii"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Cider gum"@en ,
+                                                                                            "Eucalipto sidra"@es ,
+                                                                                            "Eucalyptus gunnii"@fr ,
+                                                                                            "Gunnii"@es .
+
+
+:SpeciesEUCAL_NIT <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Eucalyptus_nitens"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Eucalyptus nitens (H.Deane & Maiden) Maiden"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Eucalyptus nitens"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesEUCAL_NIT ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000955429"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Eucalyptus_nitens"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Eucalipto nitens"@es ,
+                                                                                            "Eucalyptus nitens"@fr ,
+                                                                                            "Shining gum"@en .
+
+
+:SpeciesFAGUS_ORI <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Fagus_orientalis"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Fagus orientalis Lipsky"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Fagus orientalis"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesFAGUS_ORI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000966486"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Fagus_orientalis"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Fagus sylvatica subsp. orientalis"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Haya oriental"@es ,
+                                                                                            "Hêtre commun Orientale"@fr ,
+                                                                                            "Oriental Beech"@en .
+
+
+:SpeciesFAGUS_SYL <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Fagus_sylvatica"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Fagus sylvatica L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Fagus sylvatica"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesFAGUS_SYL ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000966507"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Fagus_sylvatica"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Common beech"@en ,
+                                                                                            "European beech"@en ,
+                                                                                            "Haya"@es ,
+                                                                                            "Hêtre commun"@fr .
+
+
+:SpeciesLARIX_DEC <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Larix_decidua"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Larix decidua Mill."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Larix decidua"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesLARIX_DEC ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000443338"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Larix_decidua"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Alerce común"@es ,
+                                                                                            "European larch"@en ,
+                                                                                            "Mélèze d'Europe"@fr .
+
+
+:SpeciesLIQUI_STY <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Liquidambar_styraciflua"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Liquidambar styraciflua L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Liquidambar styraciflua"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesLIQUI_STY ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000364015"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Liquidambar_styraciflua"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "American Sweetgum"@en ,
+                                                                                            "Copalme d'Amérique"@fr ,
+                                                                                            "Liquidámbar"@es .
+
+
+:SpeciesPINUS_BRU <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_brutia"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus brutia Ten."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus brutia"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_BRU ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000482336"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Pinus_brutia"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Pin de Calabre"@fr ,
+                                                                                            "Pin de Turquie"@fr ,
+                                                                                            "Pino de Chipre"@es ,
+                                                                                            "Turkish Pine"@en .
+
+
+:SpeciesPINUS_CAR <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_caribaea"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus caribaea Morelet"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus caribaea"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_CAR ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000482235"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Caribbean_pine"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Le pin caraïbe"@fr ,
+                                                                                            "Pino caribe"@es ,
+                                                                                            "Pino macho"@es ,
+                                                                                            "The Caribbean pine"@en .
+
+
+:SpeciesPINUS_ELL <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_elliottii"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus elliottii Engelm."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus elliottii"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_ELL ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000481442"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Pinus_elliottii"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Pin d'Elliott"@fr ,
+                                                                                            "Pino elioti"@es ,
+                                                                                            "slash pine"@en .
+
+
+:SpeciesPINUS_NIG <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_nigra"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus nigra J.F.Arnold"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus nigra"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_NIG ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000481696"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Pinus_nigra"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Austrian pine"@en ,
+                                                                                            "European Black Pine"@en ,
+                                                                                            "Pin noir"@fr ,
+                                                                                            "Pino laricio"@es ,
+                                                                                            "Pino negral"@es ,
+                                                                                            "Pino negral de Austria"@es ,
+                                                                                            "Pino negral de Corcega"@es ,
+                                                                                            "Pino negral de Crimea"@es ,
+                                                                                            "Pino negral de Córcega"@es ,
+                                                                                            "Pino salgareno"@es ,
+                                                                                            "Pino salgareño"@es .
+
+
+:SpeciesPINUS_PEU <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_peuce"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus peuce Griseb."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus peuce"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_PEU ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000481889"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Pinus_peuce"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Macedonian Pine"@en ,
+                                                                                            "Pin de Macédoine"@fr ,
+                                                                                            "Pino de Macedonia"@es .
+
+
+:SpeciesPINUS_PNA <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_pinea"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus pinea L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus pinea"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_PNA ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000481895"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Stone_pine"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Pin parasol"@fr ,
+                                                                                            "Pino piñonero"@es ,
+                                                                                            "Stone pine"@en .
+
+
+:SpeciesPINUS_PNS <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_pinaster"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus pinaster Aiton"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus pinaster"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_PNS ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000481910"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Pinus_pinaster"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Pinus maritima"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Cluster pine"@en ,
+                                                                                            "Pin des Landes"@fr ,
+                                                                                            "Pin maritime"@fr ,
+                                                                                            "Pino pináster"@es .
+
+
+:SpeciesPINUS_PON <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_ponderosa"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus ponderosa Douglas ex C.Lawson"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus ponderosa"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_PON ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000481903"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Pinus_ponderosa"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Pin ponderosa"@fr ,
+                                                                                            "Pino ponderosa"@es ,
+                                                                                            "Ponderosa Pine"@en .
+
+
+:SpeciesPINUS_SYL <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_sylvestris"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus sylvestris L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus sylvestris"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_SYL ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000481648"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Scots_pine"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Pin sylvestre"@fr ,
+                                                                                            "Pino silvestre"@es ,
+                                                                                            "Scots pine"@en .
+
+
+:SpeciesPINUS_TAE <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_taeda"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus taeda L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus taeda"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPINUS_TAE ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000481652"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Pinus_taeda"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Loblolly Pine"@en ,
+                                                                                            "Pin taeda"@fr ,
+                                                                                            "Pino taeda"@es .
+
+
+:SpeciesPSDTS_MEN <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pseudotsuga_menziesii"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pseudotsuga menziesii (Mirb.) Franco"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pseudotsuga menziesii"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesPSDTS_MEN ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000478194"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Douglas_fir"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Pseudotsuga douglasii"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Douglas-fir"@en ,
+                                                                                            "Sapin de Douglas"@fr ,
+                                                                                            "Seudotsuga"@es .
+
+
+:SpeciesQUERC_PET <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Quercus_petraea"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Quercus petraea (Matt.) Liebl."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Quercus petraea"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesQUERC_PET ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000292459"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Quercus_petraea"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Quercus petraea subsp. petraea"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Chêne rouvre"@fr ,
+                                                                                            "Chêne sessile"@fr ,
+                                                                                            "Cornish oak"@en ,
+                                                                                            "Durmast oak"@en ,
+                                                                                            "Irish Oak"@en ,
+                                                                                            "Roble montano"@es ,
+                                                                                            "Sessile oak"@en .
+
+
+:SpeciesQUERC_ROB <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Quercus_robur"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Quercus robur L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Quercus robur"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesQUERC_ROB ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0001275587"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Quercus_robur"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Quercus pedunculata"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Chêne pédonculé"@fr ,
+                                                                                            "Common oak"@en ,
+                                                                                            "English oak"@en ,
+                                                                                            "Roble pedunculado"@es .
+
+
+:SpeciesQUERC_ROT <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Quercus_rotundifolia"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Quercus rotundifolia Lam."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Quercus rotundifolia"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesQUERC_ROT ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000292989"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Quercus_rotundifolia"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Quercus ilex subsp. rotundifolia"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Chêne vert"@fr ,
+                                                                                            "Encina carrasca"@es ,
+                                                                                            "Holm oak"@en .
+
+
+:SpeciesQUERC_RUB <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Quercus_rubra"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Quercus rubra L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Quercus rubra"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesQUERC_RUB ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000293451"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Quercus_rubra"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Quercus borealis"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Champion oak"@en ,
+                                                                                            "Chêne rouge d'Amérique"@fr ,
+                                                                                            "Northern red oak"@en ,
+                                                                                            "Roble americano"@es .
+
+
+:SpeciesQUERC_SHU <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Quercus_shumardii"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Quercus shumardii Buckley"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Quercus shumardii"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesQUERC_SHU ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000293271"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Quercus_shumardii"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Chêne de Shumard"@fr ,
+                                                                                            "Roble de Shumard"@es ,
+                                                                                            "Schneck oak"@en ,
+                                                                                            "Shumard oak"@en ,
+                                                                                            "Shumard red oak"@en ,
+                                                                                            "Spotted oak"@en .
+
+
+:SpeciesQUERC_SUB <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Quercus_suber"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Quercus suber L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Quercus suber"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesQUERC_SUB ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000293451"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Quercus_suber"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Alcornoque"@es ,
+                                                                                            "Chêne-liège"@fr ,
+                                                                                            "Cork-oak"@en .
+
+
+:SpeciesROBIN_PSE <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Robinia_pseudoacacia"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Robinia pseudoacacia L."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Robinia pseudoacacia"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesROBIN_PSE ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000213931"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Robinia_pseudoacacia"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Acacia robinia"@es ,
+                                                                                            "Black locust"@en ,
+                                                                                            "Robinier faux-acacia"@fr .
+
+
+:SpeciesSEQUA_SEM <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Sequoia_sempervirens"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Sequoia sempervirens (D.Don) Endl."@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Sequoia sempervirens"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesSEQUA_SEM ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000437871"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Sequoia_sempervirens"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Coast redwood"@en ,
+                                                                                            "Secuoya"@es ,
+                                                                                            "Séquoia à feuilles d'if"@fr .
+
+
+:SpeciesTHUJA_PLI <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Thuja_plicata"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Thuja plicata Donn ex D.Don"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Thuja plicata"@la ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSpeciesTHUJA_PLI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000407856"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Thuja_plicata"^^xsd:anyURI ;
+                  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Arbol de la vida gigante"@es ,
+                                                                                            "Cedro rojo del Pacifico"@es ,
+                                                                                            "Cedro rojo del Pacífico"@es ,
+                                                                                            "Thuya géant"@fr ,
+                                                                                            "Tuya gigante"@es ,
+                                                                                            "Western redcedar"@en ,
+                                                                                            "Árbol de la vida gigante"@es .
+
+
+:SubspeciesPINUS_NIG_LAR <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus nigra subsp. laricio Maire"@la ;
+                         <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus nigra subsp. laricio"@la ;
+                         <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSubspeciesPINUS_NIG_LAR ;
+                         <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000736688"^^xsd:anyURI ;
+                         <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Corsican pine"@en ,
+                                                                                                   "Pin de Corse"@fr ,
+                                                                                                   "Pino corso"@es .
+
+
+:SubspeciesPINUS_NIG_SAL <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_nigra_subsp._salzmannii"^^xsd:anyURI ;
+                         <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus nigra subsp. salzmannii (Dunal) Franco"@la ;
+                         <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus nigra subsp. salzmannii"@la ;
+                         <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameSubspeciesPINUS_NIG_SAL ;
+                         <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000736753"^^xsd:anyURI ;
+                         <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "European black pine"@en ,
+                                                                                                   "Pin de Salzmann"@fr ,
+                                                                                                   "Pino salgareño"@es .
+
+
+:VarietyCEDRU_LIB_BRE <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Cedrus_libani_var._brevifolia"^^xsd:anyURI ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Cedrus libani var. brevifolia Hook.f."@la ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Cedrus libani var. brevifolia"@la ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameVarietyCEDRU_LIB_BRE ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000592541"^^xsd:anyURI ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasWikipediaPage> "https://en.wikipedia.org/wiki/Cedrus_brevifolia"^^xsd:anyURI ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/scientificSynonymWithoutAuthor> "Cedrus libani subsp. brevifolia"@la ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Cedro de Chipre"@es ,
+                                                                                                "Cyprus cedar"@en ,
+                                                                                                "Le cèdre de Chypre"@fr .
+
+
+:VarietyPINUS_BRU_ELD <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/WikispeciesPage> "https://species.wikimedia.org/wiki/Pinus_brutia_subsp._eldarica"^^xsd:anyURI ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus brutia var. eldarica (Medw.) Silba"@la ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus brutia var. eldarica"@la ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameVarietyPINUS_BRU_ELD ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000482302"^^xsd:anyURI ;
+                      <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Afghan pine"@en ,
+                                                                                                "Pin de Turquie eldarica"@fr ,
+                                                                                                "Pino de Calabria"@es .
+
+
+:VarietyPINUS_CAR_HOND <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithAuthor> "Pinus caribaea var. hondurensis (Sénécl.) W.H.Barrett & Golfari"@la ;
+                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/acceptedNameWithoutAuthor> "Pinus caribaea var. hondurensis"@la ;
+                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasAcceptedName> :AcceptedNameVarietyPINUS_CAR_HOND ;
+                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/hasThePlantListPage> "http://www.worldfloraonline.org/taxon/wfo-0000490090"^^xsd:anyURI ;
+                       <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/vulgarName> "Le pin caraïbe"@fr ,
+                                                                                                 "Nicaraguan pine"@en ,
+                                                                                                 "Pino caribe"@es ,
+                                                                                                 "Pino de honduras"@es ,
+                                                                                                 "The Caribbean pine"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

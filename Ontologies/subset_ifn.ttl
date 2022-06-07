@@ -1,0 +1,133 @@
+@prefix ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ifn-pendiente: <https://datos.iepnb.es/kos/sector-publico/medio-ambiente/ifn-pendiente/> .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Taxon
+ifn:Taxon rdf:type owl:Class ;
+          rdfs:comment ""@en ,
+                       ""@es ;
+          rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+          rdfs:label "Taxon"@en ,
+                     "Taxón"@es .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family
+ifn:Family rdf:type owl:Class ;
+           rdfs:subClassOf ifn:Taxon ;
+           rdfs:comment ""@en ,
+                        ""@es ;
+           rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+           rdfs:label "Familia"@es ,
+                      "Family"@en .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Genus
+ifn:Genus rdf:type owl:Class ;
+          rdfs:subClassOf ifn:Taxon ;
+          rdfs:comment ""@en ,
+                       ""@es ;
+          rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+          rdfs:label "Genus"@en ,
+                     "Género"@es .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species
+ifn:Species rdf:type owl:Class ;
+            rdfs:subClassOf ifn:Taxon ;
+            rdfs:comment ""@en ,
+                         ""@es ;
+            rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+            rdfs:label "Especie"@es ,
+                       "Species"@en .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Tree
+ifn:Tree rdf:type owl:Class ;
+         rdfs:subClassOf ifn:Plant ;
+         rdfs:comment "Planta vivaz (que vive más de dos años, de tallo leñoso, que se ramifica a cierta altura del suelo"@es ,
+                      "Woody perennial plant with an elongated stem supporting branches"@en ;
+         rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+         rdfs:label "Tree"@en ,
+                    "Árbol"@es .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Pendiente
+ifn:Pendiente rdf:type owl:Class ;
+              rdfs:subClassOf skos:ConceptScheme ;
+              <http://purl.org/dc/terms/source> "Anexo 16 (Documentador sig)" ;
+              rdfs:comment "Posición con pendiente"@es ,
+                           "Position with gradient"@en ;
+              rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+              rdfs:label "Gradient"@en ,
+                         "Pendiente"@es .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Pendiente1
+ifn-pendiente:1 rdf:type owl:Class ;
+               rdfs:subClassOf ifn:Pendiente ;
+               rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+               rdfs:label "Pendiente 0-3%" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Pendiente2
+ifn-pendiente:2 rdf:type owl:Class ;
+               rdfs:subClassOf ifn:Pendiente ;
+               rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+               rdfs:label "Pendiente 3.01-12%" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Pendiente3
+ifn-pendiente:3 rdf:type owl:Class ;
+               rdfs:subClassOf ifn:Pendiente ;
+               rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+               rdfs:label "Pendiente 12.01-20%" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Pendiente4
+ifn-pendiente:4 rdf:type owl:Class ;
+               rdfs:subClassOf ifn:Pendiente ;
+               rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+               rdfs:label "Pendiente 20.01-35%" .
+
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Pendiente5
+ifn-pendiente:5 rdf:type owl:Class ;
+               rdfs:subClassOf ifn:Pendiente ;
+               rdfs:isDefinedBy <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> ;
+               rdfs:label "Gradient more than 35%"@en ,
+                          "Pendiente más de 35%"@es .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Class1
+ifn:Class1 rdf:type owl:Class ;
+           rdfs:subClassOf ifn:Plantae .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Class2
+ifn:Class2 rdf:type owl:Class ;
+           rdfs:subClassOf ifn:Plantae .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Class1
+ifn:Class1 rdf:type owl:NamedIndividual ,
+                    ifn:Class ;
+           owl:sameAs <http://dbpedia.org/resource/Flowering_plant> ;
+           ifn:hasAcceptedName ifn:AcceptedNameClass1 ;
+           ifn:hasScientificSynonym ifn:ScientificSynonymClass1 .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedNameClass1
+ifn:AcceptedNameClass1 rdf:type owl:NamedIndividual ,
+                                ifn:AcceptedName ;
+                       ifn:name "Angiospermae"@la .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/ScientificSynonymClass1
+ifn:ScientificSynonymClass1 rdf:type owl:NamedIndividual ,
+                                     ifn:ScientificSynonym ;
+                            ifn:name "Magnoliophyta"@la .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Class2
+ifn:Class2 rdf:type owl:NamedIndividual ,
+                    ifn:Class ;
+           owl:sameAs <http://dbpedia.org/resource/Gymnosperm> ;
+           ifn:hasAcceptedName ifn:AcceptedNameClass2 ;
+           ifn:hasScientificSynonym ifn:ScientificSynonymClass2 .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedNameClass2
+ifn:AcceptedNameClass2 rdf:type owl:NamedIndividual ,
+                                ifn:AcceptedName ;
+                       ifn:name "Gymnospermae"@la .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/ScientificSynonymClass2
+ifn:ScientificSynonymClass2 rdf:type owl:NamedIndividual ,
+                                     ifn:ScientificSynonym ;
+                            ifn:name "Acrogymnospermae"@la .

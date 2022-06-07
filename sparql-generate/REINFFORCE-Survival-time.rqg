@@ -1,0 +1,56 @@
+BASE <http://reinfforce.iefc.net/data/>
+
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+PREFIX ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/>
+PREFIX smo:   <http://crossforest.eu/measures/ontology/> 
+
+PREFIX vfo: <http://virtualforests.gsic.uva.es/>
+PREFIX rff: <http://reinfforce.iefc.net/data/>
+
+
+GENERATE { 
+	<arboretum/{?idArboretum}> a vfo:Arboretum ;
+        vfo:hasArboretumProvenance <arbProvenance/{?idArbProv}> .
+
+    <arbProvenance/{?idArbProv}> a vfo:ArboretumProvenance ;
+        vfo:hasProvenance <provenance/{?upov_prov}> ;
+        vfo:isInArboretum <arboretum/{?idArboretum}> ;
+        vfo:hasLastSurvivalRate ?surv_percentNum ;
+        vfo:hasSurvivalRate <survivalRate/{?surv_rate_clean}> .
+    
+    <survivalRate/{?surv_rate}> 
+        a vfo:SurvivalRate , smo:Measure , owl:NamedIndividual ;
+        smo:hasValue ?surv_percentNum ;
+        vfo:hasIntervalTime  <intervalTime/{?years}> .
+
+    <intervalTime/{?years}> 
+        a       vfo:IntervalTime , time:ProperInterval ;
+        time:hasXSDDuration ?duration ;
+        time:hasBeginning <year/{?begin}> ;
+        time:hasEnd <year/{?end}> .
+
+      <year/{?begin}> a time:Instant ;
+                time:inXSDgYear ?year_begin  .
+
+      <year/{?end}> a time:Instant ;
+                time:inXSDgYear ?year_end .
+}
+
+SOURCE <urn:source> AS ?source
+ITERATOR iter:CSV(?source, true, "\"", ";", "\n", "ID_Site", "ID_PROVENANCE", "Species", "Provenance",
+"Survival_percentage", "ID UPOV Prov", "Years", "Begin" , "End") AS ?idArboretum ?idProv ?spReinf_id ?prov ?surv_rate
+?upov_prov ?years ?begin ?end
+WHERE {
+  BIND("{?idArboretum}-{?upov_prov}" as ?idArbProv )
+  BIND(IF(?surv_rate = "NA", ?unbound, ?surv_rate) as ?surv_rate_clean)
+  BIND(IF(?surv_rate = "NA", ?unbound, xsd:decimal(?surv_rate)) as ?surv_percentNum)
+  BIND(xsd:gYear(?begin) as ?year_begin)
+  BIND(xsd:gYear(?end) as ?year_end)
+  BIND(xsd:duration(CONCAT("P" , str(YEAR(?year_end) - YEAR(?year_begin)), "Y")) as ?duration)
+}

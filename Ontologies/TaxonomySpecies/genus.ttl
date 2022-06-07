@@ -1,0 +1,288 @@
+@prefix ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+@prefix vfo: <http://virtualforests.gsic.uva.es/> .
+
+############ From Crossforest ############
+vfo:GenusQUERC rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family12 .
+vfo:GenusQUERC rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusQUERC .
+vfo:AcceptedNameGenusQUERC rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Quercus"@la .
+vfo:GenusQUERC ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Quercus"^^xsd:anyURI ;
+             ifn:acceptedNameWithoutAuthor "Quercus"@la ;
+             ifn:vulgarName "Robles"@es ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Fagaceae/Quercus"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Quercus> ;
+             ifn:vulgarName "Oaks"@en ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Quercus"^^xsd:anyURI .
+
+vfo:GenusFAGUS rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family12 .
+vfo:GenusFAGUS rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusFAGUS .
+vfo:AcceptedNameGenusFAGUS rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Fagus"@la .
+vfo:GenusFAGUS ifn:acceptedNameWithoutAuthor "Fagus"@la ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Beech"^^xsd:anyURI ;
+             ifn:vulgarName "Beechs"@en ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Fagus"^^xsd:anyURI ;
+             ifn:vulgarName "Hayas"@es ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Fagaceae/Fagus"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Beech> .
+vfo:GenusCASTA rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family12 .
+vfo:GenusCASTA rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusCASTA .
+vfo:AcceptedNameGenusCASTA rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Castanea"@la .
+vfo:GenusCASTA ifn:acceptedNameWithoutAuthor "Castanea"@la ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Fagaceae/Castanea"^^xsd:anyURI ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Castanea"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Chestnut> ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Chestnut"^^xsd:anyURI ;
+             ifn:vulgarName "Chestnuts"@en ,
+                            "Castaños"@es .
+
+vfo:GenusCERTN rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family14 .
+vfo:GenusCERTN rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusCERTN .
+vfo:AcceptedNameGenusCERTN rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Ceratonia"@la .
+vfo:GenusCERTN <http://schema.org/sameAs> <http://dbpedia.org/resource/Ceratonia> ;
+             ifn:vulgarName "Algarrobos"@es ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Leguminosae/Ceratonia"^^xsd:anyURI ;
+             ifn:vulgarName "Carobs"@en ;
+             ifn:acceptedNameWithoutAuthor "Ceratonia"@la ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Ceratonia"^^xsd:anyURI ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Ceratonia"^^xsd:anyURI .
+
+vfo:GenusROBIN rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family14 .
+vfo:GenusROBIN rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusROBIN .
+vfo:AcceptedNameGenusROBIN rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Robinia"@la .
+vfo:GenusROBIN ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Robinia"^^xsd:anyURI ;
+             ifn:vulgarName "Robinias"@es ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Robinia> ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Leguminosae/Robinia"^^xsd:anyURI ;
+             ifn:acceptedNameWithoutAuthor "Robinia"@la ;
+             ifn:vulgarName "Locusts"@en ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Robinia"^^xsd:anyURI .
+
+vfo:GenusEUCAL rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family16 .
+vfo:GenusEUCAL rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusEUCAL .
+vfo:AcceptedNameGenusEUCAL rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Eucalyptus"@la .
+vfo:GenusEUCAL ifn:vulgarName "Eucalypts"@en ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Myrtaceae/Eucalyptus"^^xsd:anyURI ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Eucalyptus"^^xsd:anyURI ;
+             ifn:acceptedNameWithoutAuthor "Eucalyptus"@la ;
+             ifn:vulgarName "Eucaliptos"@es ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Eucalyptus> ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Eucalyptus"^^xsd:anyURI .
+
+vfo:GenusACERR rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family17 .
+vfo:GenusACERR rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusACERR .
+vfo:AcceptedNameGenusACERR rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Acer"@la .
+vfo:GenusACERR ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Maple"^^xsd:anyURI ;
+             ifn:vulgarName "Arces"@es ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Sapindaceae/Acer"^^xsd:anyURI ;
+             ifn:vulgarName "Maples"@en ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Maple> ;
+             ifn:acceptedNameWithoutAuthor "Acer"@la ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Acer"^^xsd:anyURI .       
+
+
+vfo:GenusBETUL rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family19 .
+vfo:GenusBETUL rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusBETUL .
+vfo:AcceptedNameGenusBETUL rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Betula"@la .
+vfo:GenusBETUL <http://schema.org/sameAs> <http://dbpedia.org/resource/Betula> ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Betulaceae/Betula"^^xsd:anyURI ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Betula"^^xsd:anyURI ;
+             ifn:vulgarName "Birches"@en ;
+             ifn:acceptedNameWithoutAuthor "Betula"@la ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Betula"^^xsd:anyURI ;
+             ifn:vulgarName "Abedules"@es .
+
+vfo:GenusPINUS rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusPINUS .
+vfo:GenusPINUS rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family21 .
+vfo:AcceptedNameGenusPINUS rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Pinus"@la .
+vfo:GenusPINUS ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Pinus"^^xsd:anyURI ;
+             ifn:vulgarName "Pinos"@es ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/G/Pinaceae/Pinus"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Pinus> ;
+             ifn:vulgarName "Pines"@en ;
+             ifn:acceptedNameWithoutAuthor "Pinus"@la ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pinus"^^xsd:anyURI .
+
+vfo:GenusCEDRU rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusCEDRU .            
+vfo:GenusCEDRU rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family21 .
+vfo:AcceptedNameGenusCEDRU rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Cedrus"@la .
+vfo:GenusCEDRU ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Cedrus"^^xsd:anyURI ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Cedrus"^^xsd:anyURI ;
+             ifn:acceptedNameWithoutAuthor "Cedrus"@la ;
+             ifn:vulgarName "Cedros"@es ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/G/Pinaceae/Cedrus"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Cedrus> ;
+             ifn:vulgarName "Cedars"@en .
+
+vfo:GenusLARIX rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusLARIX .
+vfo:GenusLARIX rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family21 .
+vfo:AcceptedNameGenusLARIX rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Larix"@la .
+vfo:GenusLARIX ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Larix"^^xsd:anyURI ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Larix"^^xsd:anyURI ;
+             ifn:vulgarName "Alerces"@es ,
+                            "Larches"@en ;
+             ifn:acceptedNameWithoutAuthor "Larix"@la ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/G/Pinaceae/Larix"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Larix> .
+
+vfo:GenusPSDTS rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusPSDTS .
+vfo:GenusPSDTS rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family21 .
+vfo:AcceptedNameGenusPSDTS rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Pseudotsuga"@la .
+vfo:GenusPSDTS ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/G/Pinaceae/Pseudotsuga"^^xsd:anyURI ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Pseudotsuga"^^xsd:anyURI ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pseudotsuga"^^xsd:anyURI ;
+             ifn:vulgarName "Douglas-firs"@en ;
+             ifn:acceptedNameWithoutAuthor "Pseudotsuga"@la ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Pseudotsuga> ;
+             ifn:vulgarName "Pinos oregón"@es .
+
+vfo:GenusCUPRE rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusCUPRE .
+vfo:GenusCUPRE rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family22 .
+vfo:AcceptedNameGenusCUPRE rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Cupressus"@la .
+vfo:GenusCUPRE <http://schema.org/sameAs> <http://dbpedia.org/resource/Cupressus> ;
+             ifn:acceptedNameWithoutAuthor "Cupressus"@la ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/G/Cupressaceae/Cupressus"^^xsd:anyURI ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Cupressus"^^xsd:anyURI ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Cupressus"^^xsd:anyURI ;
+             ifn:vulgarName "Cipreses"@es ,
+                            "Cypresses"@en .
+vfo:GenusTHUJA rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+             ifn:hasAcceptedName vfo:AcceptedNameGenusTHUJA .
+vfo:GenusTHUJA rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Family22 .
+vfo:AcceptedNameGenusTHUJA rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Thuja"@la .
+vfo:GenusTHUJA ifn:vulgarName "Thujas"@en ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/G/Cupressaceae/Thuja"^^xsd:anyURI ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Thuja"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Thuja> ;
+             ifn:acceptedNameWithoutAuthor "Thuja"@la ;
+             ifn:vulgarName "Thujas"@es ;
+             ifn:hasWikispeciesPage "https://species.wikimedia.org/wiki/Thuja"^^xsd:anyURI .
+
+############ New ones ############
+vfo:GenusCALOC a owl:class, rdfs:Class, ifn:Genus;
+        rdfs:subClassOf ifn:Family22 ;
+        vfo:hasUPOVCode "CALOC" ;
+        ifn:acceptedNameWithoutAuthor  "Calocedrus"@la ;
+        ifn:hasAcceptedName            vfo:AcceptedNameGenus225 ;
+        ifn:hasThePlantListPage        "http://www.worldfloraonline.org/taxon/wfo-4000006133"^^xsd:anyURI ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Calocedrus"^^xsd:anyURI ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Calocedrus"^^xsd:anyURI ;
+        ifn:vulgarName                 "Incense-cedar"@en , "Calocedrus"@es, "Cèdre"@fr .
+
+vfo:AcceptedNameGenus225
+        a         ifn:AcceptedName ;
+        ifn:name  "Calocedrus"@la .
+
+vfo:GenusCUNNI a owl:class, rdfs:Class, ifn:Genus;
+        rdfs:subClassOf ifn:Family22 ;
+        vfo:hasUPOVCode "CUNNI" ;
+        ifn:acceptedNameWithoutAuthor  "Cunninghamia"@la ;
+        ifn:hasAcceptedName            vfo:AcceptedNameGenusCUNNI ;
+        ifn:hasThePlantListPage        "http://www.worldfloraonline.org/taxon/wfo-4000010046"^^xsd:anyURI ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Cunninghamia"^^xsd:anyURI ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Cunninghamia"^^xsd:anyURI ;
+        ifn:vulgarName                 "Cunninghamia"@en , "Cunninghamia"@es, "Araucaria"@fr .
+
+vfo:AcceptedNameGenusCUNNI
+        a         ifn:AcceptedName ;
+        ifn:name  "Cunninghamia"@la .
+
+vfo:GenusLIQUI a owl:class, rdfs:Class, ifn:Genus;
+        rdfs:subClassOf ifn:Family53 ;
+        vfo:hasUPOVCode "LIQUI" ;
+        ifn:acceptedNameWithoutAuthor  "Liquidambar"@la ;
+        ifn:hasAcceptedName            vfo:AcceptedNameGenusLIQUI ;
+        ifn:hasThePlantListPage        "http://www.worldfloraonline.org/taxon/wfo-4000021930"^^xsd:anyURI ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Liquidambar"^^xsd:anyURI ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Liquidambar"^^xsd:anyURI ;
+        ifn:vulgarName                 "Sweetgum"@en , "Liquidambar"@es, "Liquidambar"@fr .
+
+vfo:AcceptedNameGenusLIQUI
+        a         ifn:AcceptedName ;
+        ifn:name  "Liquidambar"@la .
+
+vfo:GenusSEQUA a owl:class, rdfs:Class, ifn:Genus;
+        rdfs:subClassOf ifn:Family22 ;
+        vfo:hasUPOVCode "SEQUA" ;
+        ifn:acceptedNameWithoutAuthor  "Sequoia"@la ;
+        ifn:hasAcceptedName            vfo:AcceptedNameGenusSEQUA ;
+        ifn:hasThePlantListPage        "http://www.worldfloraonline.org/taxon/wfo-4000035099"^^xsd:anyURI ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Sequoia"^^xsd:anyURI ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Sequoia"^^xsd:anyURI ;
+        ifn:vulgarName                 "Coast Redwood"@en , "Secuoya"@es ,"Séquoia"@fr .
+
+vfo:AcceptedNameGenusSEQUA
+        a         ifn:AcceptedName ;
+        ifn:name  "Sequoia"@la .

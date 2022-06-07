@@ -1,0 +1,18 @@
+BASE <http://virtualforests.gsic.uva.es/>
+
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vfo: <http://virtualforests.gsic.uva.es/> 
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+
+GENERATE { 
+    <{?taxon}{?upov_cod}>  rdfs:subClassOf ?uri_wikidata ;
+                            .
+  }
+  
+  SOURCE <urn:source> AS ?source
+  ITERATOR iter:CSV(?source, true, "\"", ";", "\n", "UPOV Code" , "taxon_del_codigo", "wiki data") AS ?upov_cod ?taxon ?wikidata
+  
+  WHERE {
+    BIND(IRI(?wikidata) as ?uri_wikidata)
+  }
+  

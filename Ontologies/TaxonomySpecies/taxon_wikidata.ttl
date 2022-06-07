@@ -1,0 +1,58 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vfo: <http://virtualforests.gsic.uva.es/> .
+
+vfo:Family53  rdfs:subClassOf  <http://www.wikidata.org/entity/Q131360> .
+
+vfo:GenusCALOC  rdfs:subClassOf  <http://www.wikidata.org/entity/Q765246> .
+vfo:GenusCUNNI  rdfs:subClassOf  <http://www.wikidata.org/entity/Q13056610> .
+vfo:GenusLIQUI  rdfs:subClassOf  <http://www.wikidata.org/entity/Q183543> .
+vfo:GenusSEQUA  rdfs:subClassOf  <http://www.wikidata.org/entity/Q183543> .
+
+vfo:VarietyPINUS_BRU_ELD
+        rdfs:subClassOf  <https://www.wikidata.org/wiki/Q24764435> .
+vfo:SpeciesPSDTS_MEN  rdfs:subClassOf  <http://www.wikidata.org/entity/Q156687> .
+vfo:SpeciesROBIN_PSE  rdfs:subClassOf  <http://www.wikidata.org/entity/Q157417> .
+vfo:SpeciesCALOC_DEC  rdfs:subClassOf  <http://www.wikidata.org/entity/Q1399164> .
+vfo:SubspeciesPINUS_NIG_LAR
+        rdfs:subClassOf  <http://www.wikidata.org/entity/Q3905334> .
+vfo:SpeciesQUERC_SUB  rdfs:subClassOf  <http://www.wikidata.org/entity/Q156137> .
+vfo:SpeciesQUERC_RUB  rdfs:subClassOf  <http://www.wikidata.org/entity/Q147525> .
+vfo:SpeciesCEDRU_ATL  rdfs:subClassOf  <http://www.wikidata.org/entity/Q623489> .
+vfo:HybridEUCAL_GDA  rdfs:subClassOf  <http://www.wikidata.org/entity/Q16467654> .
+vfo:SpeciesPINUS_PNS  rdfs:subClassOf  <http://www.wikidata.org/entity/Q271582> .
+vfo:SpeciesEUCAL_DAL  rdfs:subClassOf  <http://www.wikidata.org/entity/Q159839> .
+vfo:SpeciesCUNNI_LAN  rdfs:subClassOf  <http://www.wikidata.org/entity/Q149115> .
+vfo:SpeciesQUERC_PET  rdfs:subClassOf  <http://www.wikidata.org/entity/Q158608> .
+vfo:SpeciesSEQUA_SEM  rdfs:subClassOf  <http://www.wikidata.org/entity/Q150129> .
+vfo:SpeciesPINUS_SYL  rdfs:subClassOf  <http://www.wikidata.org/entity/Q133128> .
+vfo:SpeciesFAGUS_ORI  rdfs:subClassOf  <http://www.wikidata.org/entity/Q1543749> .
+vfo:SpeciesPINUS_PNA  rdfs:subClassOf  <http://www.wikidata.org/entity/Q106094> .
+vfo:SpeciesCASTA_SAT  rdfs:subClassOf  <http://www.wikidata.org/entity/Q22699> .
+vfo:SpeciesPINUS_TAE  rdfs:subClassOf  <http://www.wikidata.org/entity/Q368248> .
+vfo:VarietyCEDRU_LIB_BRE
+        rdfs:subClassOf  <http://www.wikidata.org/entity/Q26037256> .
+vfo:SpeciesBETUL_PEN  rdfs:subClassOf  <http://www.wikidata.org/entity/Q156895> .
+vfo:SpeciesFAGUS_SYL  rdfs:subClassOf  <http://www.wikidata.org/entity/Q146149> .
+vfo:SpeciesCEDRU_LIB  rdfs:subClassOf  <http://www.wikidata.org/entity/Q61105> .
+vfo:SpeciesPINUS_BRU  rdfs:subClassOf  <http://www.wikidata.org/entity/Q628329> .
+vfo:SpeciesCUPRE_SEM  rdfs:subClassOf  <http://www.wikidata.org/entity/Q147513> .
+vfo:SpeciesEUCAL_GLO  rdfs:subClassOf  <http://www.wikidata.org/entity/Q159528> .
+vfo:SpeciesPINUS_PON  rdfs:subClassOf  <http://www.wikidata.org/entity/Q460523> .
+vfo:SpeciesQUERC_SHU  rdfs:subClassOf  <http://www.wikidata.org/entity/Q4112184> .
+vfo:SpeciesPINUS_NIG  rdfs:subClassOf  <http://www.wikidata.org/entity/Q145954> .
+vfo:SpeciesQUERC_ROT  rdfs:subClassOf  <http://www.wikidata.org/entity/Q220715> .
+vfo:SpeciesLARIX_DEC  rdfs:subClassOf  <http://www.wikidata.org/entity/Q146048> .
+vfo:SpeciesEUCAL_GUN  rdfs:subClassOf  <http://www.wikidata.org/entity/Q163788> .
+vfo:SpeciesCERTN_SIL  rdfs:subClassOf  <http://www.wikidata.org/entity/Q68763> .
+vfo:SpeciesPINUS_CAR  rdfs:subClassOf  <http://www.wikidata.org/entity/Q2900918> .
+vfo:SpeciesPINUS_ELL  rdfs:subClassOf  <http://www.wikidata.org/entity/Q1249109> .
+vfo:SpeciesTHUJA_PLI  rdfs:subClassOf  <http://www.wikidata.org/entity/Q147417> .
+vfo:SpeciesQUERC_ROB  rdfs:subClassOf  <http://www.wikidata.org/entity/Q165145> .
+vfo:SpeciesEUCAL_NIT  rdfs:subClassOf  <http://www.wikidata.org/entity/Q2512644> .
+vfo:SubspeciesPINUS_NIG_SAL
+        rdfs:subClassOf  <http://www.wikidata.org/entity/Q20722203> .
+vfo:SpeciesLIQUI_STY  rdfs:subClassOf  <http://www.wikidata.org/entity/Q469652> .
+vfo:SpeciesPINUS_PEU  rdfs:subClassOf  <http://www.wikidata.org/entity/Q146021> .
+vfo:SpeciesACERR_PSE  rdfs:subClassOf  <http://www.wikidata.org/entity/Q156944> .
+vfo:VarietyPINUS_CAR_HOND
+        rdfs:subClassOf  <http://www.wikidata.org/entity/Q37950446> .

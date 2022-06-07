@@ -1,0 +1,1331 @@
+@prefix vfo: <http://virtualforests.gsic.uva.es/> .
+@prefix rff: <http://reinfforce.iefc.net/data/> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gn: <https://www.geonames.org/ontology#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix schema: <http://schema.org/> .
+
+@prefix ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+@prefix spo: <http://crossforest.eu/position/ontology/> .
+@prefix smo: <http://crossforest.eu/measures/ontology/> .
+@prefix epsg: <http://epsg.w3id.org/data/> .
+@prefix crs: <http://epsg.w3id.org/data/crs/> .
+@prefix unit: <http://crossforest.eu/measures/data/unit/> .
+
+@prefix vfo-country: <http://virtualforests.gsic.uva.es/Country/> .
+
+vfo: a owl:Ontology ;
+    dc:title "Virtual Forests Ontology (VFO) "@en , "Ontología Virtual Forests (VFO)"@es ;
+    dc:abstract """The Virtual Forests Ontology includes all the vocabulary needed to describe Virtual Forests and REINFFORCE datasets using W3C RDF Schema (RDFS) and the Web Ontology Language (OWL). The vocabulary provides data publishers to include detailed metadata about species taxonomy and their different provenances, specialization, arboretum sites, location, climatic conditions, survival and growth rates of trees."""@en ;
+    #rdfs:comment "Ontology in development to publish data of Virtual Forests"@en , "Ontología en desarrollo para publicar datos de Virtual Forests"@es ;
+    owl:versionInfo 0.5 ;
+    owl:priorVersion 0.4 ;
+    #bibo:status "Draft";
+    dc:creator  [ foaf:name "Cristina Mayo Sarmiento" ; foaf:mbox <mailto:cmayo@gsic.uva.es> ] , [ foaf:name "Guillermo Vega-Gorgojo" ; foaf:mbox <mailto:guiveg@gsic.uva.es> ; foaf:homepage <https://www.gsic.uva.es/personal/guiveg>]  ;
+    dc:contributor "Cristóbal Ordóñez, Rémi Borelle, Felipe Bravo, Irene Ruano, José Miguel Giménez, Christophe Orazio, ..." ;
+    rdfs:seeAlso <https://github.com/gsic-emic/VirtualForests> ;
+    #vann:example <https://github.com/Cross-Forest/> ;
+    dcterms:created "2022-02-17"^^xsd:date ;
+    dcterms:modified "2022-05-19"^^xsd:date ;
+    dcterms:issued "2022-05-23"^^xsd:date ; # Date of formal issuance like publication
+    #owl:imports <> ;
+    vann:preferredNamespacePrefix "vfo" . #The preferred namespace prefix to use when using terms from this vocabulary in an XML document.
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+#################################################################
+#    Object Properties
+#################################################################
+
+vfo:hasTaxon rdf:type owl:ObjectProperty ;
+            rdfs:range ifn:Taxon ;
+            rdfs:isDefinedBy vfo: ;
+            rdfs:label  "has taxon"@en, 
+                        "tiene taxón"@es ,
+                        "comme taxon"@fr .
+
+vfo:hasTree rdf:type owl:ObjectProperty ;
+            rdfs:range ifn:Tree ;
+            rdfs:isDefinedBy vfo: ;
+            rdfs:label  "has tree"@en, 
+                        "tiene árbol"@es ,
+                        "comme arbre"@fr .
+
+vfo:hasProvenance rdf:type owl:ObjectProperty ;
+            rdfs:domain vfo:ArboretumProvenance ;
+            rdfs:range vfo:Provenance ;
+            rdfs:isDefinedBy vfo: ;
+            rdfs:label  "has provenance"@en, 
+                        "tiene procedencia"@es ,
+                        "comme provenance"@fr .
+
+vfo:hasArboretumProvenance rdf:type owl:ObjectProperty ;
+            rdfs:range vfo:Provenance ;
+            rdfs:domain vfo:Arboretum ;
+            rdfs:isDefinedBy vfo: ;
+            rdfs:label  "has arboretum provenance"@en, 
+                        "tiene procedencia del arboreto"@es,
+                        "comme provenance de l'arboretum"@fr .
+
+vfo:hasArboretumTaxon rdf:type owl:ObjectProperty ;
+            rdfs:range ifn:Taxon ;
+            rdfs:domain vfo:Arboretum ;
+            rdfs:isDefinedBy vfo: ;
+            rdfs:label  "has arboretum taxon"@en, 
+                        "tiene taxón del arboreto"@es,
+                        "comme taxon de l'arboretum"@fr .
+
+vfo:isInArboretum rdf:type owl:ObjectProperty ;
+            rdfs:range vfo:Arboretum ;
+            rdfs:isDefinedBy vfo: ;
+            rdfs:label  "is in arboretum"@en, 
+                        "está en arboreto"@es,
+                        "si Dans l'arboretum"@fr .
+
+vfo:isInCountry rdf:type owl:ObjectProperty ;
+            rdfs:label  "is in country"@en, 
+                        "está en el país"@es,
+                        "si Dans le pays"@fr.
+
+vfo:isSubregionOf rdf:type owl:ObjectProperty ;
+            rdfs:label  "is subregion of"@en, 
+                        "es subregión de"@es,
+                        "si c'est la sous-région de"@fr.
+
+vfo:hasParentTaxon rdf:type owl:ObjectProperty ;
+            rdfs:range ifn:Taxon ;
+            rdfs:isDefinedBy vfo: ;
+            rdfs:label  "has parent taxon"@en, 
+                        "tiene taxón progenitor"@es ,
+                        "comme Taxon parent"@fr ;
+            rdfs:comment  "It specifies the progenitors of a hybrid"@en, 
+                          "Especifica los progenitores de un híbrido"@es,
+                          "Il spécifie les parents d'un hybride"@fr.
+
+vfo:hasSlope rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf smo:hasMeasure ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "has slope"@en,
+                    "tiene pendiente"@es ,
+                    "comme pente"@fr.
+
+vfo:hasSurvivalRate rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf smo:hasMeasure ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "has survival rate"@en,
+                    "tiene ratio de supervivencia"@es ,
+                    "comme taux de survie"@fr.
+
+vfo:hasAnnualGrowthRate rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf smo:hasMeasure ;
+        rdfs:range vfo:AnnualGrowthRate ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "has annual growth rate"@en,
+                    "tiene ratio de crecimiento anual"@es ,
+                    "comme taux de croissance annuel"@fr ;
+        rdfs:comment  "has annual height increment"@en, 
+                      "tiene incremento anual de altura"@es,
+                      "a un accroissement annuel de la hauteur"@fr .
+
+vfo:hasIntervalTime rdf:type owl:ObjectProperty ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "has interval time"@en,
+                    "tiene intervalo temporal"@es ,
+                    "comme intervalle de temps"@fr.
+
+vfo:hasADI rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf smo:hasMeasure ;
+        rdfs:range vfo:AnnualDrynessIndex ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "has ADI"@en,
+                    "tiene ADI"@es ,
+                    "comme ADI"@fr ;
+        rdfs:comment  "has annual dryness index"@en, 
+                      "tiene índice de aridez anual"@es,
+                      "comme indice d'aridité"@fr.
+
+vfo:hasMeanAnnualTemperature rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf smo:hasMeasure ;
+        rdfs:range vfo:MeanAnnualTemperature ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "has mean annual temperature"@en,
+                    "tiene temperatura media anual"@es ,
+                    "comme moyenne température annuel"@fr .
+
+vfo:hasAnnualPrecipitation rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf smo:hasMeasure ;
+        rdfs:range vfo:AnnualPrecipitation ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "has annual precipitation"@en,
+                    "tiene precipitación anual"@es,
+                    "comme Précipitation annuel"@fr .
+
+vfo:hasGSDD rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf smo:hasMeasure ;
+        rdfs:range vfo:GrowingSeasonDegreeDays ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "has growing season degree days > 5°C"@en,
+                    "tiene grados día de crecimiento > 5°C"@es .
+#################################################################
+#    Data properties
+#################################################################
+
+vfo:hasProvenanceCode rdf:type owl:DatatypeProperty ;
+        rdfs:label  "Provenance code"@en,
+                    "Código de procedencia"@es ,
+                    "Comme code provenance"@fr  .
+
+vfo:hasLastSurvivalRate rdf:type owl:DatatypeProperty ;
+        rdfs:label  "Last survival rate"@en,
+                    "Último ratio de supervivencia"@es ,
+                    "Dernier taux de survie"@fr.
+
+vfo:hasLastAnnualGrowthRateInCentimetersPerYear rdf:type owl:DatatypeProperty ;
+        rdfs:label  "Last annual growth rate in centimeters per year"@en,
+                    "Último ratio de crecimiento anual en centímetros por año"@es,
+                    "Dernier taux de croissance annuel en centimètres par an"@fr ;
+        rdfs:comment  "the latest annual height increment in cm/year"@en, 
+                      "incremento anual de altura en cm/año más reciente"@es ,
+                      "le dernier accroissement annuel de la hauteur en cm/an"@fr .
+
+vfo:hasISO3166-2 rdf:type owl:DatatypeProperty ;
+        rdfs:label  "ISO 3166-2 code"@en,
+                    "Código ISO 3166-2"@es,
+                    "Code ISO 3166-2"@fr  ;
+        rdfs:comment "Código de las principales subdivisiones de los países codificados en ISO 3166-2"@es , "Country subdivision codes from ISO 3166-2"@en ,
+        "Code des principales subdivisions des pays codés en ISO 3166-2"@fr .
+
+vfo:hasLocalName rdf:type owl:DatatypeProperty ;
+        rdfs:label "Local name"@en, "Nombre local"@es , "Nom local"@fr ;
+        rdfs:comment "Local name arboretum site"@en,
+                     "Nombre local del sitio del arboreto"@es ,
+                     "Nom local de l'arboretum"@fr .
+
+vfo:hasUPOVCode rdf:type owl:DatatypeProperty ;
+        rdfs:label  "UPOV code"@en,
+                    "Código UPOV"@es,
+                    "Code UPOV"@fr  ;
+        rdfs:comment "Code system choosen to enhance the usefulness of the forest database by overcoming the problem of synonyms for plant taxa"@en ,
+        "Sistema de codificación que mejora la usabiilidad de la base de datos forestal superando los problemas de colisiones en la taxonomía"@es ,
+        "Système de codes choisi pour améliorer l'utilité de la base de données forestière en surmontant le problème des synonymes pour les taxons végétaux"@fr .
+
+vfo:hasSlopeInDegrees rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf smo:hasMeasureinDegrees ; 
+        rdfs:label  "Slope in degrees"@en,
+                    "Pendiente en grados"@es,
+                    "Pente en degrée"@fr .
+
+vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter rdf:type owl:DatatypeProperty ;
+        rdfs:label  "Last ADI in √°Cd/mm"@en,
+                    "Último ADI en √°Cd/mm"@es ,
+                    "Dernier ADI en √°Cd/mm"@fr ;
+        rdfs:comment  "last numeric value of annual dryness index in √°Cd/mm"@en, 
+                      "valor numérico más reciente del índice de sequedad anual en √°Cd/mm"@es ,
+                      "derniere valeur de l'indice d'aridité en √°Cd/mm"@fr .
+
+vfo:hasLastMeanAnnualTempInDegreesCelsius rdf:type owl:DatatypeProperty ;
+        rdfs:label  "Last mean annual temperature in °C"@en,
+                    "Última temperatura media anual en °C"@es ,
+                    "Derniere moyenne température annuel en °C"@fr ;
+        rdfs:comment  "last numeric value of mean annual temperature in °C"@en, 
+                      "valor numérico más reciente de la temperatura media anual en °C"@es ,
+                      "derniere valeur de la moyenne température annuel en °C"@fr .
+
+vfo:hasLastAnnualPrecipitationInMilimeters rdf:type owl:DatatypeProperty ;
+        rdfs:label  "Last annual precipitation in mm"@en,
+                    "Última precipitación anual en mm"@es ,
+                    "Dernière précipitation annuel en mm"@fr ;
+        rdfs:comment  "last numeric value of annual precipitation in mm"@en, 
+                      "valor numérico más reciente de la precipitación anual en mm"@es ,
+                      "dernière valeur de la précipitation annuel en mm"@fr .
+
+vfo:hasLastGSDDInCelsiusDay rdf:type owl:DatatypeProperty ;
+        rdfs:label  "Last GSDD > 5°C in °Cd"@en,
+                    "Último GSDD > 5°C en °Cd"@es ;
+        rdfs:comment  "last numeric value of growing season degree days above 5°C in °Cd"@en, 
+                      "valor numérico más reciente de grados día de crecimiento por encima de 5°C en °Cd"@es .
+
+#################################################################
+#    Classes
+#################################################################
+
+vfo:Arboretum rdf:type owl:Class ;
+        rdfs:subClassOf spo:SpatialEntity ;
+        rdfs:comment "Jardín botánico o parcela de terreno con diferentes especies"@es , "Botanical garden or plot of land with different species"@en ,  "Jardin botanique ou parcelle de terrain avec différentes espèces"@fr ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Arboretum"@en ,
+                    "Arboreto"@es ,
+                    "Arboretum"@fr .
+
+vfo:AnnualGrowthRate rdf:type owl:Class ;
+        rdfs:subClassOf smo:Measure ;
+        rdfs:comment "The growth rate refers to annual height increment"@en , "El ratio de crecicimiento se refiere al incremento anual de altura"@es ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Annual growth rate"@en ,
+                    "Ratio de crecimiento anual"@es ,
+                    "Taux de croissance annuel"@fr .
+
+vfo:SurvivalRate rdf:type owl:Class ;
+        rdfs:subClassOf smo:Measure ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Survival rate"@en ,
+                    "Ratio de supervivencia"@es,
+                    "Taux de survie"@fr .
+
+vfo:Slope rdf:type owl:Class ;
+        rdfs:subClassOf ifn:Pendiente ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Slope"@en ,
+                    "Pendiente"@es ,
+                    "Pente"@fr .
+
+vfo:Provenance rdf:type owl:Class ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Provenance"@en ,
+                    "Procedencia"@es ,
+                    "Provenance"@fr .
+
+vfo:ArboretumProvenance rdf:type owl:Class ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Arboretum provenance"@en ,
+                    "Procedencia del arboreto"@es ,
+                    "Provenance de l'arboretum"@fr .
+
+vfo:ArboretumTaxon rdf:type owl:Class ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Arboretum taxon"@en ,
+                    "Taxón del arboreto"@es ,
+                    "Taxon dans l'arboretum"@fr .
+
+vfo:Country rdf:type owl:Class ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Country"@en ,
+                    "País"@es ,
+                    "Pays"@fr .
+
+vfo:CountrySubdivision rdf:type owl:Class ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Country subdivision"@es ,
+                    "Subdivisión de país"@es ,
+                    "Région / Département"@fr .
+
+vfo:Subspecies rdf:type owl:Class ;
+        rdfs:subClassOf ifn:Taxon ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Subspecies"@en ,
+                    "Subespecie"@es ,
+                    "Sous-espèce"@fr .
+
+vfo:Hybrid rdf:type owl:Class ;
+        rdfs:subClassOf ifn:Taxon , ifn:Species ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Hybrid"@en ,
+                    "Híbrido"@es,
+                    "Hybride"@fr .
+
+vfo:Variety rdf:type owl:Class ;
+        rdfs:subClassOf ifn:Taxon ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Variety"@en ,
+                    "Variedad"@es ,
+                    "Variété"@fr .
+
+vfo:IntervalTime rdf:type owl:Class ;
+        rdfs:comment ""@es , ""@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Interval time"@en ,
+                    "Intervalo temporal"@es ,
+                    "Intervalle de Temps"@fr .
+
+vfo:AnnualDrynessIndex rdf:type owl:Class ;
+        rdfs:subClassOf smo:Measure ;
+        rdfs:comment "El índice de aridez anual se calcula como la raíz cuadrada de la suma de los valores de temperatura en grados °C por encima de 5°C para cada día del año y estación de crecimiento divido por la precipitación anual. Las unidades son √°Cd/mm."@es , "Annual Dryness Index is calculated as the square root of the sum of °C above 5°C per day for each year and growing season divided by annual precipitation. The units are √°Cd/mm."@en , "Indicateurs quantitatif du degré de sècheresse pour une région précise. Cet indice prend en compte la Température, la pluviométrie et le degree d'évaporation"@fr ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Annual Dryness Index (ADI)"@en ,
+                    "Índice de aridez anual (ADI)"@es ,
+                    "Indice de Sècheress Annuel / Inddice d'aridité"@fr.
+
+vfo:MeanAnnualTemperature rdf:type owl:Class ;
+        rdfs:subClassOf smo:Measure ;
+        rdfs:comment "Temperatura media anual en °C"@es , "Mean annual temperature in °C"@en , "Moyenne température annuel en °C"@fr ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Mean annual temperature"@en ,
+                    "Temperatura media anual"@es ,
+                    "Moyenne température annuel"@fr .
+
+vfo:AnnualPrecipitation rdf:type owl:Class ;
+        rdfs:subClassOf smo:Measure ;
+        rdfs:comment "Precipitación anual en mm"@es , "Annual precipitation in mm"@en ,"Précipitation Annuel en mm"@fr ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Annual precipitation"@en ,
+                    "Precipitación anual"@es ,
+                    "Précipitation Annuel"@fr .
+
+vfo:GrowingSeasonDegreeDays rdf:type owl:Class ;
+        rdfs:subClassOf smo:Measure ;
+        rdfs:comment "Grados día de crecimiento por encima de 5°C en °Cd"@es , "Growing season degree days above 5°C in °Cd"@en ;
+        rdfs:isDefinedBy vfo: ;
+        rdfs:label  "Growing season degree days > 5°C"@en ,
+                    "Grados día de crecimiento > 5°C"@es .
+
+#################################################################
+#    Individuals
+#################################################################
+
+vfo-country:GB rdf:type owl:NamedIndividual ,
+                    vfo:Country ;
+            gn:countryCode "GB" ;
+            rdfs:label "Great Britain"@en ,
+                      "Gran Bretaña"@es ,
+                      "Grande-Bretagne"@fr .
+                      
+
+vfo-country:ES rdf:type owl:NamedIndividual ,
+                    vfo:Country ;
+            gn:countryCode "ES" ;
+            rdfs:label "Spain"@en ,
+                      "España"@es ,
+                      "Espagne"@fr .      
+
+vfo-country:PT rdf:type owl:NamedIndividual ,
+                    vfo:Country ;
+            gn:countryCode "PT" ;
+            rdfs:label "Portugal"@es ,
+                      "Portugal"@en ,
+                      "Portugal"@fr .  
+
+vfo-country:FR rdf:type owl:NamedIndividual ,
+                    vfo:Country ;
+            gn:countryCode "FR" ;
+            rdfs:label "France"@en ,
+                      "Francia"@es ,
+                      "France"@fr .  
+
+vfo-country:GB-ENG rdf:type owl:NamedIndividual ,
+                    vfo:CountrySubdivision ;
+            gn:countryCode "GB" ;
+            vfo:isSubregionOf vfo-country:GB ;
+            vfo:hasISO3166-2 "GB-ENG";
+            rdfs:label "England"@en ,
+                      "Inglaterra"@es ,
+                      "Angleterre"@fr .  
+
+vfo-country:GB-SCT rdf:type owl:NamedIndividual ,
+                    vfo:CountrySubdivision ;
+            gn:countryCode "GB" ;
+            vfo:isSubregionOf vfo-country:GB ;
+            vfo:hasISO3166-2 "GB-SCT" ;
+            rdfs:label "Escocia"@es ,
+                      "Scotland"@en ,
+                      "Ecosse"@fr .  
+
+vfo-country:GB-WLS rdf:type owl:NamedIndividual ,
+                    vfo:CountrySubdivision ;
+            gn:countryCode "GB" ;
+            vfo:isSubregionOf vfo-country:GB ;
+            vfo:hasISO3166-2 "GB-WLS" ;
+            rdfs:label "Gales"@es ,
+                       "Wales"@en ,
+                       "Pays de Galles"@fr.  
+#################################################################
+#    Taxonomy of species
+#################################################################
+
+# Families
+vfo:Family53 rdf:type owl:Class ;
+        rdfs:subClassOf ifn:Class1 .
+
+vfo:AcceptedNameFamily53 rdf:type owl:NamedIndividual ,  ifn:AcceptedName ;
+        ifn:name  "Altingiaceae"@la .
+
+vfo:Family53 rdf:type owl:NamedIndividual ,
+                      ifn:Family ;
+             owl:sameAs <http://dbpedia.org/resource/Altingiaceae> ;
+             ifn:hasAcceptedName vfo:AcceptedNameFamily53 .
+
+vfo:Family53 ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-7000000016"^^xsd:anyURI ;
+        schema:sameAs  <http://dbpedia.org/resource/Altingiaceae> ;
+        ifn:vulgarName "Sweet gums"@en , "Altingiaceas"@es , "Altingiaceae"@fr ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Altingiaceae"^^xsd:anyURI ;
+        ifn:acceptedNameWithoutAuthor  "Altingiaceae"@la ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Altingiaceae"^^xsd:anyURI .
+
+# Genus
+vfo:GenusCALOC rdf:type owl:Class ;
+        rdfs:subClassOf ifn:Family22 .
+
+vfo:AcceptedNameGenus225 rdf:type owl:NamedIndividual ,  ifn:AcceptedName ;
+        ifn:name  "Calocedrus"@la .
+
+vfo:GenusCALOC rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+        vfo:hasUPOVCode "CALOC" ;
+        owl:sameAs <http://dbpedia.org/resource/Calocedrus> ;
+        ifn:hasAcceptedName vfo:AcceptedNameGenus225 .
+
+vfo:GenusCALOC ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-4000006133"^^xsd:anyURI ;
+        schema:sameAs  <http://dbpedia.org/resource/Calocedrus>;
+        ifn:vulgarName                 "Incense-cedar"@en , "Calocedrus"@es , "Cèdre"@fr ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Calocedrus"^^xsd:anyURI ;
+        ifn:acceptedNameWithoutAuthor  "Altingiaceae"@la ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Calocedrus"^^xsd:anyURI .
+
+vfo:GenusCUNNI rdf:type owl:Class ;
+        rdfs:subClassOf ifn:Family22 .
+
+vfo:AcceptedNameGenusCUNNI rdf:type owl:NamedIndividual ,  ifn:AcceptedName ;
+        ifn:name  "Cunninghamia"@la .
+
+vfo:GenusCUNNI rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+        vfo:hasUPOVCode "CUNNI" ;
+        owl:sameAs <http://dbpedia.org/resource/Cunninghamia> ;
+        ifn:hasAcceptedName vfo:AcceptedNameGenusCUNNI .
+
+vfo:GenusCUNNI ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-4000010046"^^xsd:anyURI ;
+        schema:sameAs  <http://dbpedia.org/resource/Cunninghamia>;
+        ifn:vulgarName                 "Cunninghamia"@en , "Cunninghamia"@es , "Araucaria"@fr ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Cunninghamia"^^xsd:anyURI ;
+        ifn:acceptedNameWithoutAuthor  "Cunninghamia"@la ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Cunninghamia"^^xsd:anyURI .
+
+vfo:GenusLIQUI rdf:type owl:Class ;
+        rdfs:subClassOf vfo:Family53 .
+
+vfo:AcceptedNameGenusLIQUI rdf:type owl:NamedIndividual ,  ifn:AcceptedName ;
+        ifn:name  "Liquidambar"@la .
+
+vfo:GenusLIQUI rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+        vfo:hasUPOVCode "LIQUI" ;
+        owl:sameAs <http://dbpedia.org/resource/Liquidambar> ;
+        ifn:hasAcceptedName vfo:AcceptedNameGenusLIQUI .
+
+vfo:GenusLIQUI ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-4000010046"^^xsd:anyURI ;
+        schema:sameAs  <http://dbpedia.org/resource/Liquidambar>;
+        ifn:vulgarName                 "Sweetgum"@en , "Liquidambar"@es , "Liquidambar"@fr ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Liquidambar"^^xsd:anyURI ;
+        ifn:acceptedNameWithoutAuthor  "Liquidambar"@la ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Liquidambar"^^xsd:anyURI .
+
+vfo:GenusSEQUA rdf:type owl:Class ;
+        rdfs:subClassOf ifn:Family22 .
+
+vfo:AcceptedNameGenusSEQUA rdf:type owl:NamedIndividual ,  ifn:AcceptedName ;
+        ifn:name  "Sequoia"@la .
+
+vfo:GenusSEQUA rdf:type owl:NamedIndividual ,
+                      ifn:Genus ;
+        vfo:hasUPOVCode "SEQUA" ;
+        owl:sameAs <http://dbpedia.org/resource/Sequoia> ;
+        ifn:hasAcceptedName vfo:AcceptedNameGenusSEQUA .
+
+vfo:GenusSEQUA ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-4000035099"^^xsd:anyURI ;
+        schema:sameAs  <http://dbpedia.org/resource/Sequoia>;
+        ifn:vulgarName                 "Coast Redwood"@en , "Secuoya"@es ,"Séquoia"@fr ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Sequoia"^^xsd:anyURI ;
+        ifn:acceptedNameWithoutAuthor  "Sequoia"@la ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Sequoia"^^xsd:anyURI .
+
+
+#vfo:GenusCALOC owl:sameAs vfo:Genus225. #Individuals
+#vfo:GenusCALOC owl:equivalentClass vfo:Genus225. #Classes
+
+#vfo:GenusCUNNI owl:sameAs vfo:Genus226. #Individuals
+#vfo:GenusCUNNI owl:equivalentClass vfo:Genus226. #Classes
+
+#vfo:GenusLIQUI owl:sameAs vfo:Genus531. #Individuals
+#vfo:GenusLIQUI owl:equivalentClass vfo:Genus531. #Classes
+
+#vfo:GenusSEQUA owl:sameAs vfo:Genus227. #Individuals
+#vfo:GenusSEQUA owl:equivalentClass vfo:Genus227. #Classes
+
+# Lower level taxon
+vfo:AcceptedNameSpeciesFAGUS_ORI
+  a <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedName>, owl:NamedIndividual ;
+  ifn:author "Lipsky" ;
+  ifn:name "Fagus orientalis"@la .
+
+vfo:AcceptedNameSpeciesPINUS_PNA
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Pinus pinea"@la .
+
+vfo:AcceptedNameSpeciesCASTA_SAT
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Mill." ;
+  ifn:name "Castanea sativa"@la .
+
+vfo:VarietyPINUS_BRU_ELD
+  a vfo:Variety, rdfs:Class, owl:NamedIndividual, owl:Class ;
+  rdfs:subClassOf <https://www.wikidata.org/wiki/Q24764435>, vfo:SpeciesPINUS_BRU , vfo:GenusPINUS ;
+  vfo:hasUPOVCode "PINUS_BRU_ELD" ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_brutia_subsp._eldarica"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus brutia var. eldarica (Medw.) Silba"@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus brutia var. eldarica"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameVarietyPINUS_BRU_ELD ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000482302"^^xsd:anyURI ;
+  ifn:vulgarName "Afghan pine"@en, "Pin de Turquie eldarica"@fr, "Pino de Calabria"@es .
+
+vfo:AcceptedNameVarietyCEDRU_LIB_BRE
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Hook.f." ;
+  ifn:name "Cedrus libani var. brevifolia"@la .
+
+vfo:AcceptedNameSpeciesPINUS_TAE
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Pinus taeda"@la .
+
+vfo:SpeciesPSDTS_MEN
+  a ifn:Species, owl:NamedIndividual, owl:Class, rdfs:Class ;
+  rdfs:subClassOf vfo:GenusPSDTS, <http://purl.bioontology.org/ontology/NCBITAXON/3357>, <http://www.wikidata.org/entity/Q156687> ;
+  vfo:hasUPOVCode "PSDTS_MEN" ;
+  owl:sameAs <http://dbpedia.org/resource/Douglas_fir>, ifn:Species34 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pseudotsuga_menziesii"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pseudotsuga menziesii (Mirb.) Franco"@la ;
+  ifn:acceptedNameWithoutAuthor "Pseudotsuga menziesii"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPSDTS_MEN ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000478194"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Douglas_fir"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Pseudotsuga douglasii"@la ;
+  ifn:vulgarName "Douglas-fir"@en, "Sapin de Douglas"@fr, "Seudotsuga"@es .
+
+vfo:SpeciesROBIN_PSE
+  a owl:NamedIndividual, ifn:Species, owl:Class, rdfs:Class ;
+  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/35938>, vfo:GenusROBIN, <http://www.wikidata.org/entity/Q157417> ;
+  vfo:hasUPOVCode "ROBIN_PSE" ;
+  owl:sameAs <http://dbpedia.org/resource/Robinia_pseudoacacia>, ifn:Species92 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Robinia_pseudoacacia"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Robinia pseudoacacia L."@la ;
+  ifn:acceptedNameWithoutAuthor "Robinia pseudoacacia"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesROBIN_PSE ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000213931"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Robinia_pseudoacacia"^^xsd:anyURI ;
+  ifn:vulgarName "Black locust"@en, "Robinier faux-acacia"@fr, "Acacia robinia"@es .
+
+vfo:SpeciesCALOC_DEC
+  a owl:Class, ifn:Species, rdfs:Class, owl:NamedIndividual ;
+  rdfs:subClassOf vfo:GenusCALOC, <http://www.wikidata.org/entity/Q1399164>, <http://purl.bioontology.org/ontology/NCBITAXON/13387> ;
+  vfo:hasUPOVCode "CALOC_DEC" ;
+  owl:sameAs <http://dbpedia.org/resource/Calocedrus_decurrens> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Calocedrus_decurrens"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Calocedrus decurrens (Torr.) Florin"@la ;
+  ifn:acceptedNameWithoutAuthor "Calocedrus decurrens"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesCALOC_DEC ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000580852"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Calocedrus_decurrens"^^xsd:anyURI ;
+  ifn:vulgarName "California Incense-cedar"@en, "Cèdre a encens"@fr, "Calocèdre"@fr, "Cedro de incienso"@es .
+
+vfo:SubspeciesPINUS_NIG_LAR
+  a owl:Class, owl:NamedIndividual, rdfs:Class, vfo:Subspecies ;
+  rdfs:subClassOf vfo:SpeciesPINUS_NIG, vfo:GenusPINUS, <http://www.wikidata.org/entity/Q3905334> ;
+  vfo:hasUPOVCode "PINUS_NIG_LAR" ;
+  ifn:acceptedNameWithAuthor "Pinus nigra subsp. laricio Maire"@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus nigra subsp. laricio"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSubspeciesPINUS_NIG_LAR ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000736688"^^xsd:anyURI ;
+  ifn:vulgarName "Corsican pine"@en, "Pin de Corse"@fr, "Pino corso"@es .
+
+vfo:SpeciesQUERC_SUB
+  a ifn:Species, rdfs:Class, owl:Class, owl:NamedIndividual ;
+  rdfs:subClassOf vfo:GenusQUERC, <http://purl.bioontology.org/ontology/NCBITAXON/58331>, <http://www.wikidata.org/entity/Q156137> ;
+  vfo:hasUPOVCode "QUERC_SUB" ;
+  owl:sameAs ifn:Species46, <http://dbpedia.org/resource/Quercus_suber> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Quercus_suber"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Quercus suber L."@la ;
+  ifn:acceptedNameWithoutAuthor "Quercus suber"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesQUERC_SUB ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000293451"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Quercus_suber"^^xsd:anyURI ;
+  ifn:vulgarName "Cork-oak"@en, "Chêne-liège"@fr, "Alcornoque"@es .
+
+vfo:AcceptedNameSubspeciesPINUS_NIG_SAL
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(Dunal) Franco" ;
+  ifn:name "Pinus nigra subsp. salzmannii"@la .
+
+vfo:AcceptedNameSpeciesBETUL_PEN
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Roth" ;
+  ifn:name "Betula pendula"@la .
+
+vfo:SpeciesQUERC_RUB
+  a owl:NamedIndividual, rdfs:Class, ifn:Species, owl:Class ;
+  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/3512>, vfo:GenusQUERC, <http://www.wikidata.org/entity/Q147525> ;
+  vfo:hasUPOVCode "QUERC_RUB" ;
+  owl:sameAs <http://dbpedia.org/resource/Quercus_rubra>, ifn:Species48 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Quercus_rubra"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Quercus rubra L."@la ;
+  ifn:acceptedNameWithoutAuthor "Quercus rubra"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesQUERC_RUB ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000293451"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Quercus_rubra"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Quercus borealis"@la ;
+  ifn:vulgarName "Northern red oak"@en, "Champion oak"@en, "Chêne rouge d'Amérique"@fr, "Roble americano"@es .
+
+vfo:AcceptedNameSpeciesFAGUS_SYL
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Fagus sylvatica"@la .
+
+vfo:AcceptedNameSpeciesCEDRU_LIB
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "A.Rich." ;
+  ifn:name "Cedrus libani"@la .
+
+vfo:AcceptedNameSpeciesPINUS_BRU
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Ten." ;
+  ifn:name "Pinus brutia"@la .
+
+vfo:SpeciesCEDRU_ATL
+  a owl:Class, owl:NamedIndividual, rdfs:Class, ifn:Species ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q623489>, <http://purl.bioontology.org/ontology/NCBITAXON/123597>, vfo:GenusCEDRU ;
+  vfo:hasUPOVCode "CEDRU_ATL" ;
+  owl:sameAs <http://dbpedia.org/resource/Cedrus_atlantica>, ifn:Species17 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Cedrus_atlantica"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Cedrus atlantica (Endl.) Manetti ex Carrière"@la ;
+  ifn:acceptedNameWithoutAuthor "Cedrus atlantica"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesCEDRU_ATL ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000592525"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Cedrus_atlantica"^^xsd:anyURI ;
+  ifn:vulgarName "Cedar"@en, "Cèdre de l'Atlas"@fr, "Cedro"@es .
+
+vfo:HybridEUCAL_GDA
+  a owl:Class, vfo:Hybrid, rdfs:Class, owl:NamedIndividual ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q16467654>, vfo:GenusEUCAL ;
+  vfo:hasParentTaxon vfo:SpeciesEUCAL_GUN, vfo:SpeciesEUCAL_DAL ;
+  vfo:hasUPOVCode "EUCAL_GDA" ;
+  ifn:acceptedNameWithoutAuthor "Eucalyptus gunii x Eucalyptus dalrympleana"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameHybridEUCAL_GDA ;
+  ifn:vulgarName "Gundal gum"@en, "Eucalyptus gundal"@fr, "Eucalipto gundal"@es .
+
+vfo:SpeciesPINUS_PNS
+  a ifn:Species, owl:Class, owl:NamedIndividual, rdfs:Class ;
+  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/71647>, <http://www.wikidata.org/entity/Q271582>, vfo:GenusPINUS ;
+  vfo:hasUPOVCode "PINUS_PNS" ;
+  owl:sameAs ifn:Species26, <http://dbpedia.org/resource/Pinus_pinaster> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_pinaster"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus pinaster Aiton"@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus pinaster"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_PNS ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000481910"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pinus_pinaster"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Pinus maritima"@la ;
+  ifn:vulgarName "Cluster pine"@en, "Pin des Landes"@fr, "Pin maritime"@fr, "Pino pináster"@es .
+
+vfo:SpeciesEUCAL_DAL
+  a ifn:Species, owl:Class, owl:NamedIndividual, rdfs:Class ;
+  rdfs:subClassOf vfo:GenusEUCAL, <http://purl.bioontology.org/ontology/NCBITAXON/87668>, <http://www.wikidata.org/entity/Q159839> ;
+  vfo:hasUPOVCode "EUCAL_DAL" ;
+  owl:sameAs <http://dbpedia.org/resource/Eucalyptus_dalrympleana> ;
+  ifn:WikispeciesPage "https://www.wikidata.org/wiki/Q159839"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Eucalyptus dalrympleana Maiden"@la ;
+  ifn:acceptedNameWithoutAuthor "Eucalyptus dalrympleana"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesEUCAL_DAL ;
+  ifn:hasThePlantListPage "https://wfoplantlist.org/plant-list/taxon/wfo-0000954771-2021-12"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Eucalyptus_dalrympleana"^^xsd:anyURI ;
+  ifn:vulgarName "White gum"@en, "Mountain white gum"@en, "Eucalyptus blanc des montagnes"@fr, "Eucalipto blanco de montaña"@es .
+
+vfo:SpeciesCUNNI_LAN
+  a owl:NamedIndividual, rdfs:Class, ifn:Species, owl:Class ;
+  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/28977>, <http://www.wikidata.org/entity/Q149115>, vfo:GenusCUNNI ;
+  vfo:hasUPOVCode "CUNNI_LAN" ;
+  owl:sameAs <http://dbpedia.org/resource/Cunninghamia_lanceolata> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Cunninghamia_lanceolata"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Cunninghamia lanceolata (Lamb.) Hook."@la ;
+  ifn:acceptedNameWithoutAuthor "Cunninghamia lanceolata"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesCUNNI_LAN ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000629338"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Cunninghamia_lanceolata"^^xsd:anyURI ;
+  ifn:vulgarName "Chinese Fir"@en, "Araucaria de Chine"@fr, "Cunninghamia"@es .
+
+vfo:AcceptedNameVarietyPINUS_CAR_HOND
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(Sénécl.) W.H.Barrett & Golfari" ;
+  ifn:name "Pinus caribaea var. hondurensis"@la .
+
+vfo:AcceptedNameSpeciesEUCAL_GLO
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Labill." ;
+  ifn:name "Eucalyptus globulus"@la .
+
+vfo:AcceptedNameSpeciesPINUS_PON
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Douglas ex C.Lawson" ;
+  ifn:name "Pinus ponderosa"@la .
+
+vfo:AcceptedNameSpeciesQUERC_SHU
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Buckley" ;
+  ifn:name "Quercus shumardii"@la .
+
+vfo:AcceptedNameSpeciesPINUS_NIG
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "J.F.Arnold" ;
+  ifn:name "Pinus nigra"@la .
+
+vfo:SpeciesQUERC_PET
+  a ifn:Species, rdfs:Class, owl:Class, owl:NamedIndividual ;
+  rdfs:subClassOf vfo:GenusQUERC, <http://purl.bioontology.org/ontology/NCBITAXON/38865>, <http://www.wikidata.org/entity/Q158608> ;
+  vfo:hasUPOVCode "QUERC_PET" ;
+  owl:sameAs ifn:Species42, <http://dbpedia.org/resource/Quercus_petraea> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Quercus_petraea"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Quercus petraea (Matt.) Liebl."@la ;
+  ifn:acceptedNameWithoutAuthor "Quercus petraea"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesQUERC_PET ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000292459"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Quercus_petraea"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Quercus petraea subsp. petraea"@la ;
+  ifn:vulgarName "Durmast oak"@en, "Irish Oak"@en, "Cornish oak"@en, "Sessile oak"@en, "Chêne rouvre"@fr, "Chêne sessile"@fr, "Roble montano"@es .
+
+vfo:AcceptedNameSubspeciesPINUS_NIG_LAR
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Maire" ;
+  ifn:name "Pinus nigra subsp. laricio"@la .
+
+vfo:AcceptedNameSpeciesQUERC_ROT
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Lam." ;
+  ifn:name "Quercus rotundifolia"@la .
+
+vfo:AcceptedNameSpeciesLARIX_DEC
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Mill." ;
+  ifn:name "Larix decidua"@la .
+
+vfo:SpeciesSEQUA_SEM
+  a ifn:Species, rdfs:Class, owl:NamedIndividual, owl:Class ;
+  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/28980>, vfo:GenusSEQUA, <http://www.wikidata.org/entity/Q150129> ;
+  vfo:hasUPOVCode "SEQUA_SEM" ;
+  owl:sameAs <http://dbpedia.org/resource/Sequoia_sempervirens> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Sequoia_sempervirens"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Sequoia sempervirens (D.Don) Endl."@la ;
+  ifn:acceptedNameWithoutAuthor "Sequoia sempervirens"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesSEQUA_SEM ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000437871"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Sequoia_sempervirens"^^xsd:anyURI ;
+  ifn:vulgarName "Coast redwood"@en, "Séquoia à feuilles d'if"@fr, "Secuoya"@es .
+
+vfo:SpeciesPINUS_SYL
+  a owl:Class, ifn:Species, rdfs:Class, owl:NamedIndividual ;
+  rdfs:subClassOf vfo:GenusPINUS, <http://www.wikidata.org/entity/Q133128>, <http://purl.bioontology.org/ontology/NCBITAXON/3349> ;
+  vfo:hasUPOVCode "PINUS_SYL" ;
+  owl:sameAs <http://dbpedia.org/resource/Scots_pine>, ifn:Species21 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_sylvestris"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus sylvestris L."@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus sylvestris"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_SYL ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000481648"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Scots_pine"^^xsd:anyURI ;
+  ifn:vulgarName "Scots pine"@en, "Pin sylvestre"@fr, "Pino silvestre"@es .
+
+vfo:AcceptedNameSpeciesEUCAL_GUN
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Hook.f." ;
+  ifn:name "Eucalyptus gunnii"@la .
+
+vfo:AcceptedNameSpeciesCERTN_SIL
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Ceratonia siliqua"@la .
+
+vfo:AcceptedNameSpeciesPINUS_CAR
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Morelet" ;
+  ifn:name "Pinus caribaea"@la .
+
+vfo:SpeciesFAGUS_ORI
+  a owl:NamedIndividual, ifn:Species, rdfs:Class, owl:Class ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q1543749>, vfo:GenusFAGUS, <http://purl.bioontology.org/ontology/NCBITAXON/196626> ;
+  vfo:hasUPOVCode "FAGUS_ORI" ;
+  owl:sameAs <http://dbpedia.org/resource/Fagus_orientalis> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Fagus_orientalis"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Fagus orientalis Lipsky"@la ;
+  ifn:acceptedNameWithoutAuthor "Fagus orientalis"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesFAGUS_ORI ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000966486"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Fagus_orientalis"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Fagus sylvatica subsp. orientalis"@la ;
+  ifn:vulgarName "Oriental Beech"@en, "Hêtre commun Orientale"@fr, "Haya oriental"@es .
+
+vfo:AcceptedNameSpeciesPINUS_ELL
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Engelm." ;
+  ifn:name "Pinus elliottii"@la .
+
+vfo:SpeciesPINUS_PNA
+  a rdfs:Class, ifn:Species, owl:Class, owl:NamedIndividual ;
+  rdfs:subClassOf vfo:GenusPINUS, <http://purl.bioontology.org/ontology/NCBITAXON/3346>, <http://www.wikidata.org/entity/Q106094> ;
+  vfo:hasUPOVCode "PINUS_PNA" ;
+  owl:sameAs ifn:Species23, <http://dbpedia.org/resource/Stone_pine> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_pinea"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus pinea L."@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus pinea"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_PNA ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000481895"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Stone_pine"^^xsd:anyURI ;
+  ifn:vulgarName "Stone pine"@en, "Pin parasol"@fr, "Pino piñonero"@es .
+
+vfo:SpeciesCASTA_SAT
+  a owl:Class, owl:NamedIndividual, rdfs:Class, ifn:Species ;
+  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/21020>, vfo:GenusCASTA, <http://www.wikidata.org/entity/Q22699> ;
+  vfo:hasUPOVCode "CASTA_SAT" ;
+  owl:sameAs ifn:Species72, <http://dbpedia.org/resource/Castanea_sativa> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Castanea_sativa"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Castanea sativa Mill."@la ;
+  ifn:acceptedNameWithoutAuthor "Castanea sativa"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesCASTA_SAT ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000812271"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Castanea_sativa"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Castanea vesca"@la ;
+  ifn:vulgarName "Sweet chestnut"@en, "Châtaignier commun"@fr, "Castaño"@es .
+
+vfo:SpeciesPINUS_TAE
+  a owl:NamedIndividual, rdfs:Class, owl:Class, ifn:Species ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q368248>, <http://purl.bioontology.org/ontology/NCBITAXON/3352>, vfo:GenusPINUS ;
+  vfo:hasUPOVCode "PINUS_TAE" ;
+  owl:sameAs <http://dbpedia.org/resource/Pinus_taeda> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_taeda"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus taeda L."@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus taeda"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_TAE ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000481652"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pinus_taeda"^^xsd:anyURI ;
+  ifn:vulgarName "Loblolly Pine"@en, "Pin taeda"@fr, "Pino taeda"@es .
+
+vfo:AcceptedNameSpeciesROBIN_PSE
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Robinia pseudoacacia"@la .
+
+vfo:AcceptedNameSpeciesTHUJA_PLI
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Donn ex D.Don" ;
+  ifn:name "Thuja plicata"@la .
+
+vfo:VarietyCEDRU_LIB_BRE
+  a rdfs:Class, owl:NamedIndividual, owl:Class, vfo:Variety ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q26037256>, vfo:GenusCEDRU, <http://purl.bioontology.org/ontology/NCBITAXON/400568>, vfo:SpeciesCEDRU_LIB ;
+  vfo:hasUPOVCode "CEDRU_LIB_BRE" ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Cedrus_libani_var._brevifolia"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Cedrus libani var. brevifolia Hook.f."@la ;
+  ifn:acceptedNameWithoutAuthor "Cedrus libani var. brevifolia"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameVarietyCEDRU_LIB_BRE ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000592541"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Cedrus_brevifolia"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Cedrus libani subsp. brevifolia"@la ;
+  ifn:vulgarName "Cyprus cedar"@en, "Le cèdre de Chypre"@fr, "Cedro de Chipre"@es .
+
+vfo:AcceptedNameSpeciesQUERC_ROB
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Quercus robur"@la .
+
+vfo:AcceptedNameSpeciesEUCAL_NIT
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(H.Deane & Maiden) Maiden" ;
+  ifn:name "Eucalyptus nitens"@la .
+
+vfo:SpeciesBETUL_PEN
+  a owl:Class, owl:NamedIndividual, rdfs:Class, ifn:Species ;
+  rdfs:subClassOf vfo:GenusBETUL, <http://purl.bioontology.org/ontology/NCBITAXON/3505>, <http://www.wikidata.org/entity/Q156895> ;
+  vfo:hasUPOVCode "BETUL_PEN" ;
+  owl:sameAs <http://dbpedia.org/resource/Betula_pendula>, ifn:Species373 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Betula_pendula"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Betula pendula Roth"@la ;
+  ifn:acceptedNameWithoutAuthor "Betula pendula"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesBETUL_PEN ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000335449"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Betula_pendula"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Betula hispanica"@la ;
+  ifn:vulgarName "European white birch"@en, "Bouleau verruqueux"@fr, "Abedul péndula"@es .
+
+vfo:SpeciesFAGUS_SYL
+  a ifn:Species, rdfs:Class, owl:Class, owl:NamedIndividual ;
+  rdfs:subClassOf vfo:GenusFAGUS, <http://purl.bioontology.org/ontology/NCBITAXON/28930>, <http://www.wikidata.org/entity/Q146149> ;
+  vfo:hasUPOVCode "FAGUS_SYL" ;
+  owl:sameAs ifn:Species71, <http://dbpedia.org/resource/Fagus_sylvatica> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Fagus_sylvatica"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Fagus sylvatica L."@la ;
+  ifn:acceptedNameWithoutAuthor "Fagus sylvatica"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesFAGUS_SYL ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000966507"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Fagus_sylvatica"^^xsd:anyURI ;
+  ifn:vulgarName "Common beech"@en, "European beech"@en, "Hêtre commun"@fr, "Haya"@es .
+
+vfo:AcceptedNameSpeciesLIQUI_STY
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Liquidambar styraciflua"@la .
+
+vfo:SpeciesCEDRU_LIB
+  a rdfs:Class, owl:NamedIndividual, owl:Class, ifn:Species ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q61105>, <http://purl.bioontology.org/ontology/NCBITAXON/93692>, vfo:GenusCEDRU ;
+  vfo:hasUPOVCode "CEDRU_LIB" ;
+  owl:sameAs <http://dbpedia.org/resource/Cedrus_libani>, ifn:Species317 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Cedrus_libani_subsp._libani"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Cedrus libani A.Rich."@la ;
+  ifn:acceptedNameWithoutAuthor "Cedrus libani"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesCEDRU_LIB ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000592537"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Cedrus_libani"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Cedrus libani subsp. libani"@la ;
+  ifn:vulgarName "Lebanon Cedar"@en, "cèdre du Liban"@fr, "Cedro del Líbano"@es .
+
+vfo:SpeciesPINUS_BRU
+  a owl:Class, ifn:Species, owl:NamedIndividual, rdfs:Class ;
+  rdfs:subClassOf vfo:GenusPINUS, <http://purl.bioontology.org/ontology/NCBITAXON/88726>, <http://www.wikidata.org/entity/Q628329> ;
+  vfo:hasUPOVCode "PINUS_BRU" ;
+  owl:sameAs <http://dbpedia.org/resource/Pinus_brutia> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_brutia"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus brutia Ten."@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus brutia"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_BRU ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000482336"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pinus_brutia"^^xsd:anyURI ;
+  ifn:vulgarName "Turkish Pine"@en, "Pin de Turquie"@fr, "Pin de Calabre"@fr, "Pino de Chipre"@es .
+
+vfo:SpeciesCUPRE_SEM
+  a owl:Class, ifn:Species, owl:NamedIndividual, rdfs:Class ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q147513>, <http://purl.bioontology.org/ontology/NCBITAXON/13469>, vfo:GenusCUPRE ;
+  vfo:hasUPOVCode "CUPRE_SEM" ;
+  owl:sameAs ifn:Species36, <http://dbpedia.org/resource/Cupressus_sempervirens> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Cupressus_sempervirens"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Cupressus sempervirens L."@la ;
+  ifn:acceptedNameWithoutAuthor "Cupressus sempervirens"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesCUPRE_SEM ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000630789"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Cupressus_sempervirens"^^xsd:anyURI ;
+  ifn:vulgarName "Cypress"@en, "Cyprès commun"@fr, "Ciprés"@es .
+
+vfo:AcceptedNameSpeciesPINUS_PEU
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Griseb." ;
+  ifn:name "Pinus peuce"@la .
+
+vfo:AcceptedNameSpeciesACERR_PSE
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Acer pseudoplatanus"@la .
+
+vfo:AcceptedNameHybridEUCAL_GDA
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:name "Eucalyptus gunii x Eucalyptus dalrympleana"@la .
+
+vfo:SpeciesEUCAL_GLO
+  a owl:NamedIndividual, ifn:Species, rdfs:Class, owl:Class ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q159528>, vfo:GenusEUCAL, <http://purl.bioontology.org/ontology/NCBITAXON/34317> ;
+  vfo:hasUPOVCode "EUCAL_GLO" ;
+  owl:sameAs <http://dbpedia.org/resource/Eucalyptus_globulus>, ifn:Species61 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Eucalyptus_globulus"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Eucalyptus globulus Labill."@la ;
+  ifn:acceptedNameWithoutAuthor "Eucalyptus globulus"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesEUCAL_GLO ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000954998"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Eucalyptus_globulus"^^xsd:anyURI ;
+  ifn:vulgarName "Tasmanian blue gum"@en, "Eucalyptus commun"@fr, "Eucalipto globulus"@es .
+
+vfo:SpeciesPINUS_PON
+  a ifn:Species, owl:Class, owl:NamedIndividual, rdfs:Class ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q460523>, <http://purl.bioontology.org/ontology/NCBITAXON/55062>, vfo:GenusPINUS ;
+  vfo:hasUPOVCode "PINUS_PON" ;
+  owl:sameAs <http://dbpedia.org/resource/Pinus_ponderosa> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_ponderosa"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus ponderosa Douglas ex C.Lawson"@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus ponderosa"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_PON ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000481903"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pinus_ponderosa"^^xsd:anyURI ;
+  ifn:vulgarName "Ponderosa Pine"@en, "Pin ponderosa"@fr, "Pino ponderosa"@es .
+
+vfo:AcceptedNameVarietyPINUS_BRU_ELD
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(Medw.) Silba" ;
+  ifn:name "Pinus brutia var. eldarica"@la .
+
+vfo:SpeciesQUERC_SHU
+  a owl:NamedIndividual, rdfs:Class, ifn:Species, owl:Class ;
+  rdfs:subClassOf vfo:GenusQUERC, <http://www.wikidata.org/entity/Q4112184>, <http://purl.bioontology.org/ontology/NCBITAXON/262619> ;
+  vfo:hasUPOVCode "QUERC_SHU" ;
+  owl:sameAs <http://dbpedia.org/resource/Quercus_shumardii> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Quercus_shumardii"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Quercus shumardii Buckley"@la ;
+  ifn:acceptedNameWithoutAuthor "Quercus shumardii"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesQUERC_SHU ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000293271"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Quercus_shumardii"^^xsd:anyURI ;
+  ifn:vulgarName "Shumard red oak"@en, "Schneck oak"@en, "Spotted oak"@en, "Shumard oak"@en, "Chêne de Shumard"@fr, "Roble de Shumard"@es .
+
+vfo:SpeciesPINUS_NIG
+  a ifn:Species, owl:Class, owl:NamedIndividual, rdfs:Class ;
+  rdfs:subClassOf vfo:GenusPINUS, <http://purl.bioontology.org/ontology/NCBITAXON/58042>, <http://www.wikidata.org/entity/Q145954> ;
+  vfo:hasUPOVCode "PINUS_NIG" ;
+  owl:sameAs ifn:Species25, <http://dbpedia.org/resource/Pinus_nigra> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_nigra"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus nigra J.F.Arnold"@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus nigra"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_NIG ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000481696"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pinus_nigra"^^xsd:anyURI ;
+  ifn:vulgarName "Austrian pine"@en, "European Black Pine"@en, "Pin noir"@fr, "Pino negral de Corcega"@es, "Pino laricio"@es, "Pino negral de Córcega"@es, "Pino negral"@es, "Pino salgareño"@es, "Pino negral de Austria"@es, "Pino negral de Crimea"@es, "Pino salgareno"@es .
+
+vfo:AcceptedNameSpeciesPSDTS_MEN
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(Mirb.) Franco" ;
+  ifn:name "Pseudotsuga menziesii"@la .
+
+vfo:SpeciesQUERC_ROT
+  a ifn:Species, owl:Class, owl:NamedIndividual, rdfs:Class ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q220715>, <http://purl.bioontology.org/ontology/NCBITAXON/501391>, vfo:GenusQUERC ;
+  vfo:hasUPOVCode "QUERC_ROT" ;
+  owl:sameAs <http://dbpedia.org/resource/Quercus_rotundifolia>, ifn:Species45 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Quercus_rotundifolia"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Quercus rotundifolia Lam."@la ;
+  ifn:acceptedNameWithoutAuthor "Quercus rotundifolia"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesQUERC_ROT ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000292989"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Quercus_rotundifolia"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Quercus ilex subsp. rotundifolia"@la ;
+  ifn:vulgarName "Holm oak"@en, "Chêne vert"@fr, "Encina carrasca"@es .
+
+vfo:SpeciesLARIX_DEC
+  a rdfs:Class, owl:NamedIndividual, ifn:Species, owl:Class ;
+  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/71402>, vfo:GenusLARIX, <http://www.wikidata.org/entity/Q146048> ;
+  vfo:hasUPOVCode "LARIX_DEC" ;
+  owl:sameAs <http://dbpedia.org/resource/Larix_decidua>, ifn:Species235 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Larix_decidua"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Larix decidua Mill."@la ;
+  ifn:acceptedNameWithoutAuthor "Larix decidua"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesLARIX_DEC ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000443338"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Larix_decidua"^^xsd:anyURI ;
+  ifn:vulgarName "European larch"@en, "Mélèze d'Europe"@fr, "Alerce común"@es .
+
+vfo:AcceptedNameSpeciesCALOC_DEC
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(Torr.) Florin" ;
+  ifn:name "Calocedrus decurrens"@la .
+
+vfo:SpeciesEUCAL_GUN
+  a owl:NamedIndividual, owl:Class, ifn:Species, rdfs:Class ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q163788>, vfo:GenusEUCAL, <http://purl.bioontology.org/ontology/NCBITAXON/3933> ;
+  vfo:hasUPOVCode "EUCAL_GUN" ;
+  owl:sameAs <http://dbpedia.org/resource/Eucalyptus_gunnii> ;
+  ifn:WikispeciesPage "https://www.wikidata.org/wiki/Q163788"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Eucalyptus gunnii Hook.f."@la ;
+  ifn:acceptedNameWithoutAuthor "Eucalyptus gunnii"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesEUCAL_GUN ;
+  ifn:hasThePlantListPage "https://wfoplantlist.org/plant-list/taxon/wfo-0000955055-2021-12"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Eucalyptus_gunnii"^^xsd:anyURI ;
+  ifn:vulgarName "Cider gum"@en, "Eucalyptus gunnii"@fr, "Eucalipto sidra"@es, "Gunnii"@es .
+
+vfo:SpeciesCERTN_SIL
+  a owl:Class, owl:NamedIndividual, rdfs:Class, ifn:Species ;
+  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/20340>, vfo:GenusCERTN, <http://www.wikidata.org/entity/Q68763> ;
+  vfo:hasUPOVCode "CERTN_SIL" ;
+  owl:sameAs <http://dbpedia.org/resource/Ceratonia_siliqua>, ifn:Species67 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Ceratonia_siliqua"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Ceratonia siliqua L."@la ;
+  ifn:acceptedNameWithoutAuthor "Ceratonia siliqua"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesCERTN_SIL ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000165151"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Ceratonia_siliqua"^^xsd:anyURI ;
+  ifn:vulgarName "Carob tree"@en, "Caroubier"@fr, "Algarrobo"@es .
+
+vfo:AcceptedNameSpeciesQUERC_SUB
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Quercus suber"@la .
+
+vfo:SpeciesPINUS_CAR
+  a rdfs:Class, owl:Class, ifn:Species, owl:NamedIndividual ;
+  rdfs:subClassOf vfo:GenusPINUS, <http://purl.bioontology.org/ontology/NCBITAXON/70929>, <http://www.wikidata.org/entity/Q2900918> ;
+  vfo:hasUPOVCode "PINUS_CAR" ;
+  owl:sameAs <http://dbpedia.org/resource/Caribbean_pine> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_caribaea"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus caribaea Morelet"@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus caribaea"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_CAR ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000482235"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Caribbean_pine"^^xsd:anyURI ;
+  ifn:vulgarName "The Caribbean pine"@en, "Le pin caraïbe"@fr, "Pino macho"@es, "Pino caribe"@es .
+
+vfo:SpeciesPINUS_ELL
+  a owl:Class, rdfs:Class, owl:NamedIndividual, ifn:Species ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q1249109>, vfo:GenusPINUS, <http://purl.bioontology.org/ontology/NCBITAXON/42064> ;
+  vfo:hasUPOVCode "PINUS_ELL" ;
+  owl:sameAs <http://dbpedia.org/resource/Pinus_elliottii> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_elliottii"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus elliottii Engelm."@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus elliottii"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_ELL ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000481442"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pinus_elliottii"^^xsd:anyURI ;
+  ifn:vulgarName "slash pine"@en, "Pin d'Elliott"@fr, "Pino elioti"@es .
+
+vfo:AcceptedNameSpeciesQUERC_RUB
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Quercus rubra"@la .
+
+vfo:SpeciesTHUJA_PLI
+  a owl:NamedIndividual, ifn:Species, owl:Class, rdfs:Class ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q147417>, <http://purl.bioontology.org/ontology/NCBITAXON/3316>, vfo:GenusTHUJA ;
+  vfo:hasUPOVCode "THUJA_PLI" ;
+  owl:sameAs <http://dbpedia.org/resource/Thuja_plicata> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Thuja_plicata"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Thuja plicata Donn ex D.Don"@la ;
+  ifn:acceptedNameWithoutAuthor "Thuja plicata"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesTHUJA_PLI ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000407856"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Thuja_plicata"^^xsd:anyURI ;
+  ifn:vulgarName "Western redcedar"@en, "Thuya géant"@fr, "Cedro rojo del Pacifico"@es, "Arbol de la vida gigante"@es, "Tuya gigante"@es, "Cedro rojo del Pacífico"@es, "Árbol de la vida gigante"@es .
+
+vfo:AcceptedNameSpeciesCEDRU_ATL
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(Endl.) Manetti ex Carrière" ;
+  ifn:name "Cedrus atlantica"@la .
+
+vfo:AcceptedNameSpeciesPINUS_PNS
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Aiton" ;
+  ifn:name "Pinus pinaster"@la .
+
+vfo:SpeciesQUERC_ROB
+  a owl:NamedIndividual, owl:Class, ifn:Species, rdfs:Class ;
+  rdfs:subClassOf vfo:GenusQUERC, <http://www.wikidata.org/entity/Q165145>, <http://purl.bioontology.org/ontology/NCBITAXON/38942> ;
+  vfo:hasUPOVCode "QUERC_ROB" ;
+  owl:sameAs ifn:Species41, <http://dbpedia.org/resource/Quercus_robur> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Quercus_robur"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Quercus robur L."@la ;
+  ifn:acceptedNameWithoutAuthor "Quercus robur"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesQUERC_ROB ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0001275587"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Quercus_robur"^^xsd:anyURI ;
+  ifn:scientificSynonymWithoutAuthor "Quercus pedunculata"@la ;
+  ifn:vulgarName "English oak"@en, "Common oak"@en, "Chêne pédonculé"@fr, "Roble pedunculado"@es .
+
+vfo:SpeciesEUCAL_NIT
+  a rdfs:Class, owl:NamedIndividual, owl:Class, ifn:Species ;
+  rdfs:subClassOf <http://purl.bioontology.org/ontology/NCBITAXON/87674>, vfo:GenusEUCAL, <http://www.wikidata.org/entity/Q2512644> ;
+  vfo:hasUPOVCode "EUCAL_NIT" ;
+  owl:sameAs ifn:Species64, <http://dbpedia.org/resource/Eucalyptus_nitens> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Eucalyptus_nitens"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Eucalyptus nitens (H.Deane & Maiden) Maiden"@la ;
+  ifn:acceptedNameWithoutAuthor "Eucalyptus nitens"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesEUCAL_NIT ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000955429"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Eucalyptus_nitens"^^xsd:anyURI ;
+  ifn:vulgarName "Shining gum"@en, "Eucalyptus nitens"@fr, "Eucalipto nitens"@es .
+
+vfo:AcceptedNameSpeciesEUCAL_DAL
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "Maiden" ;
+  ifn:name "Eucalyptus dalrympleana"@la .
+
+vfo:SubspeciesPINUS_NIG_SAL
+  a owl:Class, vfo:Subspecies, owl:NamedIndividual, rdfs:Class ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q20722203>, vfo:GenusPINUS, vfo:SpeciesPINUS_NIG ;
+  vfo:hasUPOVCode "PINUS_NIG_SAL" ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_nigra_subsp._salzmannii"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus nigra subsp. salzmannii (Dunal) Franco"@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus nigra subsp. salzmannii"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSubspeciesPINUS_NIG_SAL ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000736753"^^xsd:anyURI ;
+  ifn:vulgarName "European black pine"@en, "Pin de Salzmann"@fr, "Pino salgareño"@es .
+
+vfo:AcceptedNameSpeciesCUNNI_LAN
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(Lamb.) Hook." ;
+  ifn:name "Cunninghamia lanceolata"@la .
+
+vfo:SpeciesLIQUI_STY
+  a ifn:Species, rdfs:Class, owl:NamedIndividual, owl:Class ;
+  rdfs:subClassOf vfo:GenusLIQUI, <http://purl.bioontology.org/ontology/NCBITAXON/4400>, <http://www.wikidata.org/entity/Q469652> ;
+  vfo:hasUPOVCode "LIQUI_STY" ;
+  owl:sameAs <http://dbpedia.org/resource/Liquidambar_styraciflua> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Liquidambar_styraciflua"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Liquidambar styraciflua L."@la ;
+  ifn:acceptedNameWithoutAuthor "Liquidambar styraciflua"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesLIQUI_STY ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000364015"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Liquidambar_styraciflua"^^xsd:anyURI ;
+  ifn:vulgarName "American Sweetgum"@en, "Copalme d'Amérique"@fr, "Liquidámbar"@es .
+
+vfo:AcceptedNameSpeciesQUERC_PET
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(Matt.) Liebl." ;
+  ifn:name "Quercus petraea"@la .
+
+vfo:SpeciesPINUS_PEU
+  a owl:Class, rdfs:Class, ifn:Species, owl:NamedIndividual ;
+  rdfs:subClassOf vfo:GenusPINUS, <http://purl.bioontology.org/ontology/NCBITAXON/71646>, <http://www.wikidata.org/entity/Q146021> ;
+  vfo:hasUPOVCode "PINUS_PEU" ;
+  owl:sameAs <http://dbpedia.org/resource/Pinus_peuce> ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Pinus_peuce"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Pinus peuce Griseb."@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus peuce"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesPINUS_PEU ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000481889"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pinus_peuce"^^xsd:anyURI ;
+  ifn:vulgarName "Macedonian Pine"@en, "Pin de Macédoine"@fr, "Pino de Macedonia"@es .
+
+vfo:AcceptedNameSpeciesCUPRE_SEM
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Cupressus sempervirens"@la .
+
+vfo:SpeciesACERR_PSE
+  a rdfs:Class, owl:NamedIndividual, owl:Class, ifn:Species ;
+  rdfs:subClassOf <http://www.wikidata.org/entity/Q156944>, vfo:GenusACERR, <http://purl.bioontology.org/ontology/NCBITAXON/4026> ;
+  vfo:hasUPOVCode "ACERR_PSE" ;
+  owl:sameAs <http://dbpedia.org/resource/Acer_pseudoplatanus>, ifn:Species576 ;
+  ifn:WikispeciesPage "https://species.wikimedia.org/wiki/Acer_pseudoplatanus"^^xsd:anyURI ;
+  ifn:acceptedNameWithAuthor "Acer pseudoplatanus L."@la ;
+  ifn:acceptedNameWithoutAuthor "Acer pseudoplatanus"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameSpeciesACERR_PSE ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000514908"^^xsd:anyURI ;
+  ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Acer_pseudoplatanus"^^xsd:anyURI ;
+  ifn:vulgarName "Sycamore"@en, "Érable sycomore"@fr, "Arce seudoplátano"@es .
+
+vfo:VarietyPINUS_CAR_HOND
+  a owl:NamedIndividual, vfo:Variety, owl:Class, rdfs:Class ;
+  rdfs:subClassOf vfo:GenusPINUS, <http://www.wikidata.org/entity/Q37950446>, vfo:SpeciesPINUS_CAR ;
+  vfo:hasUPOVCode "PINUS_CAR_HOND" ;
+  ifn:acceptedNameWithAuthor "Pinus caribaea var. hondurensis (Sénécl.) W.H.Barrett & Golfari"@la ;
+  ifn:acceptedNameWithoutAuthor "Pinus caribaea var. hondurensis"@la ;
+  ifn:hasAcceptedName vfo:AcceptedNameVarietyPINUS_CAR_HOND ;
+  ifn:hasThePlantListPage "http://www.worldfloraonline.org/taxon/wfo-0000490090"^^xsd:anyURI ;
+  ifn:vulgarName "Nicaraguan pine"@en, "The Caribbean pine"@en, "Le pin caraïbe"@fr, "Pino caribe"@es, "Pino de honduras"@es .
+
+vfo:AcceptedNameSpeciesSEQUA_SEM
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "(D.Don) Endl." ;
+  ifn:name "Sequoia sempervirens"@la .
+
+vfo:AcceptedNameSpeciesPINUS_SYL
+  a ifn:AcceptedName, owl:NamedIndividual ;
+  ifn:author "L." ;
+  ifn:name "Pinus sylvestris"@la .

@@ -1,0 +1,2603 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl> .
+@prefix crs:   <http://epsg.w3id.org/data/crs/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix iter:  <http://w3id.org/sparql-generate/iter/> .
+@prefix vfo-country: <http://virtualforests.gsic.uva.es/Country/> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix epsg:  <http://epsg.w3id.org/data/> .
+@prefix ontology.axis: <http://epsg.w3id.org/ontology/axis/> .
+@prefix unit:  <http://crossforest.eu/measures/data/unit/> .
+@prefix spo:   <http://crossforest.eu/position/ontology/> .
+@prefix rff:   <http://reinfforce.iefc.net/data/> .
+@prefix smo:   <http://crossforest.eu/measures/ontology/> .
+@prefix data.axis: <http://epsg.w3id.org/data/axis/> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix vfo:   <http://virtualforests.gsic.uva.es/> .
+@prefix ifn-pendiente: <https://datos.iepnb.es/kos/sector-publico/medio-ambiente/ifn-pendiente/> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-41.4>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  41.4 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/gsdd/2234.288401>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2234.288401 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR24>
+        a                               ifn-pendiente:4 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR24> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.071633> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/792.373133> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2307.091346> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.071633 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                792.373133 ;
+        vfo:hasLastGSDDInCelsiusDay     2307.091346 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.708293 ;
+        vfo:hasLocalName                "Albinabehea" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.708293> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/30> ;
+        vfo:hasSlopeInDegrees           "30"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/position/p-AR18>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-90> , <http://reinfforce.iefc.net/data/coordinate/109--2.9> , <http://reinfforce.iefc.net/data/coordinate/108-43.3> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  43.3 ;
+        ontology.axis:109  -2.9 ;
+        ontology.axis:110  "90"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-37.763>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  37.763 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/gsdd/2629.646616>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2629.646616 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.056072>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.056072 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-185>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "185"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/gsdd/2431.58271>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2431.58271 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-240>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "240"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-48.4>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  48.4 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/13.183321>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         13.183321 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/876.293898>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         876.293898 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-45.8>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  45.8 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/18.923048>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         18.923048 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR36>
+        a                               vfo:Arboretum , ifn-pendiente:1 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR36> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.088688> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/804.734755> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2837.467065> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.088688 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                804.734755 ;
+        vfo:hasLastGSDDInCelsiusDay     2837.467065 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                18.923048 ;
+        vfo:hasLocalName                "Cachaços" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/18.923048> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:PT .
+
+<http://reinfforce.iefc.net/data/coordinate/109--3.7>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -3.7 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR06>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR06> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.066227> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/816.73584> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2031.082662> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.066227 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                816.73584 ;
+        vfo:hasLastGSDDInCelsiusDay     2031.082662 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.879704 ;
+        vfo:hasLocalName                "Vaumadeuc" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.879704> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/2> ;
+        vfo:hasSlopeInDegrees           "2"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/coordinate/108-49.1>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  49.1 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/1258.124924>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         1258.124924 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-94>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "94"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/slope/5>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "5"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/position/p-AR31>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-120> , <http://reinfforce.iefc.net/data/coordinate/109--8.6> , <http://reinfforce.iefc.net/data/coordinate/108-42.4> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  42.4 ;
+        ontology.axis:109  -8.6 ;
+        ontology.axis:110  "120"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-46.5>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  46.5 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/coordinate/110-64>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "64"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/adi/0.063216>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.063216 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.061652>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.061652 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR01>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-50> , <http://reinfforce.iefc.net/data/coordinate/109--6> , <http://reinfforce.iefc.net/data/coordinate/108-56.5> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  56.5 ;
+        ontology.axis:109  "-6"^^xsd:decimal ;
+        ontology.axis:110  "50"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-43.9>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  43.9 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/coordinate/109-0.7>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  0.7 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/887.221813>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         887.221813 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109--1.8>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -1.8 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR18>
+        a                               vfo:Arboretum , ifn-pendiente:2 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR18> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.064176> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/887.221813> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2278.307645> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.064176 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                887.221813 ;
+        vfo:hasLastGSDDInCelsiusDay     2278.307645 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.784415 ;
+        vfo:hasLocalName                "Unbemendi1" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.784415> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/10> ;
+        vfo:hasSlopeInDegrees           "10"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/coordinate/109--5.1>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -5.1 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/863.796234>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         863.796234 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR13>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-365> , <http://reinfforce.iefc.net/data/coordinate/109-1.1> , <http://reinfforce.iefc.net/data/coordinate/108-45.4> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  45.4 ;
+        ontology.axis:109  1.1 ;
+        ontology.axis:110  "365"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/110-500>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "500"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/110-204>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "204"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/15.031411>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         15.031411 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/799.607468>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         799.607468 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.088398>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.088398 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.342044>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.342044 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/511.148453>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         511.148453 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2353.563421>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2353.563421 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR31>
+        a                               ifn-pendiente:4 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR31> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.053432> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/1106.662083> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2268.382688> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.053432 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                1106.662083 ;
+        vfo:hasLastGSDDInCelsiusDay     2268.382688 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                14.5416 ;
+        vfo:hasLocalName                "Lourizán" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/14.5416> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/21> ;
+        vfo:hasSlopeInDegrees           "21"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/position/p-AR25>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-430> , <http://reinfforce.iefc.net/data/coordinate/109--1.8> , <http://reinfforce.iefc.net/data/coordinate/108-42.78> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  42.78 ;
+        ontology.axis:109  -1.8 ;
+        ontology.axis:110  "430"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/110-120>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "120"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR01>
+        a                               vfo:Arboretum , ifn-pendiente:2 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR01> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.029533> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/1479.736614> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/1390.29656> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.029533 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                1479.736614 ;
+        vfo:hasLastGSDDInCelsiusDay     1390.29656 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                10.064228 ;
+        vfo:hasLocalName                "Mull" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/10.064228> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/12> ;
+        vfo:hasSlopeInDegrees           "12"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:GB-SCT .
+
+<http://reinfforce.iefc.net/data/adi/0.080903>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.080903 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/15.306456>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         15.306456 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/slope/0>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "0"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/14.145068>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         14.145068 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR37>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-500> , <http://reinfforce.iefc.net/data/coordinate/109--25.36> , <http://reinfforce.iefc.net/data/coordinate/108-37.794> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  37.794 ;
+        ontology.axis:109  -25.36 ;
+        ontology.axis:110  "500"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-48>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  "48"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/gsdd/2138.246193>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2138.246193 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/13.506544>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         13.506544 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/14.5416>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         14.5416 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR13>
+        a                               vfo:Arboretum , ifn-pendiente:1 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR13> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.080294> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/762.916899> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2584.708678> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.080294 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                762.916899 ;
+        vfo:hasLastGSDDInCelsiusDay     2584.708678 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                15.1503 ;
+        vfo:hasLocalName                "Arboretum de la Bonne Foussie" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/15.1503> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/10.901942>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         10.901942 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR07>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-204> , <http://reinfforce.iefc.net/data/coordinate/109--3.4> , <http://reinfforce.iefc.net/data/coordinate/108-48> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  "48"^^xsd:decimal ;
+        ontology.axis:109  -3.4 ;
+        ontology.axis:110  "204"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/adi/0.088688>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.088688 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-44.1>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  44.1 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-47.8>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  47.8 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-37.794>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  37.794 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-51.6>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  51.6 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR25>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR25> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.065937> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/858.690453> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2366.001609> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.065937 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                858.690453 ;
+        vfo:hasLastGSDDInCelsiusDay     2366.001609 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.626411 ;
+        vfo:hasLocalName                "Etxauri" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.626411> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0.5> ;
+        vfo:hasSlopeInDegrees           0.5 ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/coordinate/110-114>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "114"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/position/p-AR19>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-121> , <http://reinfforce.iefc.net/data/coordinate/109--2.9> , <http://reinfforce.iefc.net/data/coordinate/108-43.3> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  43.3 ;
+        ontology.axis:109  -2.9 ;
+        ontology.axis:110  "121"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.28569>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.28569 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.053432>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.053432 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-48.5>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  48.5 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/position/p-AR20>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-114> , <http://reinfforce.iefc.net/data/coordinate/109--2.9> , <http://reinfforce.iefc.net/data/coordinate/108-43.3> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  43.3 ;
+        ontology.axis:109  -2.9 ;
+        ontology.axis:110  "114"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/slope/30>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "30"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/gsdd/2071.238288>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2071.238288 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.069904>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.069904 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR37>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR37> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.088398> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/804.734755> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2823.577966> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.088398 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                804.734755 ;
+        vfo:hasLastGSDDInCelsiusDay     2823.577966 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                18.831811 ;
+        vfo:hasLocalName                "Vanzinho" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/18.831811> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:PT .
+
+<http://reinfforce.iefc.net/data/gsdd/1390.29656>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         1390.29656 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109--0.1>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -0.1 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR07>
+        a                               ifn-pendiente:2 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR07> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.063216> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/863.796234> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2000.805494> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.063216 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                863.796234 ;
+        vfo:hasLastGSDDInCelsiusDay     2000.805494 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.085834 ;
+        vfo:hasLocalName                "Priziac" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.085834> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/4> ;
+        vfo:hasSlopeInDegrees           "4"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/adi/0.065937>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.065937 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/slope/3.5>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  3.5 .
+
+<http://reinfforce.iefc.net/data/coordinate/110-645>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "645"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/position/p-AR32>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-1195> , <http://reinfforce.iefc.net/data/coordinate/109--3.6> , <http://reinfforce.iefc.net/data/coordinate/108-41.4> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  41.4 ;
+        ontology.axis:109  -3.6 ;
+        ontology.axis:110  "1195"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/position/p-AR02>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-185> , <http://reinfforce.iefc.net/data/coordinate/109--3.7> , <http://reinfforce.iefc.net/data/coordinate/108-52> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  "52"^^xsd:decimal ;
+        ontology.axis:109  -3.7 ;
+        ontology.axis:110  "185"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/slope/12>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "12"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/109-0.8>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  0.8 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR19>
+        a                               vfo:Arboretum , ifn-pendiente:2 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR19> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.064176> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/887.221813> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2278.307645> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.064176 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                887.221813 ;
+        vfo:hasLastGSDDInCelsiusDay     2278.307645 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.784415 ;
+        vfo:hasLocalName                "Unbemendi2" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.784415> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/5> ;
+        vfo:hasSlopeInDegrees           "5"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/adi/0.070697>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.070697 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-1195>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "1195"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/adi/0.080294>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.080294 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/18.831811>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         18.831811 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-43.11>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  43.11 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-44.7>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  44.7 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR20>
+        a                               vfo:Arboretum , ifn-pendiente:2 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR20> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.064176> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/887.221813> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2278.307645> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.064176 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                887.221813 ;
+        vfo:hasLastGSDDInCelsiusDay     2278.307645 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.784415 ;
+        vfo:hasLocalName                "Unbemendi3" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.784415> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/10> ;
+        vfo:hasSlopeInDegrees           "10"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/position/p-AR14>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-60> , <http://reinfforce.iefc.net/data/coordinate/109--0.7> , <http://reinfforce.iefc.net/data/coordinate/108-44.7> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  44.7 ;
+        ontology.axis:109  -0.7 ;
+        ontology.axis:110  "60"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/gsdd/2802.760805>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2802.760805 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109--2.6>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -2.6 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/adi/0.063863>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.063863 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.055947>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.055947 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.064176>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.064176 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2031.082662>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2031.082662 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-965>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "965"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.836543>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.836543 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2268.382688>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2268.382688 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-45.4>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  45.4 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/adi/0.064719>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.064719 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR32>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR32> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.097811> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/558.568335> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2394.572926> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.097811 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                558.568335 ;
+        vfo:hasLastGSDDInCelsiusDay     2394.572926 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.842333 ;
+        vfo:hasLocalName                "Moral de Hornuez (Segovia)" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.842333> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/coordinate/110-121>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "121"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/position/p-AR26>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-670> , <http://reinfforce.iefc.net/data/coordinate/109--1.1> , <http://reinfforce.iefc.net/data/coordinate/108-42.76> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  42.76 ;
+        ontology.axis:109  -1.1 ;
+        ontology.axis:110  "670"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/109--0.7>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -0.7 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--0.06>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -0.06 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR02>
+        a                               vfo:Arboretum , ifn-pendiente:2 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR02> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.04291> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/1103.184843> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/1635.11938> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.04291 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                1103.184843 ;
+        vfo:hasLastGSDDInCelsiusDay     1635.11938 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                10.901942 ;
+        vfo:hasLocalName                "Crychan Forest" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/10.901942> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/5> ;
+        vfo:hasSlopeInDegrees           "5"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:GB-WLS .
+
+<http://reinfforce.iefc.net/data/coordinate/110-59>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "59"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/110-217>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "217"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/15.1503>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         15.1503 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-670>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "670"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/549.258518>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         549.258518 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/1103.184843>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         1103.184843 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2823.577966>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2823.577966 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-90>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "90"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/adi/0.13294>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.13294 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/733.066082>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         733.066082 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-60>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "60"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-37.81>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  37.81 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-43.5>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  43.5 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/position/p-AR38>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-515> , <http://reinfforce.iefc.net/data/coordinate/109--25.27> , <http://reinfforce.iefc.net/data/coordinate/108-37.81> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  37.81 ;
+        ontology.axis:109  -25.27 ;
+        ontology.axis:110  "515"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/110-525>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "525"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--7.7>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -7.7 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/coordinate/110-30>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "30"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--1.4>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -1.4 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR14>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR14> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.080903> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/762.916899> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2631.812532> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.080903 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                762.916899 ;
+        vfo:hasLastGSDDInCelsiusDay     2631.812532 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                15.306456 ;
+        vfo:hasLocalName                "Castillonville" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/15.306456> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/position/p-AR08>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-42> , <http://reinfforce.iefc.net/data/coordinate/109--0.1> , <http://reinfforce.iefc.net/data/coordinate/108-47.8> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  47.8 ;
+        ontology.axis:109  -0.1 ;
+        ontology.axis:110  "42"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/gsdd/2366.001609>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2366.001609 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-42.76>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  42.76 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/17.605744>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         17.605744 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.071633>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.071633 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-0>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "0"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/adi/0.066227>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.066227 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/1773.76995>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         1773.76995 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-42>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "42"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR26>
+        a                               ifn-pendiente:2 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR26> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.064719> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/858.690453> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2329.204586> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.064719 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                858.690453 ;
+        vfo:hasLastGSDDInCelsiusDay     2329.204586 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.258377 ;
+        vfo:hasLocalName                "Cerráncanos" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.258377> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/3.5> ;
+        vfo:hasSlopeInDegrees           3.5 ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/820.359898>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         820.359898 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/819.27495>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         819.27495 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/1046.200085>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         1046.200085 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/812.123203>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         812.123203 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109--9.1>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -9.1 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/position/p-AR21>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-245> , <http://reinfforce.iefc.net/data/coordinate/109--4.2> , <http://reinfforce.iefc.net/data/coordinate/108-43.31> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  43.31 ;
+        ontology.axis:109  -4.2 ;
+        ontology.axis:110  "245"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/110-157>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "157"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/816.73584>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         816.73584 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR38>
+        a                               vfo:Arboretum , ifn-pendiente:1 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR38> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.088398> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/804.734755> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2823.577966> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.088398 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                804.734755 ;
+        vfo:hasLastGSDDInCelsiusDay     2823.577966 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                18.831811 ;
+        vfo:hasLocalName                "Pasto dos Trevos" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/18.831811> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:PT .
+
+<http://reinfforce.iefc.net/data/coordinate/109--0.2>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -0.2 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR08>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR08> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.069904> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/782.209063> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2211.815622> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.069904 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                782.209063 ;
+        vfo:hasLastGSDDInCelsiusDay     2211.815622 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.931611 ;
+        vfo:hasLocalName                "Pêcheseul" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.931611> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/2> ;
+        vfo:hasSlopeInDegrees           "2"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/gsdd/2348.906759>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2348.906759 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109--25.27>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -25.27 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/gsdd/2017.025602>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2017.025602 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.055628>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.055628 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/year/2000>
+        a                time:Instant ;
+        time:inXSDgYear  "2000"^^xsd:gYear .
+
+<http://reinfforce.iefc.net/data/year/1970>
+        a                time:Instant ;
+        time:inXSDgYear  "1970"^^xsd:gYear .
+
+<http://reinfforce.iefc.net/data/position/p-AR33>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-400> , <http://reinfforce.iefc.net/data/coordinate/109--7.7> , <http://reinfforce.iefc.net/data/coordinate/108-41.2> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  41.2 ;
+        ontology.axis:109  -7.7 ;
+        ontology.axis:110  "400"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/110-520>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "520"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/10.064228>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         10.064228 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.074323>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.074323 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/15.110836>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         15.110836 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109--4.6>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -4.6 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/position/p-AR03>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-140> , <http://reinfforce.iefc.net/data/coordinate/109--2.2> , <http://reinfforce.iefc.net/data/coordinate/108-51.6> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  51.6 ;
+        ontology.axis:109  -2.2 ;
+        ontology.axis:110  "140"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/gsdd/2823.556009>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2823.556009 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.097811>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.097811 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2394.572926>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2394.572926 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2307.091346>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2307.091346 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2322.402456>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2322.402456 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/1106.662083>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         1106.662083 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-140>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "140"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-47.4>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  47.4 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/766.276741>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         766.276741 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR21>
+        a                               vfo:Arboretum , ifn-pendiente:2 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR21> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.058706> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/906.98514> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2071.238288> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.058706 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                906.98514 ;
+        vfo:hasLastGSDDInCelsiusDay     2071.238288 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.631417 ;
+        vfo:hasLocalName                "Monte Corona" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.631417> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/10> ;
+        vfo:hasSlopeInDegrees           "10"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/position/p-AR15>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-110> , <http://reinfforce.iefc.net/data/coordinate/109--0.2> , <http://reinfforce.iefc.net/data/coordinate/108-44.1> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  44.1 ;
+        ontology.axis:109  -0.2 ;
+        ontology.axis:110  "110"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/110-110>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "110"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.931611>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.931611 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR33>
+        a                               ifn-pendiente:3 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR33> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.060246> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/974.136305> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2461.373425> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.060246 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                974.136305 ;
+        vfo:hasLastGSDDInCelsiusDay     2461.373425 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                14.361568 ;
+        vfo:hasLocalName                "Vila Real" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/14.361568> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/19> ;
+        vfo:hasSlopeInDegrees           "19"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:PT .
+
+<http://reinfforce.iefc.net/data/coordinate/108-38.71>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  38.71 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/gsdd/2012.982309>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2012.982309 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR27>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-965> , <http://reinfforce.iefc.net/data/coordinate/109--5.1> , <http://reinfforce.iefc.net/data/coordinate/108-42.74> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  42.74 ;
+        ontology.axis:109  -5.1 ;
+        ontology.axis:110  "965"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/109--3.4>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -3.4 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-42.9>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  42.9 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR03>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR03> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.055947> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/876.293898> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/1773.76995> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.055947 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                876.293898 ;
+        vfo:hasLastGSDDInCelsiusDay     1773.76995 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                11.310534 ;
+        vfo:hasLocalName                "Westonbirt" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/11.310534> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:GB-ENG .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/558.568335>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         558.568335 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/slope/2>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "2"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/110-164>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "164"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-46.2>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  46.2 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--9>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  "-9"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/slope/0.5>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  0.5 .
+
+<http://reinfforce.iefc.net/data/coordinate/110-430>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "430"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/110-400>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "400"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/13.468824>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         13.468824 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR15>
+        a                               vfo:Arboretum , ifn-pendiente:1 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR15> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.074607> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/820.359898> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2646.862948> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.074607 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                820.359898 ;
+        vfo:hasLastGSDDInCelsiusDay     2646.862948 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                15.110836 ;
+        vfo:hasLocalName                "Domaine des Agreaux" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/15.110836> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/13.258377>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         13.258377 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR09>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-59> , <http://reinfforce.iefc.net/data/coordinate/109--0.7> , <http://reinfforce.iefc.net/data/coordinate/108-47.4> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  47.4 ;
+        ontology.axis:109  -0.7 ;
+        ontology.axis:110  "59"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/slope/19>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "19"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/slope/50>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "50"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/1479.736614>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         1479.736614 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/931.79574>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         931.79574 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2384.481951>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2384.481951 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/slope/20>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "20"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/adi/0.029533>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.029533 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR10>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-0> , <http://reinfforce.iefc.net/data/coordinate/109--0.1> , <http://reinfforce.iefc.net/data/coordinate/108-46.5> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  46.5 ;
+        ontology.axis:109  -0.1 ;
+        ontology.axis:110  "0"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/109-1.1>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  1.1 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--2.2>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -2.2 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR27>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR27> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.069051> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/749.544716> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2088.879503> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.069051 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                749.544716 ;
+        vfo:hasLastGSDDInCelsiusDay     2088.879503 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.061652 ;
+        vfo:hasLocalName                "Vidanes" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.061652> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/adi/0.074607>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.074607 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2000.805494>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2000.805494 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/762.916899>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         762.916899 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2461.373425>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2461.373425 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/13.626411>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         13.626411 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR22>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-240> , <http://reinfforce.iefc.net/data/coordinate/109--2.05> , <http://reinfforce.iefc.net/data/coordinate/108-43.21> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  43.21 ;
+        ontology.axis:109  -2.05 ;
+        ontology.axis:110  "240"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-42.4>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  42.4 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/17.611657>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         17.611657 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2244.588402>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2244.588402 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/13.708293>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         13.708293 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR09>
+        a                               ifn-pendiente:2 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR09> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.072293> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/766.276741> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2234.288401> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.072293 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                766.276741 ;
+        vfo:hasLastGSDDInCelsiusDay     2234.288401 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.183321 ;
+        vfo:hasLocalName                "Bécon-les-Granits" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.183321> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/4> ;
+        vfo:hasSlopeInDegrees           "4"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/adi/0.063726>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.063726 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.060246>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.060246 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.879704>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.879704 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-43.31>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  43.31 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/slope/8>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "8"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/position/p-AR34>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-400> , <http://reinfforce.iefc.net/data/coordinate/109--9.4> , <http://reinfforce.iefc.net/data/coordinate/108-38.78> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  38.78 ;
+        ontology.axis:109  -9.4 ;
+        ontology.axis:110  "400"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/arboretum/AR10>
+        a                               vfo:Arboretum , ifn-pendiente:1 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR10> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.070478> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/799.607468> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2322.402456> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.070478 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                799.607468 ;
+        vfo:hasLastGSDDInCelsiusDay     2322.402456 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.468824 ;
+        vfo:hasLocalName                "Chantecorps" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.468824> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/3> ;
+        vfo:hasSlopeInDegrees           "3"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/position/p-AR04>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-130> , <http://reinfforce.iefc.net/data/coordinate/109-0.8> , <http://reinfforce.iefc.net/data/coordinate/108-49.1> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  49.1 ;
+        ontology.axis:109  0.8 ;
+        ontology.axis:110  "130"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/13.784415>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         13.784415 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/intervalTime/1970-2000>
+        a                    time:ProperInterval , vfo:IntervalTime ;
+        time:hasBeginning    <http://reinfforce.iefc.net/data/year/1970> ;
+        time:hasEnd          <http://reinfforce.iefc.net/data/year/2000> ;
+        time:hasXSDDuration  "P30Y"^^xsd:duration .
+
+<http://reinfforce.iefc.net/data/gsdd/2584.708678>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2584.708678 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-41.2>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  41.2 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.219829>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.219829 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR22>
+        a                               vfo:Arboretum , ifn-pendiente:5 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR22> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.062364> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/931.79574> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2384.481951> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.062364 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                931.79574 ;
+        vfo:hasLastGSDDInCelsiusDay     2384.481951 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                14.145068 ;
+        vfo:hasLocalName                "Irisasi" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/14.145068> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/50> ;
+        vfo:hasSlopeInDegrees           "50"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/position/p-AR16>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-64> , <http://reinfforce.iefc.net/data/coordinate/109--0.2> , <http://reinfforce.iefc.net/data/coordinate/108-43.9> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  43.9 ;
+        ontology.axis:109  -0.2 ;
+        ontology.axis:110  "64"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.565436>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.565436 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2631.812532>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2631.812532 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-50>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "50"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR34>
+        a                               vfo:Arboretum , ifn-pendiente:3 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR34> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.13294> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/511.148453> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2802.760805> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.13294 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                511.148453 ;
+        vfo:hasLastGSDDInCelsiusDay     2802.760805 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                17.611657 ;
+        vfo:hasLocalName                "Sintra" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/17.611657> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/19> ;
+        vfo:hasSlopeInDegrees           "19"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:PT .
+
+<http://reinfforce.iefc.net/data/gsdd/2152.059874>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2152.059874 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2329.204586>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2329.204586 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR28>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-950> , <http://reinfforce.iefc.net/data/coordinate/109--3.5> , <http://reinfforce.iefc.net/data/coordinate/108-42.73> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  42.73 ;
+        ontology.axis:109  -3.5 ;
+        ontology.axis:110  "950"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/110-515>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "515"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--3.5>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -3.5 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/15.349631>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         15.349631 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/782.209063>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         782.209063 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR04>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR04> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.063863> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/819.27495> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2012.982309> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.063863 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                819.27495 ;
+        vfo:hasLastGSDDInCelsiusDay     2012.982309 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.219829 ;
+        vfo:hasLocalName                "Domaine d'Harcourt" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.219829> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/2> ;
+        vfo:hasSlopeInDegrees           "2"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/13.085834>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         13.085834 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/slope/3>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "3"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/adi/0.123689>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.123689 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/14.310349>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         14.310349 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109--4.2>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -4.2 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR16>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR16> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.074323> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/820.359898> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2629.646616> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.074323 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                820.359898 ;
+        vfo:hasLastGSDDInCelsiusDay     2629.646616 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                15.031411 ;
+        vfo:hasLocalName                "Domaine d'Ognoas" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/15.031411> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/2> ;
+        vfo:hasSlopeInDegrees           "2"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/gsdd/2646.862948>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2646.862948 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-950>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "950"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-42.78>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  42.78 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/858.690453>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         858.690453 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-52>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  "52"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/position/p-AR11>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-164> , <http://reinfforce.iefc.net/data/coordinate/109--0.06> , <http://reinfforce.iefc.net/data/coordinate/108-46.2> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  46.2 ;
+        ontology.axis:109  -0.06 ;
+        ontology.axis:110  "164"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/slope/21>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "21"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/109--8.6>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -8.6 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--2.3>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -2.3 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR28>
+        a                               ifn-pendiente:1 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR28> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.072667> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/733.066082> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2138.246193> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.072667 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                733.066082 ;
+        vfo:hasLastGSDDInCelsiusDay     2138.246193 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.565436 ;
+        vfo:hasLocalName                "Escobados de Abajo (Burgos)" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.565436> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/adi/0.058706>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.058706 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/position/p-AR23>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-525> , <http://reinfforce.iefc.net/data/coordinate/109--4.6> , <http://reinfforce.iefc.net/data/coordinate/108-43.11> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  43.11 ;
+        ontology.axis:109  -4.6 ;
+        ontology.axis:110  "525"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-42.5>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  42.5 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--2.05>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -2.05 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-38.78>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  38.78 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/adi/0.062364>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.062364 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/13.370795>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         13.370795 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/2278.307645>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2278.307645 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.04289>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.04289 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-130>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "130"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/position/p-AR35>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-106> , <http://reinfforce.iefc.net/data/coordinate/109--9.1> , <http://reinfforce.iefc.net/data/coordinate/108-38.71> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  38.71 ;
+        ontology.axis:109  -9.1 ;
+        ontology.axis:110  "106"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/109--7.4>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -7.4 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/gsdd/2837.467065>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2837.467065 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109--1.1>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -1.1 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR11>
+        a                               vfo:Arboretum , ifn-pendiente:2 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR11> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.070697> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/799.607468> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2353.563421> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.070697 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                799.607468 ;
+        vfo:hasLastGSDDInCelsiusDay     2353.563421 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.506544 ;
+        vfo:hasLocalName                "Chey" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.506544> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/4> ;
+        vfo:hasSlopeInDegrees           "4"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/position/p-AR05>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-157> , <http://reinfforce.iefc.net/data/coordinate/109-0.7> , <http://reinfforce.iefc.net/data/coordinate/108-48.5> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  48.5 ;
+        ontology.axis:109  0.7 ;
+        ontology.axis:110  "157"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-42.73>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  42.73 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/gsdd/2115.238933>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2115.238933 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/906.98514>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         906.98514 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/749.544716>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         749.544716 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.069051>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.069051 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.842333>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.842333 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR23>
+        a                               ifn-pendiente:5 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR23> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.057488> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/906.98514> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2017.025602> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.057488 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                906.98514 ;
+        vfo:hasLastGSDDInCelsiusDay     2017.025602 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.28569 ;
+        vfo:hasLocalName                "Potes" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.28569> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/50> ;
+        vfo:hasSlopeInDegrees           "50"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/position/p-AR17>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-30> , <http://reinfforce.iefc.net/data/coordinate/109--1.4> , <http://reinfforce.iefc.net/data/coordinate/108-43.5> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  43.5 ;
+        ontology.axis:109  -1.4 ;
+        ontology.axis:110  "30"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/109--2.9>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -2.9 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--25.42>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -25.42 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/14.361568>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         14.361568 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-365>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "365"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/gsdd/2211.815622>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2211.815622 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-420>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "420"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR35>
+        a                               ifn-pendiente:2 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR35> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.123689> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/549.258518> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2823.556009> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.123689 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                549.258518 ;
+        vfo:hasLastGSDDInCelsiusDay     2823.556009 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                17.605744 ;
+        vfo:hasLocalName                "Tapada da Ajuda" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/17.605744> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/8> ;
+        vfo:hasSlopeInDegrees           "8"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:PT .
+
+<http://reinfforce.iefc.net/data/position/p-AR29>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-217> , <http://reinfforce.iefc.net/data/coordinate/109--9> , <http://reinfforce.iefc.net/data/coordinate/108-42.6> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  42.6 ;
+        ontology.axis:109  "-9"^^xsd:decimal ;
+        ontology.axis:110  "217"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/109--3.6>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -3.6 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/adi/0.065181>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.065181 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR05>
+        a                               vfo:Arboretum , ifn-pendiente:3 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR05> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.065181> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/812.123203> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2115.238933> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.065181 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                812.123203 ;
+        vfo:hasLastGSDDInCelsiusDay     2115.238933 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.342044 ;
+        vfo:hasLocalName                "La Chaumouflère" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.342044> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/20> ;
+        vfo:hasSlopeInDegrees           "20"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/adi/0.072293>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.072293 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/792.373133>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         792.373133 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/slope/4>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "4"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/position/p-AR30>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-420> , <http://reinfforce.iefc.net/data/coordinate/109--7.4> , <http://reinfforce.iefc.net/data/coordinate/108-42.5> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  42.5 ;
+        ontology.axis:109  -7.4 ;
+        ontology.axis:110  "420"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-56.5>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  56.5 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/slope/10>
+        a             smo:MeasureInPercentage , owl:NamedIndividual , vfo:Slope ;
+        smo:hasUnit   unit:Percentage ;
+        smo:hasValue  "10"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/adi/0.057488>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.057488 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109-0.6>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  0.6 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR17>
+        a                               vfo:Arboretum , ifn-pendiente:1 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR17> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.056072> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/1046.200085> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2431.58271> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.056072 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                1046.200085 ;
+        vfo:hasLastGSDDInCelsiusDay     2431.58271 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                14.310349 ;
+        vfo:hasLocalName                "Moulin de Habas" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/14.310349> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/0> ;
+        vfo:hasSlopeInDegrees           "0"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/coordinate/110-106>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "106"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--25.36>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -25.36 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/adi/0.072667>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.072667 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/110-178>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "178"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/position/p-AR12>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-178> , <http://reinfforce.iefc.net/data/coordinate/109-0.6> , <http://reinfforce.iefc.net/data/coordinate/108-45.8> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  45.8 ;
+        ontology.axis:109  0.6 ;
+        ontology.axis:110  "178"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/11.310534>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         11.310534 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/arboretum/AR29>
+        a                               vfo:Arboretum , ifn-pendiente:2 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR29> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.055628> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/1106.662083> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2244.588402> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.055628 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                1106.662083 ;
+        vfo:hasLastGSDDInCelsiusDay     2244.588402 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                15.349631 ;
+        vfo:hasLocalName                "Caamaño-Monte Esperoi" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/15.349631> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/10> ;
+        vfo:hasSlopeInDegrees           "10"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/881.308556>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         881.308556 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/gsdd/1635.11938>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         1635.11938 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/974.136305>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         974.136305 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/108-43.21>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  43.21 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/arboretum/AR30>
+        a                               vfo:Arboretum , ifn-pendiente:1 ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR30> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.04289> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/1258.124924> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2152.059874> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.04289 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                1258.124924 ;
+        vfo:hasLastGSDDInCelsiusDay     2152.059874 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                12.836543 ;
+        vfo:hasLocalName                "A Veiga-Finca Robles" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/12.836543> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/2> ;
+        vfo:hasSlopeInDegrees           "2"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:ES .
+
+<http://reinfforce.iefc.net/data/coordinate/110-245>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Meters ;
+        smo:hasValue  "245"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:110 .
+
+<http://reinfforce.iefc.net/data/coordinate/109--9.4>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  -9.4 ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/position/p-AR24>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-645> , <http://reinfforce.iefc.net/data/coordinate/109--2.6> , <http://reinfforce.iefc.net/data/coordinate/108-42.9> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  42.9 ;
+        ontology.axis:109  -2.6 ;
+        ontology.axis:110  "645"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-42.6>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  42.6 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/gsdd/2088.879503>
+        a                    owl:NamedIndividual , vfo:GrowingSeasonDegreeDays ;
+        smo:hasUnit          unit:DegreesCelsiusDay ;
+        smo:hasValue         2088.879503 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/annualPrecipitation/804.734755>
+        a                    owl:NamedIndividual , vfo:AnnualPrecipitation ;
+        smo:hasUnit          unit:Millimeters ;
+        smo:hasValue         804.734755 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/adi/0.070478>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.070478 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/coordinate/109--6>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  "-6"^^xsd:decimal ;
+        epsg:hasAxis  data.axis:109 .
+
+<http://reinfforce.iefc.net/data/coordinate/108-43.3>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  43.3 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/position/p-AR36>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-520> , <http://reinfforce.iefc.net/data/coordinate/109--25.42> , <http://reinfforce.iefc.net/data/coordinate/108-37.763> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  37.763 ;
+        ontology.axis:109  -25.42 ;
+        ontology.axis:110  "520"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/arboretum/AR12>
+        a                               ifn-pendiente:2 , vfo:Arboretum ;
+        spo:hasPosition                 <http://reinfforce.iefc.net/data/position/p-AR12> ;
+        vfo:hasADI                      <http://reinfforce.iefc.net/data/adi/0.063726> ;
+        vfo:hasAnnualPrecipitation      <http://reinfforce.iefc.net/data/annualPrecipitation/881.308556> ;
+        vfo:hasGSDD                     <http://reinfforce.iefc.net/data/gsdd/2348.906759> ;
+        vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter
+                0.063726 ;
+        vfo:hasLastAnnualPrecipitationInMilimeters
+                881.308556 ;
+        vfo:hasLastGSDDInCelsiusDay     2348.906759 ;
+        vfo:hasLastMeanAnnualTempInDegreesCelsius
+                13.370795 ;
+        vfo:hasLocalName                "La Chétardie" ;
+        vfo:hasMeanAnnualTemperature  <http://reinfforce.iefc.net/data/meanAnnualTemp/13.370795> ;
+        vfo:hasSlope                    <http://reinfforce.iefc.net/data/slope/5> ;
+        vfo:hasSlopeInDegrees           "5"^^xsd:decimal ;
+        vfo:isInCountry                 vfo-country:FR .
+
+<http://reinfforce.iefc.net/data/position/p-AR06>
+        a                  spo:GeocentricPosition ;
+        spo:hasCoordinate  <http://reinfforce.iefc.net/data/coordinate/110-94> , <http://reinfforce.iefc.net/data/coordinate/109--2.3> , <http://reinfforce.iefc.net/data/coordinate/108-48.4> ;
+        spo:hasCoordinateReferenceSystem
+                crs:4979 ;
+        ontology.axis:108  48.4 ;
+        ontology.axis:109  -2.3 ;
+        ontology.axis:110  "94"^^xsd:decimal .
+
+<http://reinfforce.iefc.net/data/coordinate/108-42.74>
+        a             epsg:Coordinate ;
+        smo:hasUnit   unit:Degrees ;
+        smo:hasValue  42.74 ;
+        epsg:hasAxis  data.axis:108 .
+
+<http://reinfforce.iefc.net/data/adi/0.04291>
+        a                    owl:NamedIndividual , vfo:AnnualDrynessIndex ;
+        smo:hasUnit          unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue         0.04291 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .
+
+<http://reinfforce.iefc.net/data/meanAnnualTemp/12.631417>
+        a                    owl:NamedIndividual , vfo:MeanAnnualTemperature ;
+        smo:hasUnit          unit:DegreesCelsius ;
+        smo:hasValue         12.631417 ;
+        vfo:hasIntervalTime  <http://reinfforce.iefc.net/data/intervalTime/1970-2000> .

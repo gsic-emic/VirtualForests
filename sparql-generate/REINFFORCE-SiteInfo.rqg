@@ -1,0 +1,131 @@
+BASE <http://reinfforce.iefc.net/data/>
+
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> # Not necessary
+PREFIX owl: <http://www.w3.org/2002/07/owl>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+PREFIX spo: <http://crossforest.eu/position/ontology/>
+PREFIX smo: <http://crossforest.eu/measures/ontology/>
+PREFIX epsg: <http://epsg.w3id.org/data/>
+PREFIX crs: <http://epsg.w3id.org/data/crs/>
+PREFIX ontology.axis: <http://epsg.w3id.org/ontology/axis/>
+PREFIX data.axis: <http://epsg.w3id.org/data/axis/>
+PREFIX unit: <http://crossforest.eu/measures/data/unit/>
+PREFIX ifn-pendiente: <https://datos.iepnb.es/kos/sector-publico/medio-ambiente/ifn-pendiente/> 
+
+PREFIX vfo: <http://virtualforests.gsic.uva.es/>
+PREFIX rff: <http://reinfforce.iefc.net/data/>
+PREFIX vfo-country: <http://virtualforests.gsic.uva.es/Country/> 
+
+
+GENERATE { 
+	<arboretum/{?idArboretum}> a vfo:Arboretum , ?slopeClass ;
+    spo:hasPosition <position/{?idPosition}> ;
+	  vfo:hasSlope <slope/{?slp}> ;
+    vfo:hasSlopeInDegrees ?slpNum ;
+
+    vfo:isInCountry ?countryName ;
+    vfo:hasLocalName ?local ;
+
+    vfo:hasADI <adi/{?adi}> ;
+    vfo:hasLastADIInSquareRootDegreesCelsiusDayPerMilimeter ?adiNum ;
+
+    vfo:hasMeanAnnualTemperature <meanAnnualTemp/{?t_mean}> ;
+    vfo:hasLastMeanAnnualTempInDegreesCelsius ?t_meanNum ;
+
+    vfo:hasAnnualPrecipitation <annualPrecipitation/{?p_mean}> ;
+    vfo:hasLastAnnualPrecipitationInMilimeters ?p_meanNum ;
+
+    vfo:hasGSDD <gsdd/{?gsdd}> ;
+    vfo:hasLastGSDDInCelsiusDay ?gsddNum ;
+
+	.
+  
+  <position/{?idPosition}> a spo:GeocentricPosition ;
+    spo:hasCoordinateReferenceSystem crs:4979 ; # Geographic 3D (CRS 4326 is 2D)
+		ontology.axis:108 ?latNum ;
+		ontology.axis:109 ?longNum ;
+		ontology.axis:110 ?altNum ;
+    spo:hasCoordinate <coordinate/108-{?lat}> ;
+	  spo:hasCoordinate <coordinate/109-{?long}> ;
+    spo:hasCoordinate <coordinate/110-{?alt}> .
+  
+  <coordinate/108-{?lat}> a epsg:Coordinate ;
+		epsg:hasAxis data.axis:108 ;
+		smo:hasUnit unit:Degrees ;
+		smo:hasValue ?latNum .
+
+    <coordinate/109-{?long}> a epsg:Coordinate ;
+		epsg:hasAxis data.axis:109 ;
+		smo:hasUnit unit:Degrees ;
+		smo:hasValue ?longNum .
+
+    <coordinate/110-{?alt}> a epsg:Coordinate ;
+		epsg:hasAxis data.axis:110 ;
+		smo:hasUnit unit:Meters ;
+		smo:hasValue ?altNum .
+
+	<slope/{?slp}> a vfo:Slope, owl:NamedIndividual , smo:MeasureInPercentage ;
+    smo:hasUnit unit:Percentage ;
+    smo:hasValue ?slpNum .
+  
+  <adi/{?adi}> a vfo:AnnualDrynessIndex , owl:NamedIndividual ;
+        smo:hasUnit unit:SquareRootDegreesCelsiusDayPerMilimeter ;
+        smo:hasValue ?adiNum ;
+        vfo:hasIntervalTime  <intervalTime/{?years}> .
+  
+  <meanAnnualTemp/{?t_mean}> a vfo:MeanAnnualTemperature  , owl:NamedIndividual ;
+        smo:hasUnit unit:DegreesCelsius ;
+        smo:hasValue ?t_meanNum ;
+        vfo:hasIntervalTime  <intervalTime/{?years}> .
+
+  <annualPrecipitation/{?p_mean}> a vfo:AnnualPrecipitation  , owl:NamedIndividual ;
+        smo:hasUnit unit:Millimeters ;
+        smo:hasValue ?p_meanNum ;
+        vfo:hasIntervalTime  <intervalTime/{?years}> .
+  
+  <gsdd/{?gsdd}> a vfo:GrowingSeasonDegreeDays  , owl:NamedIndividual ;
+        smo:hasUnit unit:DegreesCelsiusDay ;
+        smo:hasValue ?gsddNum ;
+        vfo:hasIntervalTime  <intervalTime/{?years}> .
+
+  <intervalTime/{?years}> 
+        a       vfo:IntervalTime , time:ProperInterval ;
+        time:hasXSDDuration ?duration ;
+        time:hasBeginning <year/{?begin}> ;
+        time:hasEnd <year/{?end}> .
+
+  <year/{?begin}> a time:Instant ;
+        time:inXSDgYear ?year_begin  .
+
+  <year/{?end}> a time:Instant ;
+        time:inXSDgYear ?year_end .
+}
+
+SOURCE <urn:source> AS ?source
+ITERATOR iter:CSV(?source, true, "\"", ";", "\n", "ID_Site", "Latitude", "Longitude", "Altitude", "SLOPE", "Country", "Local_name" , "ADI" , "T_mean", "P_mean", " GSDD>5", "YearsClimate" , "Begin" , "End") AS ?idArboretum ?lat ?long ?alt ?slp ?country ?local  ?adi ?t_mean ?p_mean ?gsdd ?years ?begin ?end
+
+WHERE {
+  BIND("p-{?idArboretum}" AS ?idPosition)
+  BIND(xsd:decimal(?lat) as ?latNum)
+  BIND(xsd:decimal(?long) as ?longNum)
+  BIND(xsd:decimal(?alt) as ?altNum)
+  BIND(xsd:decimal(?slp) AS ?slpNum)
+  BIND( IF(?slpNum>35, ifn-pendiente:5, IF(?slpNum>20, ifn-pendiente:4, IF(?slpNum>12, ifn-pendiente:3, IF(?slpNum>3,
+  ifn-pendiente:2, ifn-pendiente:1)))) AS ?slopeClass)
+  BIND (IF (?country = "Scotland-UK", vfo-country:GB-SCT, IF(?country = "Wales-UK", vfo-country:GB-WLS, IF(?country =
+  "England-UK", vfo-country:GB-ENG, IF(?country = "France", vfo-country:FR, IF(?country = "Spain", vfo-country:ES,
+  IF(?country = "Portugal", vfo-country:PT, ?unbound)))))) as ?countryName)
+
+  BIND(xsd:decimal(?adi) as ?adiNum)
+  BIND(xsd:decimal(?t_mean) as ?t_meanNum)
+  BIND(xsd:decimal(?p_mean) as ?p_meanNum)
+  BIND(xsd:decimal(?gsdd) as ?gsddNum)
+
+  BIND(xsd:gYear(?begin) as ?year_begin)
+  BIND(xsd:gYear(?end) as ?year_end)
+  BIND(xsd:duration(CONCAT("P" , str(YEAR(?year_end) - YEAR(?year_begin)), "Y")) as ?duration)
+
+}

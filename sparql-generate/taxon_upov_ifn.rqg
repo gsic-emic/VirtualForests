@@ -1,0 +1,22 @@
+BASE <http://virtualforests.gsic.uva.es/>
+
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vfo: <http://virtualforests.gsic.uva.es/> 
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+PREFIX ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/>
+
+GENERATE { 
+    <{?taxon}{?upov_cod}> owl:sameAs ?ifn_sp .
+
+    <{?taxon}{?upov_cod}> owl:equivalentClass ?ifn_sp .
+  }
+  
+  
+  SOURCE <urn:source> AS ?source
+  ITERATOR iter:CSV(?source, true, "\"", ";", "\n", "UPOV Code" , "Código IFN", "taxon_del_codigo") AS ?upov_cod ?ifn_cod ?taxon
+  
+  WHERE {
+    BIND (IF(?taxon != "Species" && BOUND(?ifn_cod), ?unbound, <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species{?ifn_cod}>) as ?ifn_sp)
+  }
+  

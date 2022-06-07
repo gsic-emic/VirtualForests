@@ -1,0 +1,171 @@
+@prefix ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+
+@prefix vfo: <http://virtualforests.gsic.uva.es/> .
+
+############ From Crossforest ############
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family12
+ifn:Family12 rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Class1 .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family12
+ifn:Family12 rdf:type owl:NamedIndividual ,
+                      ifn:Family ;
+             owl:sameAs <http://dbpedia.org/resource/Fagaceae> ;
+             ifn:hasAcceptedName ifn:AcceptedNameFamily12 .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedNameFamily12
+ifn:AcceptedNameFamily12 rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Fagaceae"@la .
+ifn:Family12 ifn:hasWikiSpeciesPage "https://species.wikimedia.org/wiki/Fagaceae"^^xsd:anyURI ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Fagaceae"^^xsd:anyURI ;
+             ifn:vulgarName "Fagáceas"@es ;
+             ifn:acceptedNameWithoutAuthor "Fagaceae"@la ;
+             ifn:vulgarName "Beech family"@en ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Fagaceae> ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Fagaceae/"^^xsd:anyURI .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family14
+ifn:Family14 rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Class1 .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family14
+ifn:Family14 rdf:type owl:NamedIndividual ,
+                      ifn:Family ;
+             owl:sameAs <http://dbpedia.org/resource/Leguminosae> ;
+             ifn:hasAcceptedName ifn:AcceptedNameFamily14 .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedNameFamily14
+ifn:AcceptedNameFamily14 rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Leguminosae"@la .
+ifn:Family14 ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Leguminosae/"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Leguminosae> ;
+             ifn:vulgarName "Leguminosas"@es ;
+             ifn:hasWikiSpeciesPage "https://species.wikimedia.org/wiki/Leguminosae"^^xsd:anyURI ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Leguminosae"^^xsd:anyURI ;
+             ifn:acceptedNameWithoutAuthor "Leguminosae"@la ;
+             ifn:vulgarName "Pea family"@en .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family16
+ifn:Family16 rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Class1 .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family16
+ifn:Family16 rdf:type owl:NamedIndividual ,
+                      ifn:Family ;
+             owl:sameAs <http://dbpedia.org/resource/Myrtaceae> ;
+             ifn:hasAcceptedName ifn:AcceptedNameFamily16 .       
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedNameFamily16
+ifn:AcceptedNameFamily16 rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Myrtaceae"@la .
+ifn:Family16 ifn:vulgarName "Myrtle family"@en ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Myrtaceae"^^xsd:anyURI ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Myrtaceae/"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Myrtaceae> ;
+             ifn:hasWikiSpeciesPage "https://species.wikimedia.org/wiki/Myrtaceae"^^xsd:anyURI ;
+             ifn:vulgarName "Mirtáceas"@es ;
+             ifn:acceptedNameWithoutAuthor "Myrtaceae"@la .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family17
+ifn:Family17 rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Class1 .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedNameFamily17
+ifn:AcceptedNameFamily17 rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Sapindaceae"@la .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family17
+ifn:Family17 rdf:type owl:NamedIndividual ,
+                      ifn:Family ;
+             owl:sameAs <http://dbpedia.org/resource/Sapindaceae> ;
+             ifn:hasAcceptedName ifn:AcceptedNameFamily17 .
+
+ifn:Family17 ifn:vulgarName "Soapberry family"@en ,
+                            "Sapindáceas"@es ;
+             ifn:acceptedNameWithoutAuthor "Sapindaceae"@la ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Sapindaceae"^^xsd:anyURI ;
+             ifn:hasWikiSpeciesPage "https://species.wikimedia.org/wiki/Sapindaceae"^^xsd:anyURI ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Sapindaceae/"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Sapindaceae> .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family19
+ifn:Family19 rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Class1 .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family19
+ifn:Family19 rdf:type owl:NamedIndividual ,
+                      ifn:Family ;
+             owl:sameAs <http://dbpedia.org/resource/Betulaceae> ;
+             ifn:hasAcceptedName ifn:AcceptedNameFamily19 .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedNameFamily19
+ifn:AcceptedNameFamily19 rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Betulaceae"@la .
+ifn:Family19 ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/A/Betulaceae/"^^xsd:anyURI ;
+             ifn:hasWikiSpeciesPage "https://species.wikimedia.org/wiki/Betulaceae"^^xsd:anyURI ;
+             ifn:vulgarName "Birch famly"@en ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Betulaceae> ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Betulaceae"^^xsd:anyURI ;
+             ifn:acceptedNameWithoutAuthor "Betulaceae"@la ;
+             ifn:vulgarName "Betuláceas"@es .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family21
+ifn:Family21 rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Class2 .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family21
+ifn:Family21 rdf:type owl:NamedIndividual ,
+                      ifn:Family ;
+             owl:sameAs <http://dbpedia.org/resource/Pinaceae> ;
+             ifn:hasAcceptedName ifn:AcceptedNameFamily21 .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedNameFamily21
+ifn:AcceptedNameFamily21 rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Pinaceae"@la .
+ifn:Family21 ifn:acceptedNameWithoutAuthor "Pinaceae"@la ;
+             ifn:vulgarName "Pine family"@en ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/G/Pinaceae/"^^xsd:anyURI ;
+             ifn:hasWikiSpeciesPage "https://species.wikimedia.org/wiki/Pinaceae"^^xsd:anyURI ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Pinaceae> ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Pinaceae"^^xsd:anyURI ;
+             ifn:vulgarName "Pináceas"@es .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family22
+ifn:Family22 rdf:type owl:Class ;
+             rdfs:subClassOf ifn:Class2 .
+
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Family22
+ifn:Family22 rdf:type owl:NamedIndividual ,
+                      ifn:Family ;
+             owl:sameAs <http://dbpedia.org/resource/Cupressaceae> ;
+             ifn:hasAcceptedName ifn:AcceptedNameFamily22 .
+
+ifn:Family22 ifn:vulgarName "Cypress family"@en ;
+             ifn:hasThePlantListPage "http://www.theplantlist.org/1.1/browse/G/Cupressaceae/"^^xsd:anyURI ;
+             ifn:hasWikipediaPage "https://en.wikipedia.org/wiki/Cupressaceae"^^xsd:anyURI ;
+             ifn:vulgarName "Cupresáceas"@es ;
+             <http://schema.org/sameAs> <http://dbpedia.org/resource/Cupressaceae> ;
+             ifn:acceptedNameWithoutAuthor "Cupressaceae"@la ;
+             ifn:hasWikiSpeciesPage "https://species.wikimedia.org/wiki/Cupressaceae"^^xsd:anyURI .
+###  https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/AcceptedNameFamily22
+ifn:AcceptedNameFamily22 rdf:type owl:NamedIndividual ,
+                                  ifn:AcceptedName ;
+                         ifn:name "Cupressaceae"@la .
+                           
+############# New ############
+vfo:Family53 a owl:class, rdfs:Class, ifn:Family;
+        rdfs:subClassOf ifn:Class1 ;
+        ifn:acceptedNameWithoutAuthor  "Altingiaceae"@la ;
+        ifn:hasAcceptedName            vfo:AcceptedNameFamily53 ;
+        ifn:hasThePlantListPage        "http://www.worldfloraonline.org/taxon/wfo-7000000016"^^xsd:anyURI ;
+        ifn:hasWikiSpeciesPage         "https://species.wikimedia.org/wiki/Altingiaceae"^^xsd:anyURI ;
+        ifn:hasWikipediaPage           "https://en.wikipedia.org/wiki/Altingiaceae"^^xsd:anyURI ;
+        ifn:vulgarName                 "Sweet gums"@en , "Altingiaceas"@es .
+
+vfo:AcceptedNameFamily53
+        a         ifn:AcceptedName ;
+        ifn:name  "Altingiaceae"@la .

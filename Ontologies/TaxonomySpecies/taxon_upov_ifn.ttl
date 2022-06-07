@@ -1,0 +1,92 @@
+@prefix ifn:   <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix vfo:   <http://virtualforests.gsic.uva.es/> .
+
+# Species
+vfo:SpeciesPINUS_NIG  owl:equivalentClass
+                ifn:Species25 ;
+        owl:sameAs           ifn:Species25 .
+
+vfo:SpeciesACERR_PSE  owl:equivalentClass
+                ifn:Species576 ;
+        owl:sameAs           ifn:Species576 .
+
+vfo:SpeciesBETUL_PEN  owl:equivalentClass
+                ifn:Species373 ;
+        owl:sameAs           ifn:Species373 .
+
+vfo:SpeciesROBIN_PSE  owl:equivalentClass
+                ifn:Species92 ;
+        owl:sameAs           ifn:Species92 .
+
+vfo:SpeciesPSDTS_MEN  owl:equivalentClass
+                ifn:Species34 ;
+        owl:sameAs           ifn:Species34 .
+
+vfo:SpeciesCEDRU_LIB  owl:equivalentClass
+                ifn:Species317 ;
+        owl:sameAs           ifn:Species317 .
+
+vfo:SpeciesFAGUS_SYL  owl:equivalentClass
+                ifn:Species71 ;
+        owl:sameAs           ifn:Species71 .
+
+vfo:SpeciesLARIX_DEC  owl:equivalentClass
+                ifn:Species235 ;
+        owl:sameAs           ifn:Species235 .
+
+vfo:SpeciesEUCAL_NIT  owl:equivalentClass
+                ifn:Species64 ;
+        owl:sameAs           ifn:Species64 .
+
+vfo:SpeciesPINUS_PNA  owl:equivalentClass
+                ifn:Species23 ;
+        owl:sameAs           ifn:Species23 .
+
+vfo:SpeciesPINUS_PNS  owl:equivalentClass
+                ifn:Species26 ;
+        owl:sameAs           ifn:Species26 .
+
+vfo:SpeciesQUERC_ROB  owl:equivalentClass
+                ifn:Species41 ;
+        owl:sameAs           ifn:Species41 .
+
+vfo:SpeciesCUPRE_SEM  owl:equivalentClass
+                ifn:Species36 ;
+        owl:sameAs           ifn:Species36 .
+
+vfo:SpeciesQUERC_ROT  owl:equivalentClass
+                ifn:Species45 ;
+        owl:sameAs           ifn:Species45 .
+
+vfo:SpeciesCERTN_SIL  owl:equivalentClass
+                ifn:Species67 ;
+        owl:sameAs           ifn:Species67 .
+
+vfo:SpeciesQUERC_SUB  owl:equivalentClass
+                ifn:Species46 ;
+        owl:sameAs           ifn:Species46 .
+
+vfo:SpeciesEUCAL_GLO  owl:equivalentClass
+                ifn:Species61 ;
+        owl:sameAs           ifn:Species61 .
+
+vfo:SpeciesQUERC_PET  owl:equivalentClass
+                ifn:Species42 ;
+        owl:sameAs           ifn:Species42 .
+
+vfo:SpeciesQUERC_RUB  owl:equivalentClass
+                ifn:Species48 ;
+        owl:sameAs           ifn:Species48 .
+
+vfo:SpeciesPINUS_SYL  owl:equivalentClass
+                ifn:Species21 ;
+        owl:sameAs           ifn:Species21 .
+
+vfo:SpeciesCASTA_SAT  owl:equivalentClass
+                ifn:Species72 ;
+        owl:sameAs           ifn:Species72 .
+
+vfo:SpeciesCEDRU_ATL  owl:equivalentClass
+                ifn:Species17 ;
+        owl:sameAs           ifn:Species17 .

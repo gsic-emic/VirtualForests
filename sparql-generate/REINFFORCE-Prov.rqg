@@ -1,0 +1,35 @@
+BASE <http://reinfforce.iefc.net/data/>
+
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> # Not necessary
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fun: <http://w3id.org/sparql-generate/fn/>
+
+PREFIX spo: <http://crossforest.eu/position/ontology/>
+PREFIX smo: <http://crossforest.eu/measures/ontology/>
+PREFIX epsg: <http://epsg.w3id.org/data/>
+PREFIX crs: <http://epsg.w3id.org/data/crs/>
+PREFIX ontology.axis: <http://epsg.w3id.org/ontology/axis/>
+PREFIX data.axis: <http://epsg.w3id.org/data/axis/>
+PREFIX unit: <http://crossforest.eu/measures/data/unit/>
+PREFIX ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/>
+
+PREFIX vfo: <http://virtualforests.gsic.uva.es/>
+PREFIX rff: <http://reinfforce.iefc.net/data/>
+
+
+GENERATE { 
+  <provenance/{?upov_prov}> a vfo:Provenance,  owl:NamedIndividual , owl:Class , rdfs:Class ;
+                         rdfs:label ?prov ;
+                         vfo:hasTaxon <http://virtualforests.gsic.uva.es/{?taxon}{?upov}> ;
+                         vfo:hasProvenanceCode ?provCode .
+}
+
+SOURCE <urn:source> AS ?source
+ITERATOR iter:CSV(?source, true, "\"", ";", "\n", "Provenances", "ID_PROVENANCE", "UPOV Code", "ID UPOV Prov" , "Taxon" ) AS ?prov ?idProv ?upov ?upov_prov ?taxon
+
+WHERE {
+  BIND( fun:regex(?idProv, "(.*)-(.*)" , 2) as ?provCode)
+}

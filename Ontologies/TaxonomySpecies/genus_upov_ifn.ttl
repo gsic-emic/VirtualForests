@@ -1,0 +1,46 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix vfo: <http://virtualforests.gsic.uva.es/> .
+@prefix ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+
+## Existing in CrossForest
+vfo:GenusQUERC owl:sameAs ifn:Genus121 .
+vfo:GenusQUERC owl:equivalentClass ifn:Genus121 .
+
+vfo:GenusFAGUS owl:sameAs ifn:Genus122 .
+vfo:GenusFAGUS owl:equivalentClass ifn:Genus122 .
+
+vfo:GenusCASTA owl:sameAs ifn:Genus123 .
+vfo:GenusCASTA owl:equivalentClass ifn:Genus123 .
+
+vfo:GenusCERTN owl:sameAs ifn:Genus142 .
+vfo:GenusCERTN owl:equivalentClass ifn:Genus142 .
+
+vfo:GenusROBIN owl:sameAs ifn:Genus144 .
+vfo:GenusROBIN owl:equivalentClass ifn:Genus144 .
+
+vfo:GenusEUCAL owl:sameAs ifn:Genus162 .
+vfo:GenusEUCAL owl:equivalentClass ifn:Genus162 .
+
+vfo:GenusACERR owl:sameAs ifn:Genus171 .
+vfo:GenusACERR owl:equivalentClass ifn:Genus171 .
+
+vfo:GenusBETUL owl:sameAs ifn:Genus191 .
+vfo:GenusBETUL owl:equivalentClass ifn:Genus191 .
+
+vfo:GenusPINUS owl:sameAs ifn:Genus211 .
+vfo:GenusPINUS owl:equivalentClass ifn:Genus211 .
+
+vfo:GenusCEDRU owl:sameAs ifn:Genus212 .
+vfo:GenusCEDRU owl:equivalentClass ifn:Genus212 .
+
+vfo:GenusLARIX owl:sameAs ifn:Genus214 .
+vfo:GenusLARIX owl:equivalentClass ifn:Genus214 .
+
+vfo:GenusPSDTS owl:sameAs ifn:Genus216 .
+vfo:GenusPSDTS owl:equivalentClass ifn:Genus216 .
+
+vfo:GenusCUPRE owl:sameAs ifn:Genus221 .
+vfo:GenusCUPRE owl:equivalentClass ifn:Genus221 .
+
+vfo:GenusTHUJA owl:sameAs ifn:Genus224 .
+vfo:GenusTHUJA owl:equivalentClass ifn:Genus224 .

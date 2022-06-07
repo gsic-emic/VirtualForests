@@ -1,0 +1,1552 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix crs:   <http://epsg.w3id.org/data/crs/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix iter:  <http://w3id.org/sparql-generate/iter/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix epsg:  <http://epsg.w3id.org/data/> .
+@prefix ifn:   <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+@prefix ontology.axis: <http://epsg.w3id.org/ontology/axis/> .
+@prefix unit:  <http://crossforest.eu/measures/data/unit/> .
+@prefix spo:   <http://crossforest.eu/position/ontology/> .
+@prefix rff:   <http://reinfforce.iefc.net/data/> .
+@prefix smo:   <http://crossforest.eu/measures/ontology/> .
+@prefix data.axis: <http://epsg.w3id.org/data/axis/> .
+@prefix fun:   <http://w3id.org/sparql-generate/fn/> .
+@prefix vfo:   <http://virtualforests.gsic.uva.es/> .
+
+<http://reinfforce.iefc.net/data/provenance/FAGUS_SYL-PODT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PODTATRANSKA, Slovakia" ;
+        vfo:hasProvenanceCode  "PODT" ;
+        vfo:hasTaxon           vfo:SpeciesFAGUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNA-ITAL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Natural Biogenetic Reserve of Tomboli of Cecina, Italy" ;
+        vfo:hasProvenanceCode  "ITAL" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNA .
+
+<http://reinfforce.iefc.net/data/provenance/CUPRE_SEM-FRAN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "France" ;
+        vfo:hasProvenanceCode  "FRAN" ;
+        vfo:hasTaxon           vfo:SpeciesCUPRE_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNS-LEIR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LEIRIA, Portugal" ;
+        vfo:hasProvenanceCode  "LEIR" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNS .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_NIG_SAL-CUEN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "salzmannii - ES07b - SISTEMA IBERICO MERIDIONAL, SUR DE CUENCA - Spain" ;
+        vfo:hasProvenanceCode  "CUEN" ;
+        vfo:hasTaxon           vfo:SubspeciesPINUS_NIG_SAL .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_LIB-LEBH>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Lebanon" ;
+        vfo:hasProvenanceCode  "LEBH" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_LIB .
+
+<http://reinfforce.iefc.net/data/provenance/LARIX_DEC-TRU2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Hybrid European-Japanese Danish variety Truust FP 636" ;
+        vfo:hasProvenanceCode  "TRU2" ;
+        vfo:hasTaxon           vfo:SpeciesLARIX_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROB-SUD2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SUD OUEST, France" ;
+        vfo:hasProvenanceCode  "SUD2" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROB .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_PET-ARBA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LITORAL VASCO-NAVARRO (E 05)" ;
+        vfo:hasProvenanceCode  "ARBA" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_PET .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PON-MEXI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Southern rockies (New Mexico)" ;
+        vfo:hasProvenanceCode  "MEXI" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PON .
+
+<http://reinfforce.iefc.net/data/provenance/LIQUI_STY-MISS>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Missouri, USA" ;
+        vfo:hasProvenanceCode  "MISS" ;
+        vfo:hasTaxon           vfo:SpeciesLIQUI_STY .
+
+<http://reinfforce.iefc.net/data/provenance/CALOC_DEC-NOC3>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NORTHERN CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "NOC3" ;
+        vfo:hasTaxon           vfo:SpeciesCALOC_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNS-LEVA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES16 - LEVANTE - Spain" ;
+        vfo:hasProvenanceCode  "LEVA" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNS .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_SYL-UNIV>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES12 - MONTES UNIVERSALES - Spain" ;
+        vfo:hasProvenanceCode  "UNIV" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/CUPRE_SEM-ANTA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "KOPRULU KANYON, Turkey" ;
+        vfo:hasProvenanceCode  "ANTA" ;
+        vfo:hasTaxon           vfo:SpeciesCUPRE_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-PARD>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Monte de El Pardo, Madrid, Spain" ;
+        vfo:hasProvenanceCode  "PARD" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-SLOV>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Slovakia" ;
+        vfo:hasProvenanceCode  "SLOV" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_NIT-RUBI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "E.nitens - RUBICON (18075), Victoria - Australia" ;
+        vfo:hasProvenanceCode  "RUBI" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_NIT .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-CORD>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES19 - SIERRA DE GREDOS - Spain" ;
+        vfo:hasProvenanceCode  "CORD" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-IDA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Idaho - USA" ;
+        vfo:hasProvenanceCode  "IDA2" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/SEQUA_SEM-NOC2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NORTHERN CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "NOC2" ;
+        vfo:hasTaxon           vfo:SpeciesSEQUA_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PON-IDA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "IDAHO - USA" ;
+        vfo:hasProvenanceCode  "IDA2" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PON .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_PET-GASC>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "GASCOGNE, France" ;
+        vfo:hasProvenanceCode  "GASC" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_PET .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROB-SUDO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SUD OUEST, France" ;
+        vfo:hasProvenanceCode  "SUDO" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNA-VEND>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "VENDAS NOVAS, Portugal" ;
+        vfo:hasProvenanceCode  "VEND" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNA .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-POLO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Eastern Poland" ;
+        vfo:hasProvenanceCode  "POLO" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-HUNG>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Hungary" ;
+        vfo:hasProvenanceCode  "HUNG" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_ELL-LOUI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LOUISIANA, USA" ;
+        vfo:hasProvenanceCode  "LOUI" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_ELL .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-POAN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PORT ANGELES Washington, USA" ;
+        vfo:hasProvenanceCode  "POAN" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNA-FRA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "REGION MEDITERRANEENNE, France" ;
+        vfo:hasProvenanceCode  "FRA2" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNA .
+
+<http://reinfforce.iefc.net/data/provenance/LARIX_DEC-SLOV>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "5, JUHOZAPADOSLOVENSKA, Slovakia" ;
+        vfo:hasProvenanceCode  "SLOV" ;
+        vfo:hasTaxon           vfo:SpeciesLARIX_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_LIB-TUR2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Turkey" ;
+        vfo:hasProvenanceCode  "TUR2" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_LIB .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-ORSI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SISKYOU OREGON - USA" ;
+        vfo:hasProvenanceCode  "ORSI" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/CUPRE_SEM-ANDA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ANDALUCIA CENTRO, Spain" ;
+        vfo:hasProvenanceCode  "ANDA" ;
+        vfo:hasTaxon           vfo:SpeciesCUPRE_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROT-ITAL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Italy" ;
+        vfo:hasProvenanceCode  "ITAL" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROT .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROT-OTEI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "rotundifolia OTEIZA - ALTO EBRO, Spain" ;
+        vfo:hasProvenanceCode  "OTEI" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROT .
+
+<http://reinfforce.iefc.net/data/provenance/SEQUA_SEM-COCA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "COAST CALIFORNIA-USA-Seed zones: 092.10 Humboldt County/095.10 Mendocino County/097.10 Santa Cruz County" ;
+        vfo:hasProvenanceCode  "COCA" ;
+        vfo:hasTaxon           vfo:SpeciesSEQUA_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_NIG_LAR-SIV2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Laricio variety calabrian  LES BARNES-SIVENS, France" ;
+        vfo:hasProvenanceCode  "SIV2" ;
+        vfo:hasTaxon           vfo:SubspeciesPINUS_NIG_LAR .
+
+<http://reinfforce.iefc.net/data/provenance/CERTN_SIL-ITAL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Italy" ;
+        vfo:hasProvenanceCode  "ITAL" ;
+        vfo:hasTaxon           vfo:SpeciesCERTN_SIL .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_GLO-WIE3>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "E.globulus - WIELANGTA (18894), Tasmania - Australia" ;
+        vfo:hasProvenanceCode  "WIE3" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_GLO .
+
+<http://reinfforce.iefc.net/data/provenance/SEQUA_SEM-CALI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "CALI" ;
+        vfo:hasTaxon           vfo:SpeciesSEQUA_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-ORCA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "OREGON CASCADE - USA" ;
+        vfo:hasProvenanceCode  "ORCA" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROB-UNIT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "New Forest, Hampshire, UK" ;
+        vfo:hasProvenanceCode  "UNIT" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROB .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_LIB-ADA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MERSIN-ASLANKOY, Turkey" ;
+        vfo:hasProvenanceCode  "ADA2" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_LIB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_SYL-HAGE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "HAGUENAU VAYRIERE, France" ;
+        vfo:hasProvenanceCode  "HAGE" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_TAE-VIRG>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "VIRGINIA - USA" ;
+        vfo:hasProvenanceCode  "VIRG" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_TAE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_TAE-TEX2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "TEXAS - USA" ;
+        vfo:hasProvenanceCode  "TEX2" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_TAE .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-BRIT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "QUALICUM, British Columbia - Canada" ;
+        vfo:hasProvenanceCode  "BRIT" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-MACE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Macedonia" ;
+        vfo:hasProvenanceCode  "MACE" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-BART>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "BARTIN, Turkey" ;
+        vfo:hasProvenanceCode  "BART" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-LAND>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PYRENEES ORIENTALES 761, France" ;
+        vfo:hasProvenanceCode  "LAND" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/CUNNI_LAN-SHAN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SHAN XI, China" ;
+        vfo:hasProvenanceCode  "SHAN" ;
+        vfo:hasTaxon           vfo:SpeciesCUNNI_LAN .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_SYL-POLA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "TABORZ, Polland HAUTE SERRE French seeds orchard" ;
+        vfo:hasProvenanceCode  "POLA" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_NIT-TAG2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "TALLAGANDA (18164), South New Wales - Australia" ;
+        vfo:hasProvenanceCode  "TAG2" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_NIT .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_BRU_ELD-ELDA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Variety eldarica Crimea" ;
+        vfo:hasProvenanceCode  "ELDA" ;
+        vfo:hasTaxon           vfo:VarietyPINUS_BRU_ELD .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROB-UNI2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "New Forest, Hampshire, UK" ;
+        vfo:hasProvenanceCode  "UNI2" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROB .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_PET-GRES>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "GRESIGNE - GASCOGNE, France" ;
+        vfo:hasProvenanceCode  "GRES" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_PET .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROT-EXTR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES11a - REGION EXTREMADURIENSE - Spain" ;
+        vfo:hasProvenanceCode  "EXTR" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROT .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_ATL-ALGE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "DJURDJURA, Algeria" ;
+        vfo:hasProvenanceCode  "ALGE" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_ATL .
+
+<http://reinfforce.iefc.net/data/provenance/LIQUI_STY-GEO2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "GEORGIA - USA" ;
+        vfo:hasProvenanceCode  "GEO2" ;
+        vfo:hasTaxon           vfo:SpeciesLIQUI_STY .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_NIG_SAL-BESS>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "salzmannii  ST GUILHEM BESSEGES GARD, France" ;
+        vfo:hasProvenanceCode  "BESS" ;
+        vfo:hasTaxon           vfo:SubspeciesPINUS_NIG_SAL .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-WAS2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "WASHINGTON CASCADE, USA" ;
+        vfo:hasProvenanceCode  "WAS2" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/LARIX_DEC-ALPE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ALPES INTERNES SUD, France" ;
+        vfo:hasProvenanceCode  "ALPE" ;
+        vfo:hasTaxon           vfo:SpeciesLARIX_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-KOZA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "GORNA ORYAHOVITSA - KOZAREVEC, Bulgary" ;
+        vfo:hasProvenanceCode  "KOZA" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_TAE-MISS>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MISSISSIPPI -USA" ;
+        vfo:hasProvenanceCode  "MISS" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_TAE .
+
+<http://reinfforce.iefc.net/data/provenance/LARIX_DEC-LAV2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Hybrid European-Japanese - LAVERCANTI_RE SEED ORCHARD" ;
+        vfo:hasProvenanceCode  "LAV2" ;
+        vfo:hasTaxon           vfo:SpeciesLARIX_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-BRI2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Vancouver Island in British Columbia Canada Qualicum" ;
+        vfo:hasProvenanceCode  "BRI2" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_RUB-FEST>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Rubra- EST 902, France" ;
+        vfo:hasProvenanceCode  "FEST" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_RUB .
+
+<http://reinfforce.iefc.net/data/provenance/CUPRE_SEM-ITAL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Stricta (Var. Pyramidalis), Emilia Romagna, Bologna- Italy" ;
+        vfo:hasProvenanceCode  "ITAL" ;
+        vfo:hasTaxon           vfo:SpeciesCUPRE_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROT-SUDO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Ilex - SUD OUEST, France" ;
+        vfo:hasProvenanceCode  "SUDO" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROT .
+
+<http://reinfforce.iefc.net/data/provenance/CERTN_SIL-ITA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Italy" ;
+        vfo:hasProvenanceCode  "ITA2" ;
+        vfo:hasTaxon           vfo:SpeciesCERTN_SIL .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-BAR2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "BARTIN, Turkey" ;
+        vfo:hasProvenanceCode  "BAR2" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-VAN2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "4 VERTIENTE SEPTENTRIONAL CANTABRICA, Spain" ;
+        vfo:hasProvenanceCode  "VAN2" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNA-CAST>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "2 VALLES DEL TIETAR Y DEL ALBERCHE, Spain" ;
+        vfo:hasProvenanceCode  "CAST" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNA .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PON-MEX2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "New Mexico, USA" ;
+        vfo:hasProvenanceCode  "MEX2" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PON .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROB-FRAN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "France" ;
+        vfo:hasProvenanceCode  "FRAN" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_TAE-SOUT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SOUTHERN CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "SOUT" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_TAE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PON-CALI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CENTRAL CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "CALI" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PON .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROT-CROA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Ilex - CROATIA" ;
+        vfo:hasProvenanceCode  "CROA" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROT .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNS-CORD>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CORDAL DE LOBA (MONFERO), Spain" ;
+        vfo:hasProvenanceCode  "CORD" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNS .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_SYL-SERR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PINHAL DA PEDRA BELA, Portugal" ;
+        vfo:hasProvenanceCode  "SERR" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-PAPU>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PAPUCKA,Croatia" ;
+        vfo:hasProvenanceCode  "PAPU" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_ATL-PARD>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PARDAILHAN, France" ;
+        vfo:hasProvenanceCode  "PARD" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_ATL .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_NIT-RUB2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "E.nitens - RUBICON (18075), Victoria - Australia" ;
+        vfo:hasProvenanceCode  "RUB2" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_NIT .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_CAR_HOND-HOND>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Poptun, El Petén. Guatemala" ;
+        vfo:hasProvenanceCode  "HOND" ;
+        vfo:hasTaxon           vfo:VarietyPINUS_CAR_HOND .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-ROMA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CAREI, Romania" ;
+        vfo:hasProvenanceCode  "ROMA" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROB-POSA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "POSAVINA, Croatia" ;
+        vfo:hasProvenanceCode  "POSA" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROB .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-ALP3>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ALPS JURA, Switzerland" ;
+        vfo:hasProvenanceCode  "ALP3" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_TAE-LOUS>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LOUISIANA - USA" ;
+        vfo:hasProvenanceCode  "LOUS" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_TAE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_ELL-LOU2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LOUISIANA, USA" ;
+        vfo:hasProvenanceCode  "LOU2" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_ELL .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_ATL-MEN2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CAT-PP-01 MENERBES, France" ;
+        vfo:hasProvenanceCode  "MEN2" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_ATL .
+
+<http://reinfforce.iefc.net/data/provenance/CUPRE_SEM-ANT2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "KOPRULU KANYON, Turkey" ;
+        vfo:hasProvenanceCode  "ANT2" ;
+        vfo:hasTaxon           vfo:SpeciesCUPRE_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-VILL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES03 - MONTES DE TOLEDO VILLUERCAS - Spain" ;
+        vfo:hasProvenanceCode  "VILL" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_PET-UNIT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "BRISTOL, UK" ;
+        vfo:hasProvenanceCode  "UNIT" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_PET .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-SLO2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Slovakia" ;
+        vfo:hasProvenanceCode  "SLO2" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/LIQUI_STY-MARY>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Maryland, USA" ;
+        vfo:hasProvenanceCode  "MARY" ;
+        vfo:hasTaxon           vfo:SpeciesLIQUI_STY .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROT-SPAN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Spain" ;
+        vfo:hasProvenanceCode  "SPAN" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROT .
+
+<http://reinfforce.iefc.net/data/provenance/CUNNI_LAN-YUNN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "YUNNAN, China" ;
+        vfo:hasProvenanceCode  "YUNN" ;
+        vfo:hasTaxon           vfo:SpeciesCUNNI_LAN .
+
+<http://reinfforce.iefc.net/data/provenance/CUPRE_SEM-FRA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "France" ;
+        vfo:hasProvenanceCode  "FRA2" ;
+        vfo:hasTaxon           vfo:SpeciesCUPRE_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/CUPRE_SEM-ITA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Var. Pyramidalis - Italy" ;
+        vfo:hasProvenanceCode  "ITA2" ;
+        vfo:hasTaxon           vfo:SpeciesCUPRE_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-KUL2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NOVI PAZAR -KULEVCHA, Bulgary" ;
+        vfo:hasProvenanceCode  "KUL2" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/LARIX_DEC-TRUU>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Hybrid European-Japanese - TRUUST DANISH SEED ORCHARD" ;
+        vfo:hasProvenanceCode  "TRUU" ;
+        vfo:hasTaxon           vfo:SpeciesLARIX_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-MONT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MONTANA, USA" ;
+        vfo:hasProvenanceCode  "MONT" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROB-SZLI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SZLICHTYNGOWA, Pologne" ;
+        vfo:hasProvenanceCode  "SZLI" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROB .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-LUZE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LUZETTE, France" ;
+        vfo:hasProvenanceCode  "LUZE" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNA-MALA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MALAGA, Spain" ;
+        vfo:hasProvenanceCode  "MALA" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNA .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_BRU_ELD-CRI2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Eldarica - URFA REGION, Turkey" ;
+        vfo:hasProvenanceCode  "CRI2" ;
+        vfo:hasTaxon           vfo:VarietyPINUS_BRU_ELD .
+
+<http://reinfforce.iefc.net/data/provenance/CALOC_DEC-NOCA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NORTHERN CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "NOCA" ;
+        vfo:hasTaxon           vfo:SpeciesCALOC_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_NIG_SAL-SORI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "salzmannii - ES10 - SORIA - Spain" ;
+        vfo:hasProvenanceCode  "SORI" ;
+        vfo:hasTaxon           vfo:SubspeciesPINUS_NIG_SAL .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-ESP>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Rif Occidental I.2, Chefchaouen, Morocco" ;
+        vfo:hasProvenanceCode  "ESP" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/FAGUS_ORI-ORDU>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ORDU MESUDIYE - BACKWARD BLACK SEA REGION - Turkey" ;
+        vfo:hasProvenanceCode  "ORDU" ;
+        vfo:hasTaxon           vfo:SpeciesFAGUS_ORI .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_NIG_LAR-SIVE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Laricio variety calabrian  LES BARNES-SIVENS, France" ;
+        vfo:hasProvenanceCode  "SIVE" ;
+        vfo:hasTaxon           vfo:SubspeciesPINUS_NIG_LAR .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PEU-GODE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "GOTSE DELCHEV, Bulgary" ;
+        vfo:hasProvenanceCode  "GODE" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PEU .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_PET-UNI2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "BRISTOL, UK" ;
+        vfo:hasProvenanceCode  "UNI2" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_PET .
+
+<http://reinfforce.iefc.net/data/provenance/FAGUS_SYL-ESPI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ESPINAL - NAVARRA, Spain" ;
+        vfo:hasProvenanceCode  "ESPI" ;
+        vfo:hasTaxon           vfo:SpeciesFAGUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_ATL-VISF>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "VIS, France" ;
+        vfo:hasProvenanceCode  "VISF" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_ATL .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_BRU-TAUO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "TAURUS, Turkey" ;
+        vfo:hasProvenanceCode  "TAUO" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_BRU .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-MON2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MONTANA, USA" ;
+        vfo:hasProvenanceCode  "MON2" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/SEQUA_SEM-CAL2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "CAL2" ;
+        vfo:hasTaxon           vfo:SpeciesSEQUA_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-KRAL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "1, KRALOVA, Slovakia" ;
+        vfo:hasProvenanceCode  "KRAL" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PON-DAKO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "DAKOTA - USA" ;
+        vfo:hasProvenanceCode  "DAKO" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PON .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-COLO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "COLORADO, USA" ;
+        vfo:hasProvenanceCode  "COLO" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-NORD>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "France, Origine APS101 NORD" ;
+        vfo:hasProvenanceCode  "NORD" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/LIQUI_STY-GEOR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "GEORGIA - USA" ;
+        vfo:hasProvenanceCode  "GEOR" ;
+        vfo:hasTaxon           vfo:SpeciesLIQUI_STY .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-NORD>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NORD EST ET MONTAGNE, France" ;
+        vfo:hasProvenanceCode  "NORD" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/SEQUA_SEM-COC2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "COAST CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "COC2" ;
+        vfo:hasTaxon           vfo:SpeciesSEQUA_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-MEDI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MEDITERRANEE 741, France" ;
+        vfo:hasProvenanceCode  "MEDI" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-IDAH>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "IDAHO - USA" ;
+        vfo:hasProvenanceCode  "IDAH" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-IDA3>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "IDAHO - USA" ;
+        vfo:hasProvenanceCode  "IDA3" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-NOCA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NORTHERN CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "NOCA" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-CZA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "KZARNA, Poland" ;
+        vfo:hasProvenanceCode  "CZA2" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PON-IDAH>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "IDAHO - USA" ;
+        vfo:hasProvenanceCode  "IDAH" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PON .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-TETT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "TETI - SARDEGNA, Italy" ;
+        vfo:hasProvenanceCode  "TETT" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/LIQUI_STY-ITAL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Castelleone, Lombardie, Italy" ;
+        vfo:hasProvenanceCode  "ITAL" ;
+        vfo:hasTaxon           vfo:SpeciesLIQUI_STY .
+
+<http://reinfforce.iefc.net/data/provenance/CERTN_SIL-SPAI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "R.I. 37-09, Spain" ;
+        vfo:hasProvenanceCode  "SPAI" ;
+        vfo:hasTaxon           vfo:SpeciesCERTN_SIL .
+
+<http://reinfforce.iefc.net/data/provenance/LIQUI_STY-MIS2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Missouri, USA" ;
+        vfo:hasProvenanceCode  "MIS2" ;
+        vfo:hasTaxon           vfo:SpeciesLIQUI_STY .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNS-GRED>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES06 - SIERRA DE GREDOS - Spain" ;
+        vfo:hasProvenanceCode  "GRED" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNS .
+
+<http://reinfforce.iefc.net/data/provenance/LARIX_DEC-LAVE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Hybrid European-Japanese - LAVERCANTI_RE SEED ORCHARD" ;
+        vfo:hasProvenanceCode  "LAVE" ;
+        vfo:hasTaxon           vfo:SpeciesLARIX_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/LARIX_DEC-REVE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Hybrid European-Japanese REVE-VERT" ;
+        vfo:hasProvenanceCode  "REVE" ;
+        vfo:hasTaxon           vfo:SpeciesLARIX_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/LIQUI_STY-MAR2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Maryland, USA" ;
+        vfo:hasProvenanceCode  "MAR2" ;
+        vfo:hasTaxon           vfo:SpeciesLIQUI_STY .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SHU-TEXA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "shumardii - Texas, USA" ;
+        vfo:hasProvenanceCode  "TEXA" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SHU .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-ORCO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NULL" ;
+        vfo:hasProvenanceCode  "ORCO" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-ORE2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SALEM, Oregon - USA" ;
+        vfo:hasProvenanceCode  "ORE2" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-OREG>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "262 LEBANON, Oregon - USA" ;
+        vfo:hasProvenanceCode  "OREG" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-TET2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "TETI - SARDEGNA, Italy" ;
+        vfo:hasProvenanceCode  "TET2" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_BRU_ELD-ELD2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Variety eldarica CRIMEA" ;
+        vfo:hasProvenanceCode  "ELD2" ;
+        vfo:hasTaxon           vfo:VarietyPINUS_BRU_ELD .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-KRA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "1, KRALOVA, Slovakia" ;
+        vfo:hasProvenanceCode  "KRA2" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_GDA-GUN1>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "E.gundal I => France (plants)" ;
+        vfo:hasProvenanceCode  "GUN1" ;
+        vfo:hasTaxon           vfo:HybridEUCAL_GDA .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-ALPS>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ALPS JURA, Switzerland" ;
+        vfo:hasProvenanceCode  "ALPS" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROB-ITAL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Italy" ;
+        vfo:hasProvenanceCode  "ITAL" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PON-OREG>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "OREGON - USA" ;
+        vfo:hasProvenanceCode  "OREG" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PON .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-SLOV>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Slovakia" ;
+        vfo:hasProvenanceCode  "SLOV" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PON-CAL2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CENTRAL CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "CAL2" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PON .
+
+<http://reinfforce.iefc.net/data/provenance/CALOC_DEC-CECA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CENTRAL CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "CECA" ;
+        vfo:hasTaxon           vfo:SpeciesCALOC_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/CUNNI_LAN-LIS2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LISHU - China" ;
+        vfo:hasProvenanceCode  "LIS2" ;
+        vfo:hasTaxon           vfo:SpeciesCUNNI_LAN .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-KOZ2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Kozarevec Bulgary (Nyrsegi)" ;
+        vfo:hasProvenanceCode  "KOZ2" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_SYL-SLOV>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "5, SEVEROZAPADNA, Slovakia" ;
+        vfo:hasProvenanceCode  "SLOV" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_NIT-NEWZ>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "E.nitens - NEW ZEALAND (16301)" ;
+        vfo:hasProvenanceCode  "NEWZ" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_NIT .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-WALE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "30, WALES, UK" ;
+        vfo:hasProvenanceCode  "WALE" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_LIB-POZA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ADANAN-POZANTI, Turkey" ;
+        vfo:hasProvenanceCode  "POZA" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_LIB .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_ATL-SAUM>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "France, Alpes de Haute Provence (Saumon CAT-PP-03)" ;
+        vfo:hasProvenanceCode  "SAUM" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_ATL .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_NIG_LAR-VAYR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Laricio variety corsican  SOLOGNE VAYRI_RES, France" ;
+        vfo:hasProvenanceCode  "VAYR" ;
+        vfo:hasTaxon           vfo:SubspeciesPINUS_NIG_LAR .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-ITA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Puglia, Brindisi, Italia" ;
+        vfo:hasProvenanceCode  "ITA" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_ELL-GEO2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "GEORGIA - USA" ;
+        vfo:hasProvenanceCode  "GEO2" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_ELL .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_ATL-LUBE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LUBERON CR  TE, France" ;
+        vfo:hasProvenanceCode  "LUBE" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_ATL .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_ATL-MENE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CAT-PP-01 MENERBES, France" ;
+        vfo:hasProvenanceCode  "MENE" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_ATL .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-NOR2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NORD EST ET MONTAGNE, France" ;
+        vfo:hasProvenanceCode  "NOR2" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-CATA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SUD OUEST, France" ;
+        vfo:hasProvenanceCode  "CATA" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_SYL-SCOT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SCOTLAND, UK (204)" ;
+        vfo:hasProvenanceCode  "SCOT" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-KULE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NOVI PAZAR -KULEVCHA, Bulgary" ;
+        vfo:hasProvenanceCode  "KULE" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/FAGUS_ORI-SINO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "VEZIRKOPRU GOLKOY - BACKWARD BLACK SEA REGION - Turkey" ;
+        vfo:hasProvenanceCode  "SINO" ;
+        vfo:hasTaxon           vfo:SpeciesFAGUS_ORI .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_PET-PIRI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES07 - PIRINEO NAVARRO - Spain" ;
+        vfo:hasProvenanceCode  "PIRI" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_PET .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-CECA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CENTRAL CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "CECA" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_SYL-TURK>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Turkey" ;
+        vfo:hasProvenanceCode  "TURK" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-PARI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "BASSIN PARISIEN, France" ;
+        vfo:hasProvenanceCode  "PARI" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-WASH>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "WASHINGTON CASCADE, USA" ;
+        vfo:hasProvenanceCode  "WASH" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/LIQUI_STY-ARKA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ARKANSAS - USA" ;
+        vfo:hasProvenanceCode  "ARKA" ;
+        vfo:hasTaxon           vfo:SpeciesLIQUI_STY .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_TAE-GEOR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Hardiness zone Georgia seed orchard" ;
+        vfo:hasProvenanceCode  "GEOR" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_TAE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_SYL-SCO2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SCOTLAND, UK (204)" ;
+        vfo:hasProvenanceCode  "SCO2" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/CALOC_DEC-SOCA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SOUTHERN CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "SOCA" ;
+        vfo:hasTaxon           vfo:SpeciesCALOC_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-CZAR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "KZARNA, Poland" ;
+        vfo:hasProvenanceCode  "CZAR" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/CERTN_SIL-ITA3>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Italy" ;
+        vfo:hasProvenanceCode  "ITA3" ;
+        vfo:hasTaxon           vfo:SpeciesCERTN_SIL .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_LIB-TURK>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Turkey" ;
+        vfo:hasProvenanceCode  "TURK" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_LIB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNS-LAND>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MIMIZAN LANDES, France" ;
+        vfo:hasProvenanceCode  "LAND" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNS .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-DARR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "DARRINGTON, WASHINGTON, USA" ;
+        vfo:hasProvenanceCode  "DARR" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_BRU-MARM>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MARMARIS, Turkey" ;
+        vfo:hasProvenanceCode  "MARM" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_BRU .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_BRU_ELD-CRIM>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Eldarica - URFA REGION, Turkey" ;
+        vfo:hasProvenanceCode  "CRIM" ;
+        vfo:hasTaxon           vfo:VarietyPINUS_BRU_ELD .
+
+<http://reinfforce.iefc.net/data/provenance/CALOC_DEC-NOC2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NORTHERN CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "NOC2" ;
+        vfo:hasTaxon           vfo:SpeciesCALOC_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/LARIX_DEC-THEI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LE THEIL, France" ;
+        vfo:hasProvenanceCode  "THEI" ;
+        vfo:hasTaxon           vfo:SpeciesLARIX_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PEU-MACE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PELISTER NATIONAL PARK, Macedonia" ;
+        vfo:hasProvenanceCode  "MACE" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PEU .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROB-PAGO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LITORAL VASCO-NAVARRO (E 05)" ;
+        vfo:hasProvenanceCode  "PAGO" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_TAE-MIS2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MISSISSIPPI -USA" ;
+        vfo:hasProvenanceCode  "MIS2" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_TAE .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-MED2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MEDITERRANEE 741, France" ;
+        vfo:hasProvenanceCode  "MED2" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_NIT-RUB3>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "E.nitens - RUBICON (18075), Victoria - Australia" ;
+        vfo:hasProvenanceCode  "RUB3" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_NIT .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_GLO-WIEL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "E.globulus - WIELANGTA (18894), Tasmania - Australia" ;
+        vfo:hasProvenanceCode  "WIEL" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_GLO .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_SYL-VALS>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES10 - SIERRA DE GUADARRAMA - Spain" ;
+        vfo:hasProvenanceCode  "VALS" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/CERTN_SIL-SPA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LEVANTE, Spain" ;
+        vfo:hasProvenanceCode  "SPA2" ;
+        vfo:hasTaxon           vfo:SpeciesCERTN_SIL .
+
+<http://reinfforce.iefc.net/data/provenance/LARIX_DEC-STRA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "STRAZA, Slovenia" ;
+        vfo:hasProvenanceCode  "STRA" ;
+        vfo:hasTaxon           vfo:SpeciesLARIX_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-IZMI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Turkey" ;
+        vfo:hasProvenanceCode  "IZMI" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROT-DUNE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Rotundifolia from France (North of Landes)" ;
+        vfo:hasProvenanceCode  "DUNE" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROT .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_NIG_LAR-CORS>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Laricio variety corsican HAUTE SIERRE SEED TREE ORCHARD, France" ;
+        vfo:hasProvenanceCode  "CORS" ;
+        vfo:hasTaxon           vfo:SubspeciesPINUS_NIG_LAR .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_ROT-BARR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Rotundifolia  - BARRANCOS (CONTENDA), Portugal" ;
+        vfo:hasProvenanceCode  "BARR" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_ROT .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNS-CUEN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES12 - SERRANIA DE CUENCA - Spain" ;
+        vfo:hasProvenanceCode  "CUEN" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNS .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_ELL-GEOR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "GEORGIA - USA" ;
+        vfo:hasProvenanceCode  "GEOR" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_ELL .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_NIT-MCAL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MACALISTER (20764), Victoria - Australia" ;
+        vfo:hasProvenanceCode  "MCAL" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_NIT .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNA-FRAN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "REGION MEDITERRANEENNE, France" ;
+        vfo:hasProvenanceCode  "FRAN" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNA .
+
+<http://reinfforce.iefc.net/data/provenance/SEQUA_SEM-NOCA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NORTHERN CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "NOCA" ;
+        vfo:hasTaxon           vfo:SpeciesSEQUA_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_GLO-WIE2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "E.globulus - WIELANGTA (18894), Tasmania - Australia" ;
+        vfo:hasProvenanceCode  "WIE2" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_GLO .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-NMEX>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "New Mexico, USA" ;
+        vfo:hasProvenanceCode  "NMEX" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SHU-TEX2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "shumardii - Texas, USA" ;
+        vfo:hasProvenanceCode  "TEX2" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SHU .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-MAR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Alpujarras, Haza de Lino, Spain" ;
+        vfo:hasProvenanceCode  "MAR" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-ALCA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ALCACER DO SAL, Portugal" ;
+        vfo:hasProvenanceCode  "ALCA" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_RUB-VANA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES06 - LITORAL VASCO - Spain" ;
+        vfo:hasProvenanceCode  "VANA" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_RUB .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNS-TAMJ>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "TAMJOUT (COLLOBRIERE), Morocco - French seeds orchard" ;
+        vfo:hasProvenanceCode  "TAMJ" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNS .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_PET-CHAR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CHARENTES POITOU, France" ;
+        vfo:hasProvenanceCode  "CHAR" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_PET .
+
+<http://reinfforce.iefc.net/data/provenance/THUJA_PLI-OLYM>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PORT ANGELES, Washington - USA" ;
+        vfo:hasProvenanceCode  "OLYM" ;
+        vfo:hasTaxon           vfo:SpeciesTHUJA_PLI .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-NYRS>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NYIRSEGI, Hungary" ;
+        vfo:hasProvenanceCode  "NYRS" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/CALOC_DEC-CEC2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SHASTA LAKE, Northern California - USA" ;
+        vfo:hasProvenanceCode  "CEC2" ;
+        vfo:hasTaxon           vfo:SpeciesCALOC_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-UNIT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "30, WALES, UK" ;
+        vfo:hasProvenanceCode  "UNIT" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/SEQUA_SEM-COC3>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "COAST CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "COC3" ;
+        vfo:hasTaxon           vfo:SpeciesSEQUA_SEM .
+
+<http://reinfforce.iefc.net/data/provenance/FAGUS_SYL-FRAN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "FSY102-Nord, France" ;
+        vfo:hasProvenanceCode  "FRAN" ;
+        vfo:hasTaxon           vfo:SpeciesFAGUS_SYL .
+
+<http://reinfforce.iefc.net/data/provenance/CERTN_SIL-HVAR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "HVAR ISLAND, Croatia" ;
+        vfo:hasProvenanceCode  "HVAR" ;
+        vfo:hasTaxon           vfo:SpeciesCERTN_SIL .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-CALI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CALIFORNIA - FRENCH SEED ORCHARD" ;
+        vfo:hasProvenanceCode  "CALI" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_LIB-POZ2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ADANAN-POZANTI, Turkey" ;
+        vfo:hasProvenanceCode  "POZ2" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_LIB .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_LIB-ADAN>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MERSIN-ASLANKOY, Turkey" ;
+        vfo:hasProvenanceCode  "ADAN" ;
+        vfo:hasTaxon           vfo:SpeciesCEDRU_LIB .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_NIT-MCA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MACALISTER (20764), Victoria - Australia" ;
+        vfo:hasProvenanceCode  "MCA2" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_NIT .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-EXTR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "EXTREMADURA, Zah_no en Badajoz - Spain" ;
+        vfo:hasProvenanceCode  "EXTR" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-PAR2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "BASSIN PARISIEN, France" ;
+        vfo:hasProvenanceCode  "PAR2" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_ELL-SOUT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SOUTH CAROLINA - USA" ;
+        vfo:hasProvenanceCode  "SOUT" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_ELL .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-ITAL>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Italy" ;
+        vfo:hasProvenanceCode  "ITAL" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PON-COLO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "COLORADO, USA" ;
+        vfo:hasProvenanceCode  "COLO" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PON .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-UNI2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "30, WALES, UK" ;
+        vfo:hasProvenanceCode  "UNI2" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNA-LEVA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ES A - BIAR - Spain" ;
+        vfo:hasProvenanceCode  "LEVA" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNA .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-PUZT>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PUSZTAVACS,Hungary" ;
+        vfo:hasProvenanceCode  "PUZT" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-GALI>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "MONTA" ;
+        vfo:hasProvenanceCode  "GALI" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_GDA-GUN2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "E.gundal II => France (plants)" ;
+        vfo:hasProvenanceCode  "GUN2" ;
+        vfo:hasTaxon           vfo:HybridEUCAL_GDA .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-CEC2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CENTRAL CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "CEC2" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/CUNNI_LAN-LISH>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "LISHU - China" ;
+        vfo:hasProvenanceCode  "LISH" ;
+        vfo:hasTaxon           vfo:SpeciesCUNNI_LAN .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_TAE-TEXA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "TEXAS - USA" ;
+        vfo:hasProvenanceCode  "TEXA" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_TAE .
+
+<http://reinfforce.iefc.net/data/provenance/LIQUI_STY-ARK2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Central strip Pinnacle Mountains in Tennesee" ;
+        vfo:hasProvenanceCode  "ARK2" ;
+        vfo:hasTaxon           vfo:SpeciesLIQUI_STY .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_BRU-CYPR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "CYPRUS" ;
+        vfo:hasProvenanceCode  "CYPR" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_BRU .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-PUZ2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PUSZTAVACS,Hungary" ;
+        vfo:hasProvenanceCode  "PUZ2" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/CALOC_DEC-SOC2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "SOUTHERN CALIFORNIA - USA" ;
+        vfo:hasProvenanceCode  "SOC2" ;
+        vfo:hasTaxon           vfo:SpeciesCALOC_DEC .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_PET-GERO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "GERONCE - GASCOGNE, France" ;
+        vfo:hasProvenanceCode  "GERO" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_PET .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_NIG_SAL-CAZO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "salzmannii - ES08a - CORDILLERA BETICAS, CAZORLA ALCARAZ - Spain" ;
+        vfo:hasProvenanceCode  "CAZO" ;
+        vfo:hasTaxon           vfo:SubspeciesPINUS_NIG_SAL .
+
+<http://reinfforce.iefc.net/data/provenance/EUCAL_NIT-TAGA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "TALLAGANDA (18164), South New Wales - Australia" ;
+        vfo:hasProvenanceCode  "TAGA" ;
+        vfo:hasTaxon           vfo:SpeciesEUCAL_NIT .
+
+<http://reinfforce.iefc.net/data/provenance/QUERC_SUB-PYRE>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PYRENEES ORIENTALES, France" ;
+        vfo:hasProvenanceCode  "PYRE" ;
+        vfo:hasTaxon           vfo:SpeciesQUERC_SUB .
+
+<http://reinfforce.iefc.net/data/provenance/PSDTS_MEN-ARIZ>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Variety glauca ARIZONA - USA" ;
+        vfo:hasProvenanceCode  "ARIZ" ;
+        vfo:hasTaxon           vfo:SpeciesPSDTS_MEN .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-ALP2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "ALPS JURA, Switzerland" ;
+        vfo:hasProvenanceCode  "ALP2" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/PINUS_PNS-LACO>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "PICARD (Lande Corse), France" ;
+        vfo:hasProvenanceCode  "LACO" ;
+        vfo:hasTaxon           vfo:SpeciesPINUS_PNS .
+
+<http://reinfforce.iefc.net/data/provenance/BETUL_PEN-NOR3>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "NORD EST ET MONTAGNE, France" ;
+        vfo:hasProvenanceCode  "NOR3" ;
+        vfo:hasTaxon           vfo:SpeciesBETUL_PEN .
+
+<http://reinfforce.iefc.net/data/provenance/ROBIN_PSE-IZM2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Turkey" ;
+        vfo:hasProvenanceCode  "IZM2" ;
+        vfo:hasTaxon           vfo:SpeciesROBIN_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/CASTA_SAT-ITA2>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "Italy" ;
+        vfo:hasProvenanceCode  "ITA2" ;
+        vfo:hasTaxon           vfo:SpeciesCASTA_SAT .
+
+<http://reinfforce.iefc.net/data/provenance/CEDRU_LIB_BRE-CYPR>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "C.brevifolia - CYPRUS" ;
+        vfo:hasProvenanceCode  "CYPR" ;
+        vfo:hasTaxon           vfo:VarietyCEDRU_LIB_BRE .
+
+<http://reinfforce.iefc.net/data/provenance/ACERR_PSE-VANA>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "4 VERTIENTE SEPTENTRIONAL CANTABRICA, Spain" ;
+        vfo:hasProvenanceCode  "VANA" ;
+        vfo:hasTaxon           vfo:SpeciesACERR_PSE .
+
+<http://reinfforce.iefc.net/data/provenance/FAGUS_ORI-MARM>
+        a                      rdfs:Class , owl:Class , owl:NamedIndividual , vfo:Provenance ;
+        rdfs:label             "BURSA M.K.PASA, Marmara region, Turkey" ;
+        vfo:hasProvenanceCode  "MARM" ;
+        vfo:hasTaxon           vfo:SpeciesFAGUS_ORI .

@@ -1,0 +1,58 @@
+@prefix ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+@prefix vfo: <http://virtualforests.gsic.uva.es/> .
+
+vfo:Family53 ifn:vulgarName "Altingiaceas"@es .
+
+vfo:GenusCALOC ifn:vulgarName "Calocedrus"@es .
+vfo:GenusCUNNI ifn:vulgarName "Cunninghamia"@es .
+vfo:GenusLIQUI ifn:vulgarName "Liquidambar"@es .
+vfo:GenusSEQUA ifn:vulgarName "Secuoya"@es .
+
+vfo:VarietyPINUS_BRU_ELD
+        ifn:vulgarName  "Pino de Calabria"@es .
+vfo:SpeciesPSDTS_MEN  ifn:vulgarName  "Seudotsuga"@es .
+vfo:SpeciesROBIN_PSE  ifn:vulgarName  "Acacia robinia"@es .
+vfo:SpeciesCALOC_DEC  ifn:vulgarName  "Cedro de incienso"@es .
+vfo:SubspeciesPINUS_NIG_LAR
+        ifn:vulgarName  "Pino corso"@es .
+vfo:SpeciesQUERC_SUB  ifn:vulgarName  "Alcornoque"@es .
+vfo:SpeciesQUERC_RUB  ifn:vulgarName  "Roble americano"@es .
+vfo:SpeciesCEDRU_ATL  ifn:vulgarName  "Cedro"@es .
+vfo:HybridEUCAL_GDA  ifn:vulgarName  "Eucalipto gundal"@es .
+vfo:SpeciesPINUS_PNS  ifn:vulgarName  "Pino pináster"@es .
+vfo:SpeciesEUCAL_DAL  ifn:vulgarName  "Eucalipto blanco de montaña"@es .
+vfo:SpeciesCUNNI_LAN  ifn:vulgarName  "Cunninghamia"@es .
+vfo:SpeciesQUERC_PET  ifn:vulgarName  "Roble montano"@es .
+vfo:SpeciesSEQUA_SEM  ifn:vulgarName  "Secuoya"@es .
+vfo:SpeciesPINUS_SYL  ifn:vulgarName  "Pino silvestre"@es .
+vfo:SpeciesFAGUS_ORI  ifn:vulgarName  "Haya oriental"@es .
+vfo:SpeciesPINUS_PNA  ifn:vulgarName  "Pino piñonero"@es .
+vfo:SpeciesCASTA_SAT  ifn:vulgarName  "Castaño"@es .
+vfo:SpeciesPINUS_TAE  ifn:vulgarName  "Pino taeda"@es .
+vfo:VarietyCEDRU_LIB_BRE
+        ifn:vulgarName  "Cedro de Chipre"@es .
+vfo:SpeciesBETUL_PEN  ifn:vulgarName  "Abedul péndula"@es .
+vfo:SpeciesFAGUS_SYL  ifn:vulgarName  "Haya"@es .
+vfo:SpeciesCEDRU_LIB  ifn:vulgarName  "Cedro del Líbano"@es .
+vfo:SpeciesPINUS_BRU  ifn:vulgarName  "Pino de Chipre"@es .
+vfo:SpeciesCUPRE_SEM  ifn:vulgarName  "Ciprés"@es .
+vfo:SpeciesEUCAL_GLO  ifn:vulgarName  "Eucalipto globulus"@es .
+vfo:SpeciesPINUS_PON  ifn:vulgarName  "Pino ponderosa"@es .
+vfo:SpeciesQUERC_SHU  ifn:vulgarName  "Roble de Shumard"@es .
+vfo:SpeciesPINUS_NIG  ifn:vulgarName  "Pino negral de Corcega"@es , "Pino laricio"@es , "Pino negral de Córcega"@es , "Pino negral"@es , "Pino salgareño"@es , "Pino negral de Austria"@es , "Pino negral de Crimea"@es , "Pino salgareno"@es .
+vfo:SpeciesQUERC_ROT  ifn:vulgarName  "Encina carrasca"@es .
+vfo:SpeciesLARIX_DEC  ifn:vulgarName  "Alerce común"@es .
+vfo:SpeciesEUCAL_GUN  ifn:vulgarName  "Eucalipto sidra"@es , "Gunnii"@es , "Eucalipto sidra"@es .
+vfo:SpeciesCERTN_SIL  ifn:vulgarName  "Algarrobo"@es .
+vfo:SpeciesPINUS_CAR  ifn:vulgarName  "Pino macho"@es , "Pino caribe"@es .
+vfo:SpeciesPINUS_ELL  ifn:vulgarName  "Pino elioti"@es .
+vfo:SpeciesTHUJA_PLI  ifn:vulgarName  "Cedro rojo del Pacifico"@es , "Arbol de la vida gigante"@es , "Tuya gigante"@es , "Cedro rojo del Pacífico"@es , "Árbol de la vida gigante"@es .
+vfo:SpeciesQUERC_ROB  ifn:vulgarName  "Roble pedunculado"@es .
+vfo:SpeciesEUCAL_NIT  ifn:vulgarName  "Eucalipto nitens"@es .
+vfo:SubspeciesPINUS_NIG_SAL
+        ifn:vulgarName  "Pino salgareño"@es .
+vfo:SpeciesLIQUI_STY  ifn:vulgarName  "Liquidámbar"@es .
+vfo:SpeciesPINUS_PEU  ifn:vulgarName  "Pino de Macedonia"@es .
+vfo:SpeciesACERR_PSE  ifn:vulgarName  "Arce seudoplátano"@es .
+vfo:VarietyPINUS_CAR_HOND
+        ifn:vulgarName  "Pino caribe"@es , "Pino de honduras"@es .

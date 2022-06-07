@@ -1,0 +1,23 @@
+BASE <http://virtualforests.gsic.uva.es/>
+
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fun: <http://w3id.org/sparql-generate/fn/>
+PREFIX schema: <http://schema.org/> 
+
+PREFIX ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/>
+PREFIX vfo: <http://virtualforests.gsic.uva.es/>
+
+GENERATE { 
+  <{?taxon}{?upov_cod}>  schema:sameAs ?iri_dbpedia ;
+                          .
+}
+
+SOURCE <urn:source> AS ?source
+ITERATOR iter:CSV(?source, true, "\"", ";", "\n", "UPOV Code" , "taxon_del_codigo", "URI Dbpedia") AS ?upov_cod ?taxon ?dbpedia
+
+WHERE {
+   BIND(IRI(?dbpedia) as ?iri_dbpedia)
+}

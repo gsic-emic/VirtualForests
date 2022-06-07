@@ -1,0 +1,18 @@
+BASE <http://virtualforests.gsic.uva.es/>
+
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vfo: <http://virtualforests.gsic.uva.es/> 
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+
+GENERATE { 
+    <{?taxon}{?upov_cod}>  rdfs:subClassOf ?uri_ncbi ;
+                            .
+  }
+  
+  SOURCE <urn:source> AS ?source
+  ITERATOR iter:CSV(?source, true, "\"", ";", "\n", "UPOV Code" , "taxon_del_codigo", "URI NCBI") AS ?upov_cod ?taxon ?ncbi
+  
+  WHERE {
+    BIND(IRI(?ncbi) as ?uri_ncbi)
+  }
+  

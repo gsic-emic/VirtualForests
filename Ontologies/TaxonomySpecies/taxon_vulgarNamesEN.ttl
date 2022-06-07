@@ -1,0 +1,58 @@
+@prefix ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/> .
+@prefix vfo: <http://virtualforests.gsic.uva.es/> .
+
+vfo:Family53 ifn:vulgarName "Sweet gums"@en .
+
+vfo:GenusCALOC ifn:vulgarName "Incense-cedar"@en .
+vfo:GenusCUNNI ifn:vulgarName "Cunninghamia"@en .
+vfo:GenusLIQUI ifn:vulgarName "Sweetgum"@en .
+vfo:GenusSEQUA ifn:vulgarName "Coast Redwood"@en .
+
+vfo:VarietyPINUS_BRU_ELD
+        ifn:vulgarName  "Afghan pine"@en .
+vfo:SpeciesPSDTS_MEN  ifn:vulgarName  "Douglas-fir"@en .
+vfo:SpeciesROBIN_PSE  ifn:vulgarName  "Black locust"@en .
+vfo:SpeciesCALOC_DEC  ifn:vulgarName  "California Incense-cedar"@en .
+vfo:SubspeciesPINUS_NIG_LAR
+        ifn:vulgarName  "Corsican pine"@en .
+vfo:SpeciesQUERC_SUB  ifn:vulgarName  "Cork-oak"@en .
+vfo:SpeciesQUERC_RUB  ifn:vulgarName  "Northern red oak"@en , "Champion oak"@en .
+vfo:SpeciesCEDRU_ATL  ifn:vulgarName  "Cedar"@en .
+vfo:HybridEUCAL_GDA  ifn:vulgarName  "Gundal gum"@en .
+vfo:SpeciesPINUS_PNS  ifn:vulgarName  "Cluster pine"@en .
+vfo:SpeciesEUCAL_DAL  ifn:vulgarName  "White gum"@en , "Mountain white gum"@en .
+vfo:SpeciesCUNNI_LAN  ifn:vulgarName  "Chinese Fir"@en .
+vfo:SpeciesQUERC_PET  ifn:vulgarName  "Durmast oak"@en , "Irish Oak"@en , "Cornish oak"@en , "Sessile oak"@en .
+vfo:SpeciesSEQUA_SEM  ifn:vulgarName  "Coast redwood"@en .
+vfo:SpeciesPINUS_SYL  ifn:vulgarName  "Scots pine"@en .
+vfo:SpeciesFAGUS_ORI  ifn:vulgarName  "Oriental Beech"@en .
+vfo:SpeciesPINUS_PNA  ifn:vulgarName  "Stone pine"@en .
+vfo:SpeciesCASTA_SAT  ifn:vulgarName  "Sweet chestnut"@en .
+vfo:SpeciesPINUS_TAE  ifn:vulgarName  "Loblolly Pine"@en .
+vfo:VarietyCEDRU_LIB_BRE
+        ifn:vulgarName  "Cyprus cedar"@en .
+vfo:SpeciesBETUL_PEN  ifn:vulgarName  "European white birch"@en .
+vfo:SpeciesFAGUS_SYL  ifn:vulgarName  "Common beech"@en , "European beech"@en .
+vfo:SpeciesCEDRU_LIB  ifn:vulgarName  "Lebanon Cedar"@en .
+vfo:SpeciesPINUS_BRU  ifn:vulgarName  "Turkish Pine"@en .
+vfo:SpeciesCUPRE_SEM  ifn:vulgarName  "Cypress"@en .
+vfo:SpeciesEUCAL_GLO  ifn:vulgarName  "Tasmanian blue gum"@en .
+vfo:SpeciesPINUS_PON  ifn:vulgarName  "Ponderosa Pine"@en .
+vfo:SpeciesQUERC_SHU  ifn:vulgarName  "Shumard red oak"@en , "Schneck oak"@en , "Spotted oak"@en , "Shumard oak"@en .
+vfo:SpeciesPINUS_NIG  ifn:vulgarName  "Austrian pine"@en , "European Black Pine"@en .
+vfo:SpeciesQUERC_ROT  ifn:vulgarName  "Holm oak"@en .
+vfo:SpeciesLARIX_DEC  ifn:vulgarName  "European larch"@en .
+vfo:SpeciesEUCAL_GUN  ifn:vulgarName  "Cider gum"@en .
+vfo:SpeciesCERTN_SIL  ifn:vulgarName  "Carob tree"@en .
+vfo:SpeciesPINUS_CAR  ifn:vulgarName  "The Caribbean pine"@en .
+vfo:SpeciesPINUS_ELL  ifn:vulgarName  "slash pine"@en .
+vfo:SpeciesTHUJA_PLI  ifn:vulgarName  "Western redcedar"@en .
+vfo:SpeciesQUERC_ROB  ifn:vulgarName  "English oak"@en , "Common oak"@en .
+vfo:SpeciesEUCAL_NIT  ifn:vulgarName  "Shining gum"@en .
+vfo:SubspeciesPINUS_NIG_SAL
+        ifn:vulgarName  "European black pine"@en .
+vfo:SpeciesLIQUI_STY  ifn:vulgarName  "American Sweetgum"@en .
+vfo:SpeciesPINUS_PEU  ifn:vulgarName  "Macedonian Pine"@en .
+vfo:SpeciesACERR_PSE  ifn:vulgarName  "Sycamore"@en .
+vfo:VarietyPINUS_CAR_HOND
+        ifn:vulgarName  "Nicaraguan pine"@en , "The Caribbean pine"@en .

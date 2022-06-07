@@ -1,0 +1,70 @@
+BASE <http://virtualforests.gsic.uva.es/>
+
+PREFIX iter: <http://w3id.org/sparql-generate/iter/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX fun: <http://w3id.org/sparql-generate/fn/>
+
+PREFIX ifn: <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/>
+PREFIX vfo: <http://virtualforests.gsic.uva.es/>
+
+GENERATE { 
+  <{?taxon}{?upov_cod}> a owl:Class, rdfs:Class, owl:NamedIndividual, ?uri_taxon;
+                        # owl:sameAs  ?ifn_sp ;
+
+                         rdfs:subClassOf ?parent ;
+
+                         rdfs:subClassOf <Genus{?id_genero}> ;
+
+                        # rdfs:subClassOf ?uri_ncbi ;
+                        # rdfs:subClassOf ?uri_wikidata ;
+
+                         ifn:acceptedNameWithAuthor ?latin_name ;
+                         ifn:acceptedNameWithoutAuthor ?latname_lang ;
+                         ifn:hasAcceptedName <AcceptedName{?taxon}{?upov_cod}> ;
+
+                        # owl:sameAs ?iri_dbpedia ;
+
+                         ifn:hasWikipediaPage ?wikipedia_url ;
+                         ifn:hasThePlantListPage ?worldFlora_url ;
+                         ifn:WikispeciesPage ?wikispecies_url ;
+
+                         ifn:scientificSynonymWithoutAuthor ?sinonimo_lang ;
+
+                         vfo:hasUPOVCode ?upov_cod ;
+
+                         vfo:hasParentTaxon <{?p1}> , <{?p2}> ;
+                         .
+                          
+   <AcceptedName{?taxon}{?upov_cod}> a owl:NamedIndividual ,  ifn:AcceptedName ;
+        ifn:name  ?latname_lang ;
+        ifn:author ?latname_a .
+}
+
+SOURCE <urn:source> AS ?source
+ITERATOR iter:CSV(?source, true, "\"", ";", "\n", "UPOV Code", "Código IFN", "taxon_del_codigo","LatinName","LatinNameAuthor", "Wikipedia", "URI Dbpedia", "URI NCBI", "wiki data", "id_genero", "world_flora_online","Wiki species", "Sinonimias" , "parents") AS ?upov_cod ?ifn_cod ?taxon ?latname ?latname_a ?wikipedia ?dbpedia ?ncbi ?wikidata ?id_genero ?worldFlora ?wikispecies ?sinonimo ?parents
+
+WHERE {
+    BIND (IF(?taxon = "Species", ifn:Species, IF(?taxon = "Subspecies", vfo:Subspecies  , IF(?taxon = "Hybrid", vfo:Hybrid , IF(?taxon = "Variety", vfo:Variety , "")))) as ?uri_taxon)
+
+    BIND (IF((?taxon = "Subspecies" || ?taxon = "Variety")  && BOUND(?ifn_cod),  <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species{?ifn_cod}>, IF((?taxon = "Subspecies" || ?taxon = "Variety")  && BOUND(?parents), <{?parents}>, ?unbound )) as ?parent)
+    BIND (IF(?taxon != "Species" && BOUND(?ifn_cod), ?unbound, <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Species{?ifn_cod}>) as ?ifn_sp)
+    
+   #Only Hybrids
+   BIND (IF(?taxon = "Hybrid", fun:regex(?parents,"(.*)(x)(.*)",1), ?unbound) as ?p1)
+   BIND (IF(?taxon = "Hybrid" , fun:regex(?parents,"(.*)(x)(.*)",3) ,?unbound) as ?p2)
+
+   #BIND( IF (contains (?id_genero, "["), IRI(CONCAT("http://virtualforests.gsic.uva.es/Genus", str(fun:regex(?id_genero,"([0-9]+)",1)))) , IF(?taxon = "Subspecies", ?unbound, <https://datos.iepnb.es/def/sector-publico/medio-ambiente/ifn/Genus{?id_genero}>)) as ?genus)
+
+   BIND (STRLANG(CONCAT(?latname, " ", ?latname_a),"la") as ?latin_name)
+   BIND (STRLANG(?latname,"la") as ?latname_lang)
+   BIND(IRI(?dbpedia) as ?iri_dbpedia)
+   BIND(xsd:anyURI(?wikipedia) as ?wikipedia_url)
+   BIND(IRI(?ncbi) as ?uri_ncbi)
+   BIND(IRI(?wikidata) as ?uri_wikidata)
+   BIND(xsd:anyURI(?worldFlora) as ?worldFlora_url)
+   BIND(xsd:anyURI(?wikispecies) as ?wikispecies_url)
+
+   BIND (STRLANG(?sinonimo,"la") as ?sinonimo_lang)
+}
