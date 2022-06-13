@@ -4,9 +4,9 @@
 @prefix : <> .
 <..\index-en.html> a prov:Entity;
 	 dc:title "Virtual Forests Ontology (VFO) ";
-	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://www.gsic.uva.es/personal/guiveg>;
 	 dc:creator <https://www.gsic.uva.es/personal/guiveg>;
+	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:wasRevisionOf <0.4>;

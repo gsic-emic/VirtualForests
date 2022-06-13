@@ -1,13 +1,5 @@
 [ {
   "@id" : "_:genid1",
-  "http://xmlns.com/foaf/0.1/mbox" : [ {
-    "@id" : "mailto:cmayo@gsic.uva.es"
-  } ],
-  "http://xmlns.com/foaf/0.1/name" : [ {
-    "@value" : "Cristina Mayo Sarmiento"
-  } ]
-}, {
-  "@id" : "_:genid2",
   "http://xmlns.com/foaf/0.1/homepage" : [ {
     "@id" : "https://www.gsic.uva.es/personal/guiveg"
   } ],
@@ -16,6 +8,14 @@
   } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Guillermo Vega-Gorgojo"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@id" : "mailto:cmayo@gsic.uva.es"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Cristina Mayo Sarmiento"
   } ]
 }, {
   "@id" : "http://crossforest.eu/measures/ontology/Measure",

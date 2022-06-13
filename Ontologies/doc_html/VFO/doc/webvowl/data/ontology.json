@@ -20,12 +20,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483648",
+        "value" : "_:genid2147483649",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "_:genid2147483649",
+        "value" : "_:genid2147483648",
         "type" : "label"
       } ],
       "contributor" : [ {
@@ -52,16 +52,16 @@
         "value" : "2022-05-19",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "0.5",
-        "type" : "label"
-      } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "en",
         "value" : "The Virtual Forests Ontology includes all the vocabulary needed to describe Virtual Forests and REINFFORCE datasets using W3C RDF Schema (RDFS) and the Web Ontology Language (OWL). The vocabulary provides data publishers to include detailed metadata about species taxonomy and their different provenances, specialization, arboretum sites, location, climatic conditions, survival and growth rates of trees.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.5",
         "type" : "label"
       } ],
       "issued" : [ {
@@ -193,7 +193,7 @@
     "id" : "144",
     "type" : "owl:Class"
   }, {
-    "id" : "153",
+    "id" : "155",
     "type" : "owl:Class"
   }, {
     "id" : "70",
@@ -271,7 +271,7 @@
     "id" : "123",
     "type" : "owl:Class"
   }, {
-    "id" : "228",
+    "id" : "229",
     "type" : "owl:Class"
   }, {
     "id" : "235",
@@ -283,7 +283,7 @@
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "155",
+    "id" : "154",
     "type" : "rdfs:Literal"
   }, {
     "id" : "104",
@@ -292,7 +292,7 @@
     "id" : "158",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "256",
+    "id" : "255",
     "type" : "rdfs:Literal"
   }, {
     "id" : "136",
@@ -316,7 +316,7 @@
     "id" : "268",
     "type" : "owl:Class"
   }, {
-    "id" : "252",
+    "id" : "251",
     "type" : "owl:Class"
   }, {
     "id" : "223",
@@ -427,7 +427,7 @@
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "145",
     "type" : "owl:Class"
   }, {
     "id" : "32",
@@ -487,7 +487,7 @@
     "id" : "17",
     "type" : "owl:Class"
   }, {
-    "id" : "250",
+    "id" : "226",
     "type" : "owl:Class"
   }, {
     "id" : "102",
@@ -583,7 +583,7 @@
     "id" : "382",
     "type" : "owl:Class"
   }, {
-    "id" : "145",
+    "id" : "26",
     "type" : "owl:Class"
   }, {
     "id" : "112",
@@ -601,7 +601,7 @@
     "id" : "88",
     "type" : "owl:Class"
   }, {
-    "id" : "234",
+    "id" : "256",
     "type" : "owl:Class"
   }, {
     "id" : "184",
@@ -631,10 +631,10 @@
     "id" : "221",
     "type" : "owl:Class"
   }, {
-    "id" : "255",
+    "id" : "194",
     "type" : "owl:Class"
   }, {
-    "id" : "194",
+    "id" : "252",
     "type" : "owl:Class"
   }, {
     "id" : "29",
@@ -646,10 +646,10 @@
     "id" : "126",
     "type" : "owl:Class"
   }, {
-    "id" : "128",
+    "id" : "118",
     "type" : "owl:Class"
   }, {
-    "id" : "118",
+    "id" : "129",
     "type" : "owl:Class"
   }, {
     "id" : "52",
@@ -674,11 +674,6 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Araucaria",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Cunninghamia",
         "type" : "label"
@@ -686,6 +681,11 @@
         "identifier" : "vulgarName",
         "language" : "en",
         "value" : "Cunninghamia",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "fr",
+        "value" : "Araucaria",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -700,22 +700,16 @@
         "value" : "Cunninghamia",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Cunninghamia",
-        "type" : "label"
-      } ],
       "hasAcceptedName" : [ {
         "identifier" : "hasAcceptedName",
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameGenusCUNNI",
         "type" : "iri"
       } ],
-      "hasWikiSpeciesPage" : [ {
-        "identifier" : "hasWikiSpeciesPage",
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
         "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Cunninghamia",
+        "value" : "https://en.wikipedia.org/wiki/Cunninghamia",
         "type" : "label"
       } ],
       "sameAs" : [ {
@@ -723,6 +717,12 @@
         "language" : "undefined",
         "value" : "http://dbpedia.org/resource/Cunninghamia",
         "type" : "iri"
+      } ],
+      "hasWikiSpeciesPage" : [ {
+        "identifier" : "hasWikiSpeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Cunninghamia",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -746,26 +746,9 @@
     "label" : {
       "IRI-based" : "CountrySubdivision",
       "fr" : "Région / Département",
-      "es" : "Country subdivision"
+      "es" : "Subdivisión de país"
     },
     "individuals" : [ {
-      "iri" : "http://virtualforests.gsic.uva.es/Country/GB-ENG",
-      "baseIri" : "http://virtualforests.gsic.uva.es/Country",
-      "annotations" : {
-        "countryCode" : [ {
-          "identifier" : "countryCode",
-          "language" : "undefined",
-          "value" : "GB",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "GB-ENG",
-        "en" : "England",
-        "fr" : "Angleterre",
-        "es" : "Inglaterra"
-      }
-    }, {
       "iri" : "http://virtualforests.gsic.uva.es/Country/GB-WLS",
       "baseIri" : "http://virtualforests.gsic.uva.es/Country",
       "annotations" : {
@@ -781,6 +764,23 @@
         "en" : "Wales",
         "fr" : "Pays de Galles",
         "es" : "Gales"
+      }
+    }, {
+      "iri" : "http://virtualforests.gsic.uva.es/Country/GB-ENG",
+      "baseIri" : "http://virtualforests.gsic.uva.es/Country",
+      "annotations" : {
+        "countryCode" : [ {
+          "identifier" : "countryCode",
+          "language" : "undefined",
+          "value" : "GB",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "GB-ENG",
+        "en" : "England",
+        "fr" : "Angleterre",
+        "es" : "Inglaterra"
       }
     }, {
       "iri" : "http://virtualforests.gsic.uva.es/Country/GB-SCT",
@@ -818,11 +818,6 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Pin d'Elliott",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Pino elioti",
         "type" : "label"
@@ -831,11 +826,10 @@
         "language" : "en",
         "value" : "slash pine",
         "type" : "label"
-      } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481442",
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "fr",
+        "value" : "Pin d'Elliott",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
@@ -844,10 +838,22 @@
         "value" : "https://species.wikimedia.org/wiki/Pinus_elliottii",
         "type" : "label"
       } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481442",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Pinus elliottii",
+        "type" : "label"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Pinus elliottii Engelm.",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -855,12 +861,6 @@
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_ELL",
         "type" : "iri"
-      } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Pinus elliottii Engelm.",
-        "type" : "label"
       } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
@@ -1037,13 +1037,13 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Cyprès commun",
+        "language" : "es",
+        "value" : "Ciprés",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Ciprés",
+        "language" : "fr",
+        "value" : "Cyprès commun",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
@@ -1070,16 +1070,16 @@
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCUPRE_SEM",
         "type" : "iri"
       } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Cupressus sempervirens L.",
-        "type" : "label"
-      } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
         "language" : "undefined",
         "value" : "https://en.wikipedia.org/wiki/Cupressus_sempervirens",
+        "type" : "label"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Cupressus sempervirens L.",
         "type" : "label"
       } ]
     },
@@ -1115,6 +1115,11 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "European white birch",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Abedul péndula",
         "type" : "label"
@@ -1122,17 +1127,6 @@
         "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Bouleau verruqueux",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "European white birch",
-        "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Betula_pendula",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -1147,22 +1141,28 @@
         "value" : "Betula hispanica",
         "type" : "label"
       } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Betula_pendula",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Betula pendula",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Betula_pendula",
-        "type" : "label"
-      } ],
       "acceptedNameWithAuthor" : [ {
         "identifier" : "acceptedNameWithAuthor",
         "language" : "la",
         "value" : "Betula pendula Roth",
+        "type" : "label"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Betula_pendula",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -1224,8 +1224,8 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Alerce común",
+        "language" : "en",
+        "value" : "European larch",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -1234,14 +1234,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "European larch",
-        "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Larix_decidua",
+        "language" : "es",
+        "value" : "Alerce común",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -1250,22 +1244,16 @@
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000443338",
         "type" : "label"
       } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Larix_decidua",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Larix decidua",
-        "type" : "label"
-      } ],
-      "hasAcceptedName" : [ {
-        "identifier" : "hasAcceptedName",
-        "language" : "undefined",
-        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesLARIX_DEC",
-        "type" : "iri"
-      } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Larix decidua Mill.",
         "type" : "label"
       } ],
       "hasWikipediaPage" : [ {
@@ -1273,6 +1261,18 @@
         "language" : "undefined",
         "value" : "https://en.wikipedia.org/wiki/Larix_decidua",
         "type" : "label"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Larix decidua Mill.",
+        "type" : "label"
+      } ],
+      "hasAcceptedName" : [ {
+        "identifier" : "hasAcceptedName",
+        "language" : "undefined",
+        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesLARIX_DEC",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -1329,21 +1329,21 @@
     "attributes" : [ "external" ],
     "id" : "24"
   }, {
-    "iri" : "http://www.wikidata.org/entity/Q158608",
-    "baseIri" : "http://www.wikidata.org/entity",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Q158608"
-    },
-    "subClasses" : [ "26" ],
-    "attributes" : [ "external" ],
-    "id" : "27"
-  }, {
     "iri" : "http://www.wikidata.org/entity/Q3905334",
     "baseIri" : "http://www.wikidata.org/entity",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Q3905334"
+    },
+    "subClasses" : [ "26" ],
+    "attributes" : [ "external" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://www.wikidata.org/entity/Q158608",
+    "baseIri" : "http://www.wikidata.org/entity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Q158608"
     },
     "subClasses" : [ "145" ],
     "attributes" : [ "external" ],
@@ -1357,7 +1357,7 @@
     },
     "subClasses" : [ "30" ],
     "attributes" : [ "external" ],
-    "id" : "153"
+    "id" : "155"
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/SurvivalRate",
     "baseIri" : "http://virtualforests.gsic.uva.es",
@@ -1386,6 +1386,16 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
+        "language" : "fr",
+        "value" : "Le pin caraïbe",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Pino caribe",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Pino de honduras",
         "type" : "label"
@@ -1396,18 +1406,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino caribe",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "en",
         "value" : "The Caribbean pine",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Le pin caraïbe",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -1467,23 +1467,23 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "White gum",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Mountain white gum",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Eucalipto blanco de montaña",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "White gum",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Eucalyptus blanc des montagnes",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Mountain white gum",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -1504,6 +1504,12 @@
         "value" : "Eucalyptus dalrympleana",
         "type" : "label"
       } ],
+      "hasAcceptedName" : [ {
+        "identifier" : "hasAcceptedName",
+        "language" : "undefined",
+        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_DAL",
+        "type" : "iri"
+      } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
         "language" : "undefined",
@@ -1515,19 +1521,13 @@
         "language" : "la",
         "value" : "Eucalyptus dalrympleana Maiden",
         "type" : "label"
-      } ],
-      "hasAcceptedName" : [ {
-        "identifier" : "hasAcceptedName",
-        "language" : "undefined",
-        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_DAL",
-        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "SpeciesEUCAL_DAL"
     },
     "id" : "33",
-    "superClasses" : [ "182", "89", "28" ]
+    "superClasses" : [ "182", "28", "89" ]
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/GenusPSDTS",
     "baseIri" : "http://virtualforests.gsic.uva.es",
@@ -1544,8 +1544,8 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Douglas-fir",
+        "language" : "fr",
+        "value" : "Sapin de Douglas",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -1554,8 +1554,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Sapin de Douglas",
+        "language" : "en",
+        "value" : "Douglas-fir",
         "type" : "label"
       } ],
       "scientificSynonymWithoutAuthor" : [ {
@@ -1564,16 +1564,16 @@
         "value" : "Pseudotsuga douglasii",
         "type" : "label"
       } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Pseudotsuga_menziesii",
-        "type" : "label"
-      } ],
       "hasThePlantListPage" : [ {
         "identifier" : "hasThePlantListPage",
         "language" : "undefined",
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000478194",
+        "type" : "label"
+      } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Pseudotsuga_menziesii",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -1588,16 +1588,16 @@
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPSDTS_MEN",
         "type" : "iri"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Douglas_fir",
-        "type" : "label"
-      } ],
       "acceptedNameWithAuthor" : [ {
         "identifier" : "acceptedNameWithAuthor",
         "language" : "la",
         "value" : "Pseudotsuga menziesii (Mirb.) Franco",
+        "type" : "label"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Douglas_fir",
         "type" : "label"
       } ]
     },
@@ -1613,8 +1613,8 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Roble americano",
+        "language" : "en",
+        "value" : "Northern red oak",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -1623,19 +1623,13 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Northern red oak",
+        "language" : "es",
+        "value" : "Roble americano",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Chêne rouge d'Amérique",
-        "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Quercus_rubra",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -1650,16 +1644,16 @@
         "value" : "Quercus borealis",
         "type" : "label"
       } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Quercus_rubra",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Quercus rubra",
-        "type" : "label"
-      } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Quercus rubra L.",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -1667,6 +1661,12 @@
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_RUB",
         "type" : "iri"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Quercus rubra L.",
+        "type" : "label"
       } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
@@ -1727,8 +1727,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "The Caribbean pine",
+        "language" : "es",
+        "value" : "Pino caribe",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -1737,8 +1737,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino caribe",
+        "language" : "en",
+        "value" : "The Caribbean pine",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -1880,11 +1880,6 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Loblolly Pine",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Pin taeda",
         "type" : "label"
@@ -1892,6 +1887,11 @@
         "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Pino taeda",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Loblolly Pine",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
@@ -1912,6 +1912,12 @@
         "value" : "Pinus taeda",
         "type" : "label"
       } ],
+      "hasAcceptedName" : [ {
+        "identifier" : "hasAcceptedName",
+        "language" : "undefined",
+        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_TAE",
+        "type" : "iri"
+      } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
         "language" : "undefined",
@@ -1923,12 +1929,6 @@
         "language" : "la",
         "value" : "Pinus taeda L.",
         "type" : "label"
-      } ],
-      "hasAcceptedName" : [ {
-        "identifier" : "hasAcceptedName",
-        "language" : "undefined",
-        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_TAE",
-        "type" : "iri"
       } ]
     },
     "label" : {
@@ -1943,8 +1943,8 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Cedro del Líbano",
+        "language" : "fr",
+        "value" : "cèdre du Liban",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -1953,8 +1953,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "cèdre du Liban",
+        "language" : "es",
+        "value" : "Cedro del Líbano",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -1963,16 +1963,16 @@
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000592537",
         "type" : "label"
       } ],
-      "scientificSynonymWithoutAuthor" : [ {
-        "identifier" : "scientificSynonymWithoutAuthor",
-        "language" : "la",
-        "value" : "Cedrus libani subsp. libani",
-        "type" : "label"
-      } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Cedrus_libani_subsp._libani",
+        "type" : "label"
+      } ],
+      "scientificSynonymWithoutAuthor" : [ {
+        "identifier" : "scientificSynonymWithoutAuthor",
+        "language" : "la",
+        "value" : "Cedrus libani subsp. libani",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -1981,10 +1981,10 @@
         "value" : "Cedrus libani",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Cedrus_libani",
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Cedrus libani A.Rich.",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -1993,10 +1993,10 @@
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCEDRU_LIB",
         "type" : "iri"
       } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Cedrus libani A.Rich.",
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Cedrus_libani",
         "type" : "label"
       } ]
     },
@@ -2070,7 +2070,7 @@
     "label" : {
       "IRI-based" : "GenusQUERC"
     },
-    "subClasses" : [ "26", "168", "54", "88", "85", "39" ],
+    "subClasses" : [ "145", "168", "54", "88", "85", "39" ],
     "id" : "152"
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/SpeciesSEQUA_SEM",
@@ -2079,24 +2079,18 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Coast redwood",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Séquoia à feuilles d'if",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Coast redwood",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Secuoya",
-        "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Sequoia_sempervirens",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -2105,16 +2099,16 @@
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000437871",
         "type" : "label"
       } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Sequoia_sempervirens",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Sequoia sempervirens",
-        "type" : "label"
-      } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Sequoia sempervirens (D.Don) Endl.",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -2122,6 +2116,12 @@
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesSEQUA_SEM",
         "type" : "iri"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Sequoia sempervirens (D.Don) Endl.",
+        "type" : "label"
       } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
@@ -2142,8 +2142,8 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Cedro",
+        "language" : "en",
+        "value" : "Cedar",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -2152,8 +2152,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Cedar",
+        "language" : "es",
+        "value" : "Cedro",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -2180,16 +2180,16 @@
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCEDRU_ATL",
         "type" : "iri"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Cedrus_atlantica",
-        "type" : "label"
-      } ],
       "acceptedNameWithAuthor" : [ {
         "identifier" : "acceptedNameWithAuthor",
         "language" : "la",
         "value" : "Cedrus atlantica (Endl.) Manetti ex Carrière",
+        "type" : "label"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Cedrus_atlantica",
         "type" : "label"
       } ]
     },
@@ -2197,7 +2197,7 @@
       "IRI-based" : "SpeciesCEDRU_ATL"
     },
     "id" : "123",
-    "superClasses" : [ "223", "179", "124" ]
+    "superClasses" : [ "179", "223", "124" ]
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/ArboretumProvenance",
     "baseIri" : "http://virtualforests.gsic.uva.es",
@@ -2217,7 +2217,7 @@
       "es" : "Procedencia del arboreto"
     },
     "comment" : { },
-    "id" : "228"
+    "id" : "229"
   }, {
     "iri" : "http://www.wikidata.org/entity/Q16467654",
     "baseIri" : "http://www.wikidata.org/entity",
@@ -2245,24 +2245,18 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Shining gum",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Eucalipto nitens",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Shining gum",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Eucalyptus nitens",
-        "type" : "label"
-      } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000955429",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
@@ -2271,16 +2265,22 @@
         "value" : "https://species.wikimedia.org/wiki/Eucalyptus_nitens",
         "type" : "label"
       } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000955429",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Eucalyptus nitens",
         "type" : "label"
       } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Eucalyptus nitens (H.Deane & Maiden) Maiden",
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Eucalyptus_nitens",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -2289,10 +2289,10 @@
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_NIT",
         "type" : "iri"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Eucalyptus_nitens",
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Eucalyptus nitens (H.Deane & Maiden) Maiden",
         "type" : "label"
       } ]
     },
@@ -2303,7 +2303,7 @@
     "superClasses" : [ "126", "245", "28" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "155",
+    "id" : "154",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -2315,6 +2315,11 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
+        "language" : "fr",
+        "value" : "Copalme d'Amérique",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Liquidámbar",
         "type" : "label"
@@ -2323,22 +2328,17 @@
         "language" : "en",
         "value" : "American Sweetgum",
         "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Copalme d'Amérique",
+      } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Liquidambar_styraciflua",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
         "identifier" : "hasThePlantListPage",
         "language" : "undefined",
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000364015",
-        "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Liquidambar_styraciflua",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -2370,7 +2370,7 @@
       "IRI-based" : "SpeciesLIQUI_STY"
     },
     "id" : "104",
-    "superClasses" : [ "255", "105", "149" ]
+    "superClasses" : [ "252", "105", "149" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "158",
@@ -2380,7 +2380,7 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "256",
+    "id" : "255",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -2392,13 +2392,13 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Calocedrus",
+        "language" : "en",
+        "value" : "Incense-cedar",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Incense-cedar",
+        "language" : "es",
+        "value" : "Calocedrus",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -2418,17 +2418,17 @@
         "value" : "Altingiaceae",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Calocedrus",
-        "type" : "label"
-      } ],
       "hasAcceptedName" : [ {
         "identifier" : "hasAcceptedName",
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameGenus225",
         "type" : "iri"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Calocedrus",
+        "type" : "label"
       } ],
       "hasWikiSpeciesPage" : [ {
         "identifier" : "hasWikiSpeciesPage",
@@ -2446,7 +2446,7 @@
     "label" : {
       "IRI-based" : "GenusCALOC"
     },
-    "subClasses" : [ "234" ],
+    "subClasses" : [ "256" ],
     "id" : "136",
     "superClasses" : [ "10" ]
   }, {
@@ -2515,7 +2515,7 @@
     "label" : {
       "IRI-based" : "Q156944"
     },
-    "subClasses" : [ "250" ],
+    "subClasses" : [ "226" ],
     "attributes" : [ "external" ],
     "id" : "268"
   }, {
@@ -2526,7 +2526,7 @@
       "IRI-based" : "Genus"
     },
     "attributes" : [ "external" ],
-    "id" : "252"
+    "id" : "251"
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/GenusCEDRU",
     "baseIri" : "http://virtualforests.gsic.uva.es",
@@ -2543,7 +2543,7 @@
     "label" : {
       "IRI-based" : "GenusACERR"
     },
-    "subClasses" : [ "250" ],
+    "subClasses" : [ "226" ],
     "id" : "271"
   }, {
     "iri" : "http://www.wikidata.org/entity/Q1543749",
@@ -2562,11 +2562,6 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Black locust",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Robinier faux-acacia",
         "type" : "label"
@@ -2575,17 +2570,22 @@
         "language" : "es",
         "value" : "Acacia robinia",
         "type" : "label"
-      } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000213931",
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Black locust",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Robinia_pseudoacacia",
+        "type" : "label"
+      } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000213931",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -2672,13 +2672,13 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Haya oriental",
+        "language" : "en",
+        "value" : "Oriental Beech",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Oriental Beech",
+        "language" : "es",
+        "value" : "Haya oriental",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
@@ -2687,16 +2687,16 @@
         "value" : "https://species.wikimedia.org/wiki/Fagus_orientalis",
         "type" : "label"
       } ],
-      "scientificSynonymWithoutAuthor" : [ {
-        "identifier" : "scientificSynonymWithoutAuthor",
-        "language" : "la",
-        "value" : "Fagus sylvatica subsp. orientalis",
-        "type" : "label"
-      } ],
       "hasThePlantListPage" : [ {
         "identifier" : "hasThePlantListPage",
         "language" : "undefined",
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000966486",
+        "type" : "label"
+      } ],
+      "scientificSynonymWithoutAuthor" : [ {
+        "identifier" : "scientificSynonymWithoutAuthor",
+        "language" : "la",
+        "value" : "Fagus sylvatica subsp. orientalis",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -2705,17 +2705,17 @@
         "value" : "Fagus orientalis",
         "type" : "label"
       } ],
-      "hasAcceptedName" : [ {
-        "identifier" : "hasAcceptedName",
-        "language" : "undefined",
-        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesFAGUS_ORI",
-        "type" : "iri"
-      } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
         "language" : "undefined",
         "value" : "https://en.wikipedia.org/wiki/Fagus_orientalis",
         "type" : "label"
+      } ],
+      "hasAcceptedName" : [ {
+        "identifier" : "hasAcceptedName",
+        "language" : "undefined",
+        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesFAGUS_ORI",
+        "type" : "iri"
       } ],
       "acceptedNameWithAuthor" : [ {
         "identifier" : "acceptedNameWithAuthor",
@@ -2728,7 +2728,7 @@
       "IRI-based" : "SpeciesFAGUS_ORI"
     },
     "id" : "91",
-    "superClasses" : [ "273", "292", "90" ]
+    "superClasses" : [ "273", "90", "292" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -2815,8 +2815,8 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Haya",
+        "language" : "en",
+        "value" : "Common beech",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -2825,25 +2825,25 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Hêtre commun",
+        "language" : "es",
+        "value" : "Haya",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Common beech",
-        "type" : "label"
-      } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000966507",
+        "language" : "fr",
+        "value" : "Hêtre commun",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Fagus_sylvatica",
+        "type" : "label"
+      } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000966507",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -2858,17 +2858,17 @@
         "value" : "Fagus sylvatica L.",
         "type" : "label"
       } ],
-      "hasAcceptedName" : [ {
-        "identifier" : "hasAcceptedName",
-        "language" : "undefined",
-        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesFAGUS_SYL",
-        "type" : "iri"
-      } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
         "language" : "undefined",
         "value" : "https://en.wikipedia.org/wiki/Fagus_sylvatica",
         "type" : "label"
+      } ],
+      "hasAcceptedName" : [ {
+        "identifier" : "hasAcceptedName",
+        "language" : "undefined",
+        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesFAGUS_SYL",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -2904,7 +2904,7 @@
     "label" : {
       "IRI-based" : "4026"
     },
-    "subClasses" : [ "250" ],
+    "subClasses" : [ "226" ],
     "attributes" : [ "external" ],
     "id" : "304"
   }, {
@@ -3001,16 +3001,16 @@
         "value" : "Pino silvestre",
         "type" : "label"
       } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Pinus_sylvestris",
-        "type" : "label"
-      } ],
       "hasThePlantListPage" : [ {
         "identifier" : "hasThePlantListPage",
         "language" : "undefined",
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481648",
+        "type" : "label"
+      } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Pinus_sylvestris",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -3019,11 +3019,11 @@
         "value" : "Pinus sylvestris",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
+      "hasAcceptedName" : [ {
+        "identifier" : "hasAcceptedName",
         "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Scots_pine",
-        "type" : "label"
+        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_SYL",
+        "type" : "iri"
       } ],
       "acceptedNameWithAuthor" : [ {
         "identifier" : "acceptedNameWithAuthor",
@@ -3031,11 +3031,11 @@
         "value" : "Pinus sylvestris L.",
         "type" : "label"
       } ],
-      "hasAcceptedName" : [ {
-        "identifier" : "hasAcceptedName",
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
         "language" : "undefined",
-        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_SYL",
-        "type" : "iri"
+        "value" : "https://en.wikipedia.org/wiki/Scots_pine",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -3092,16 +3092,16 @@
         "value" : "Carob tree",
         "type" : "label"
       } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000165151",
-        "type" : "label"
-      } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Ceratonia_siliqua",
+        "type" : "label"
+      } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000165151",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -3110,17 +3110,17 @@
         "value" : "Ceratonia siliqua",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Ceratonia_siliqua",
-        "type" : "label"
-      } ],
       "hasAcceptedName" : [ {
         "identifier" : "hasAcceptedName",
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCERTN_SIL",
         "type" : "iri"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Ceratonia_siliqua",
+        "type" : "label"
       } ],
       "acceptedNameWithAuthor" : [ {
         "identifier" : "acceptedNameWithAuthor",
@@ -3141,8 +3141,18 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Roble montano",
+        "language" : "fr",
+        "value" : "Chêne rouvre",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Cornish oak",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Sessile oak",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -3152,17 +3162,7 @@
       }, {
         "identifier" : "vulgarName",
         "language" : "en",
-        "value" : "Cornish oak",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Chêne rouvre",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Sessile oak",
+        "value" : "Durmast oak",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -3171,20 +3171,20 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Durmast oak",
-        "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Quercus_petraea",
+        "language" : "es",
+        "value" : "Roble montano",
         "type" : "label"
       } ],
       "scientificSynonymWithoutAuthor" : [ {
         "identifier" : "scientificSynonymWithoutAuthor",
         "language" : "la",
         "value" : "Quercus petraea subsp. petraea",
+        "type" : "label"
+      } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Quercus_petraea",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -3199,6 +3199,12 @@
         "value" : "Quercus petraea",
         "type" : "label"
       } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Quercus petraea (Matt.) Liebl.",
+        "type" : "label"
+      } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
         "language" : "undefined",
@@ -3210,19 +3216,13 @@
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_PET",
         "type" : "iri"
-      } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Quercus petraea (Matt.) Liebl.",
-        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "SpeciesQUERC_PET"
     },
-    "id" : "26",
-    "superClasses" : [ "333", "152", "27" ]
+    "id" : "145",
+    "superClasses" : [ "333", "152", "144" ]
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/SpeciesEUCAL_GUN",
     "baseIri" : "http://virtualforests.gsic.uva.es",
@@ -3235,8 +3235,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Cider gum",
+        "language" : "es",
+        "value" : "Gunnii",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -3245,8 +3245,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Gunnii",
+        "language" : "en",
+        "value" : "Cider gum",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -3375,23 +3375,23 @@
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameFamily53",
         "type" : "iri"
       } ],
-      "sameAs" : [ {
-        "identifier" : "sameAs",
-        "language" : "undefined",
-        "value" : "http://dbpedia.org/resource/Altingiaceae",
-        "type" : "iri"
-      } ],
       "hasWikiSpeciesPage" : [ {
         "identifier" : "hasWikiSpeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Altingiaceae",
         "type" : "label"
+      } ],
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Altingiaceae",
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "Family53"
     },
-    "subClasses" : [ "255" ],
+    "subClasses" : [ "252" ],
     "id" : "214",
     "superClasses" : [ "215" ]
   }, {
@@ -3453,6 +3453,12 @@
         "value" : "Pinus ponderosa",
         "type" : "label"
       } ],
+      "hasAcceptedName" : [ {
+        "identifier" : "hasAcceptedName",
+        "language" : "undefined",
+        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_PON",
+        "type" : "iri"
+      } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
         "language" : "undefined",
@@ -3464,12 +3470,6 @@
         "language" : "la",
         "value" : "Pinus ponderosa Douglas ex C.Lawson",
         "type" : "label"
-      } ],
-      "hasAcceptedName" : [ {
-        "identifier" : "hasAcceptedName",
-        "language" : "undefined",
-        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_PON",
-        "type" : "iri"
       } ]
     },
     "label" : {
@@ -3534,7 +3534,7 @@
       }, {
         "identifier" : "vulgarName",
         "language" : "fr",
-        "value" : "Pin des Landes",
+        "value" : "Pin maritime",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -3544,7 +3544,13 @@
       }, {
         "identifier" : "vulgarName",
         "language" : "fr",
-        "value" : "Pin maritime",
+        "value" : "Pin des Landes",
+        "type" : "label"
+      } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481910",
         "type" : "label"
       } ],
       "scientificSynonymWithoutAuthor" : [ {
@@ -3559,22 +3565,10 @@
         "value" : "https://species.wikimedia.org/wiki/Pinus_pinaster",
         "type" : "label"
       } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481910",
-        "type" : "label"
-      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Pinus pinaster",
-        "type" : "label"
-      } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Pinus pinaster Aiton",
         "type" : "label"
       } ],
       "hasWikipediaPage" : [ {
@@ -3588,6 +3582,12 @@
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_PNS",
         "type" : "iri"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Pinus pinaster Aiton",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -3645,16 +3645,16 @@
         "value" : "Chinese Fir",
         "type" : "label"
       } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Cunninghamia_lanceolata",
-        "type" : "label"
-      } ],
       "hasThePlantListPage" : [ {
         "identifier" : "hasThePlantListPage",
         "language" : "undefined",
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000629338",
+        "type" : "label"
+      } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Cunninghamia_lanceolata",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -3663,17 +3663,17 @@
         "value" : "Cunninghamia lanceolata",
         "type" : "label"
       } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Cunninghamia lanceolata (Lamb.) Hook.",
-        "type" : "label"
-      } ],
       "hasAcceptedName" : [ {
         "identifier" : "hasAcceptedName",
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCUNNI_LAN",
         "type" : "iri"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Cunninghamia lanceolata (Lamb.) Hook.",
+        "type" : "label"
       } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
@@ -3686,7 +3686,7 @@
       "IRI-based" : "SpeciesCUNNI_LAN"
     },
     "id" : "11",
-    "superClasses" : [ "9", "321", "128" ]
+    "superClasses" : [ "9", "321", "129" ]
   }, {
     "iri" : "http://www.wikidata.org/entity/Q460523",
     "baseIri" : "http://www.wikidata.org/entity",
@@ -3728,16 +3728,16 @@
         "value" : "Sycamore",
         "type" : "label"
       } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000514908",
-        "type" : "label"
-      } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Acer_pseudoplatanus",
+        "type" : "label"
+      } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000514908",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -3746,17 +3746,17 @@
         "value" : "Acer pseudoplatanus",
         "type" : "label"
       } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Acer pseudoplatanus L.",
-        "type" : "label"
-      } ],
       "hasAcceptedName" : [ {
         "identifier" : "hasAcceptedName",
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesACERR_PSE",
         "type" : "iri"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Acer pseudoplatanus L.",
+        "type" : "label"
       } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
@@ -3768,7 +3768,7 @@
     "label" : {
       "IRI-based" : "SpeciesACERR_PSE"
     },
-    "id" : "250",
+    "id" : "226",
     "superClasses" : [ "268", "271", "304" ]
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/Variety",
@@ -3798,41 +3798,6 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino negral de Crimea",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino salgareño",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino salgareno",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino negral de Corcega",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino negral de Córcega",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino laricio",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino negral",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "en",
         "value" : "European Black Pine",
         "type" : "label"
@@ -3844,18 +3809,47 @@
       }, {
         "identifier" : "vulgarName",
         "language" : "es",
-        "value" : "Pino negral de Austria",
+        "value" : "Pino salgareño",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Pino negral",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Pino laricio",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Pino salgareno",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Pino negral de Crimea",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Pin noir",
         "type" : "label"
-      } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481696",
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Pino negral de Austria",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Pino negral de Corcega",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Pino negral de Córcega",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
@@ -3864,16 +3858,16 @@
         "value" : "https://species.wikimedia.org/wiki/Pinus_nigra",
         "type" : "label"
       } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481696",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Pinus nigra",
-        "type" : "label"
-      } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Pinus_nigra",
         "type" : "label"
       } ],
       "acceptedNameWithAuthor" : [ {
@@ -3887,12 +3881,18 @@
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_NIG",
         "type" : "iri"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Pinus_nigra",
+        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "SpeciesPINUS_NIG"
     },
-    "subClasses" : [ "140", "145" ],
+    "subClasses" : [ "140", "26" ],
     "id" : "198",
     "superClasses" : [ "257", "340", "37" ]
   }, {
@@ -3902,13 +3902,13 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino de Chipre",
+        "language" : "fr",
+        "value" : "Pin de Turquie",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Pin de Turquie",
+        "language" : "en",
+        "value" : "Turkish Pine",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -3917,20 +3917,20 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Turkish Pine",
-        "type" : "label"
-      } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000482336",
+        "language" : "es",
+        "value" : "Pino de Chipre",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Pinus_brutia",
+        "type" : "label"
+      } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000482336",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -3971,24 +3971,18 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Stone pine",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Pin parasol",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Stone pine",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Pino piñonero",
-        "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Pinus_pinea",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -3997,10 +3991,22 @@
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481895",
         "type" : "label"
       } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Pinus_pinea",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Pinus pinea",
+        "type" : "label"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Stone_pine",
         "type" : "label"
       } ],
       "acceptedNameWithAuthor" : [ {
@@ -4014,12 +4020,6 @@
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_PNA",
         "type" : "iri"
-      } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Stone_pine",
-        "type" : "label"
       } ]
     },
     "label" : {
@@ -4087,7 +4087,7 @@
     "label" : {
       "IRI-based" : "GenusPINUS"
     },
-    "subClasses" : [ "202", "156", "7", "52", "140", "145", "80", "198", "13", "186", "34", "77", "93", "23" ],
+    "subClasses" : [ "202", "156", "7", "52", "140", "26", "80", "198", "13", "186", "34", "77", "93", "23" ],
     "id" : "37"
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/VarietyCEDRU_LIB_BRE",
@@ -4096,8 +4096,8 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Cyprus cedar",
+        "language" : "fr",
+        "value" : "Le cèdre de Chypre",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -4106,14 +4106,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Le cèdre de Chypre",
-        "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Cedrus_libani_var._brevifolia",
+        "language" : "en",
+        "value" : "Cyprus cedar",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -4128,22 +4122,16 @@
         "value" : "Cedrus libani subsp. brevifolia",
         "type" : "label"
       } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Cedrus_libani_var._brevifolia",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Cedrus libani var. brevifolia",
-        "type" : "label"
-      } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Cedrus libani var. brevifolia Hook.f.",
-        "type" : "label"
-      } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Cedrus_brevifolia",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -4151,6 +4139,18 @@
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameVarietyCEDRU_LIB_BRE",
         "type" : "iri"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Cedrus_brevifolia",
+        "type" : "label"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Cedrus libani var. brevifolia Hook.f.",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -4264,21 +4264,6 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Tuya gigante",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Cedro rojo del Pacífico",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Árbol de la vida gigante",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Thuya géant",
         "type" : "label"
@@ -4294,14 +4279,23 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Árbol de la vida gigante",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Cedro rojo del Pacífico",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Tuya gigante",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
         "language" : "en",
         "value" : "Western redcedar",
-        "type" : "label"
-      } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000407856",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
@@ -4310,22 +4304,28 @@
         "value" : "https://species.wikimedia.org/wiki/Thuja_plicata",
         "type" : "label"
       } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000407856",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Thuja plicata",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Thuja_plicata",
-        "type" : "label"
-      } ],
       "acceptedNameWithAuthor" : [ {
         "identifier" : "acceptedNameWithAuthor",
         "language" : "la",
         "value" : "Thuja plicata Donn ex D.Don",
+        "type" : "label"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Thuja_plicata",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -4358,7 +4358,7 @@
       "vulgarName" : [ {
         "identifier" : "vulgarName",
         "language" : "en",
-        "value" : "Schneck oak",
+        "value" : "Spotted oak",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -4367,8 +4367,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Roble de Shumard",
+        "language" : "en",
+        "value" : "Schneck oak",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -4377,13 +4377,13 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Spotted oak",
+        "language" : "fr",
+        "value" : "Chêne de Shumard",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Chêne de Shumard",
+        "language" : "es",
+        "value" : "Roble de Shumard",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
@@ -4404,12 +4404,6 @@
         "value" : "Quercus shumardii",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Quercus_shumardii",
-        "type" : "label"
-      } ],
       "hasAcceptedName" : [ {
         "identifier" : "hasAcceptedName",
         "language" : "undefined",
@@ -4420,6 +4414,12 @@
         "identifier" : "acceptedNameWithAuthor",
         "language" : "la",
         "value" : "Quercus shumardii Buckley",
+        "type" : "label"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Quercus_shumardii",
         "type" : "label"
       } ]
     },
@@ -4455,13 +4455,13 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Sweet chestnut",
+        "language" : "fr",
+        "value" : "Châtaignier commun",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Châtaignier commun",
+        "language" : "en",
+        "value" : "Sweet chestnut",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -4475,16 +4475,16 @@
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000812271",
         "type" : "label"
       } ],
-      "scientificSynonymWithoutAuthor" : [ {
-        "identifier" : "scientificSynonymWithoutAuthor",
-        "language" : "la",
-        "value" : "Castanea vesca",
-        "type" : "label"
-      } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Castanea_sativa",
+        "type" : "label"
+      } ],
+      "scientificSynonymWithoutAuthor" : [ {
+        "identifier" : "scientificSynonymWithoutAuthor",
+        "language" : "la",
+        "value" : "Castanea vesca",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -4492,6 +4492,12 @@
         "language" : "la",
         "value" : "Castanea sativa",
         "type" : "label"
+      } ],
+      "hasAcceptedName" : [ {
+        "identifier" : "hasAcceptedName",
+        "language" : "undefined",
+        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCASTA_SAT",
+        "type" : "iri"
       } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
@@ -4504,12 +4510,6 @@
         "language" : "la",
         "value" : "Castanea sativa Mill.",
         "type" : "label"
-      } ],
-      "hasAcceptedName" : [ {
-        "identifier" : "hasAcceptedName",
-        "language" : "undefined",
-        "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCASTA_SAT",
-        "type" : "iri"
       } ]
     },
     "label" : {
@@ -4539,19 +4539,13 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Eucalyptus commun",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "en",
         "value" : "Tasmanian blue gum",
         "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Eucalyptus_globulus",
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "fr",
+        "value" : "Eucalyptus commun",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -4560,16 +4554,16 @@
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000954998",
         "type" : "label"
       } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Eucalyptus_globulus",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Eucalyptus globulus",
-        "type" : "label"
-      } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Eucalyptus globulus Labill.",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -4577,6 +4571,12 @@
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_GLO",
         "type" : "iri"
+      } ],
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Eucalyptus globulus Labill.",
+        "type" : "label"
       } ],
       "hasWikipediaPage" : [ {
         "identifier" : "hasWikipediaPage",
@@ -4589,7 +4589,7 @@
       "IRI-based" : "SpeciesEUCAL_GLO"
     },
     "id" : "30",
-    "superClasses" : [ "351", "153", "28" ]
+    "superClasses" : [ "351", "155", "28" ]
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/AnnualPrecipitation",
     "baseIri" : "http://virtualforests.gsic.uva.es",
@@ -4733,26 +4733,6 @@
         "IRI-based" : "AcceptedNameSpeciesPINUS_TAE"
       }
     }, {
-      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesSEQUA_SEM",
-      "baseIri" : "http://virtualforests.gsic.uva.es",
-      "annotations" : {
-        "author" : [ {
-          "identifier" : "author",
-          "language" : "undefined",
-          "value" : "(D.Don) Endl.",
-          "type" : "label"
-        } ],
-        "name" : [ {
-          "identifier" : "name",
-          "language" : "la",
-          "value" : "Sequoia sempervirens",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "AcceptedNameSpeciesSEQUA_SEM"
-      }
-    }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesLIQUI_STY",
       "baseIri" : "http://virtualforests.gsic.uva.es",
       "annotations" : {
@@ -4773,6 +4753,40 @@
         "IRI-based" : "AcceptedNameSpeciesLIQUI_STY"
       }
     }, {
+      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesSEQUA_SEM",
+      "baseIri" : "http://virtualforests.gsic.uva.es",
+      "annotations" : {
+        "author" : [ {
+          "identifier" : "author",
+          "language" : "undefined",
+          "value" : "(D.Don) Endl.",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "la",
+          "value" : "Sequoia sempervirens",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AcceptedNameSpeciesSEQUA_SEM"
+      }
+    }, {
+      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameGenusSEQUA",
+      "baseIri" : "http://virtualforests.gsic.uva.es",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "la",
+          "value" : "Sequoia",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AcceptedNameGenusSEQUA"
+      }
+    }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameVarietyPINUS_CAR_HOND",
       "baseIri" : "http://virtualforests.gsic.uva.es",
       "annotations" : {
@@ -4791,20 +4805,6 @@
       },
       "labels" : {
         "IRI-based" : "AcceptedNameVarietyPINUS_CAR_HOND"
-      }
-    }, {
-      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameGenusSEQUA",
-      "baseIri" : "http://virtualforests.gsic.uva.es",
-      "annotations" : {
-        "name" : [ {
-          "identifier" : "name",
-          "language" : "la",
-          "value" : "Sequoia",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "AcceptedNameGenusSEQUA"
       }
     }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_CAR",
@@ -4947,20 +4947,6 @@
         "IRI-based" : "AcceptedNameSpeciesEUCAL_GLO"
       }
     }, {
-      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameHybridEUCAL_GDA",
-      "baseIri" : "http://virtualforests.gsic.uva.es",
-      "annotations" : {
-        "name" : [ {
-          "identifier" : "name",
-          "language" : "la",
-          "value" : "Eucalyptus gunii x Eucalyptus dalrympleana",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "AcceptedNameHybridEUCAL_GDA"
-      }
-    }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_ROT",
       "baseIri" : "http://virtualforests.gsic.uva.es",
       "annotations" : {
@@ -4979,6 +4965,20 @@
       },
       "labels" : {
         "IRI-based" : "AcceptedNameSpeciesQUERC_ROT"
+      }
+    }, {
+      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameHybridEUCAL_GDA",
+      "baseIri" : "http://virtualforests.gsic.uva.es",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "la",
+          "value" : "Eucalyptus gunii x Eucalyptus dalrympleana",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AcceptedNameHybridEUCAL_GDA"
       }
     }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesPINUS_NIG",
@@ -5021,26 +5021,6 @@
         "IRI-based" : "AcceptedNameSpeciesPINUS_SYL"
       }
     }, {
-      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_DAL",
-      "baseIri" : "http://virtualforests.gsic.uva.es",
-      "annotations" : {
-        "author" : [ {
-          "identifier" : "author",
-          "language" : "undefined",
-          "value" : "Maiden",
-          "type" : "label"
-        } ],
-        "name" : [ {
-          "identifier" : "name",
-          "language" : "la",
-          "value" : "Eucalyptus dalrympleana",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "AcceptedNameSpeciesEUCAL_DAL"
-      }
-    }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCUNNI_LAN",
       "baseIri" : "http://virtualforests.gsic.uva.es",
       "annotations" : {
@@ -5059,6 +5039,26 @@
       },
       "labels" : {
         "IRI-based" : "AcceptedNameSpeciesCUNNI_LAN"
+      }
+    }, {
+      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesEUCAL_DAL",
+      "baseIri" : "http://virtualforests.gsic.uva.es",
+      "annotations" : {
+        "author" : [ {
+          "identifier" : "author",
+          "language" : "undefined",
+          "value" : "Maiden",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "la",
+          "value" : "Eucalyptus dalrympleana",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AcceptedNameSpeciesEUCAL_DAL"
       }
     }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_SHU",
@@ -5141,6 +5141,20 @@
         "IRI-based" : "AcceptedNameVarietyCEDRU_LIB_BRE"
       }
     }, {
+      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameFamily53",
+      "baseIri" : "http://virtualforests.gsic.uva.es",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "la",
+          "value" : "Altingiaceae",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AcceptedNameFamily53"
+      }
+    }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesACERR_PSE",
       "baseIri" : "http://virtualforests.gsic.uva.es",
       "annotations" : {
@@ -5159,20 +5173,6 @@
       },
       "labels" : {
         "IRI-based" : "AcceptedNameSpeciesACERR_PSE"
-      }
-    }, {
-      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameFamily53",
-      "baseIri" : "http://virtualforests.gsic.uva.es",
-      "annotations" : {
-        "name" : [ {
-          "identifier" : "name",
-          "language" : "la",
-          "value" : "Altingiaceae",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "AcceptedNameFamily53"
       }
     }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesFAGUS_SYL",
@@ -5255,26 +5255,6 @@
         "IRI-based" : "AcceptedNameSpeciesPSDTS_MEN"
       }
     }, {
-      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_ROB",
-      "baseIri" : "http://virtualforests.gsic.uva.es",
-      "annotations" : {
-        "author" : [ {
-          "identifier" : "author",
-          "language" : "undefined",
-          "value" : "L.",
-          "type" : "label"
-        } ],
-        "name" : [ {
-          "identifier" : "name",
-          "language" : "la",
-          "value" : "Quercus robur",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "AcceptedNameSpeciesQUERC_ROB"
-      }
-    }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCASTA_SAT",
       "baseIri" : "http://virtualforests.gsic.uva.es",
       "annotations" : {
@@ -5293,6 +5273,26 @@
       },
       "labels" : {
         "IRI-based" : "AcceptedNameSpeciesCASTA_SAT"
+      }
+    }, {
+      "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_ROB",
+      "baseIri" : "http://virtualforests.gsic.uva.es",
+      "annotations" : {
+        "author" : [ {
+          "identifier" : "author",
+          "language" : "undefined",
+          "value" : "L.",
+          "type" : "label"
+        } ],
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "la",
+          "value" : "Quercus robur",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AcceptedNameSpeciesQUERC_ROB"
       }
     }, {
       "iri" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesROBIN_PSE",
@@ -5626,7 +5626,7 @@
     "label" : {
       "IRI-based" : "13387"
     },
-    "subClasses" : [ "234" ],
+    "subClasses" : [ "256" ],
     "attributes" : [ "external" ],
     "id" : "373"
   }, {
@@ -5661,13 +5661,13 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Pin de Corse",
+        "language" : "es",
+        "value" : "Pino corso",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino corso",
+        "language" : "fr",
+        "value" : "Pin de Corse",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -5698,8 +5698,8 @@
     "label" : {
       "IRI-based" : "SubspeciesPINUS_NIG_LAR"
     },
-    "id" : "145",
-    "superClasses" : [ "37", "198", "144" ]
+    "id" : "26",
+    "superClasses" : [ "37", "198", "27" ]
   }, {
     "iri" : "http://purl.bioontology.org/ontology/NCBITAXON/3505",
     "baseIri" : "http://purl.bioontology.org/ontology/NCBITAXON",
@@ -5722,13 +5722,13 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Coast Redwood",
+        "language" : "es",
+        "value" : "Secuoya",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Secuoya",
+        "language" : "en",
+        "value" : "Coast Redwood",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -5755,17 +5755,17 @@
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameGenusSEQUA",
         "type" : "iri"
       } ],
-      "sameAs" : [ {
-        "identifier" : "sameAs",
-        "language" : "undefined",
-        "value" : "http://dbpedia.org/resource/Sequoia",
-        "type" : "iri"
-      } ],
       "hasWikiSpeciesPage" : [ {
         "identifier" : "hasWikiSpeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Sequoia",
         "type" : "label"
+      } ],
+      "sameAs" : [ {
+        "identifier" : "sameAs",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Sequoia",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -5781,7 +5781,7 @@
     "label" : {
       "IRI-based" : "Q1399164"
     },
-    "subClasses" : [ "234" ],
+    "subClasses" : [ "256" ],
     "attributes" : [ "external" ],
     "id" : "381"
   }, {
@@ -5815,16 +5815,16 @@
         "value" : "Cork-oak",
         "type" : "label"
       } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000293451",
-        "type" : "label"
-      } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Quercus_suber",
+        "type" : "label"
+      } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000293451",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -5833,10 +5833,10 @@
         "value" : "Quercus suber",
         "type" : "label"
       } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Quercus suber L.",
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Quercus_suber",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -5845,10 +5845,10 @@
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_SUB",
         "type" : "iri"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Quercus_suber",
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Quercus suber L.",
         "type" : "label"
       } ]
     },
@@ -5874,19 +5874,13 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Calocèdre",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Cedro de incienso",
         "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Calocedrus_decurrens",
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "fr",
+        "value" : "Calocèdre",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -5895,16 +5889,22 @@
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000580852",
         "type" : "label"
       } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Calocedrus_decurrens",
+        "type" : "label"
+      } ],
       "acceptedNameWithoutAuthor" : [ {
         "identifier" : "acceptedNameWithoutAuthor",
         "language" : "la",
         "value" : "Calocedrus decurrens",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Calocedrus_decurrens",
+      "acceptedNameWithAuthor" : [ {
+        "identifier" : "acceptedNameWithAuthor",
+        "language" : "la",
+        "value" : "Calocedrus decurrens (Torr.) Florin",
         "type" : "label"
       } ],
       "hasAcceptedName" : [ {
@@ -5913,17 +5913,17 @@
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesCALOC_DEC",
         "type" : "iri"
       } ],
-      "acceptedNameWithAuthor" : [ {
-        "identifier" : "acceptedNameWithAuthor",
-        "language" : "la",
-        "value" : "Calocedrus decurrens (Torr.) Florin",
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Calocedrus_decurrens",
         "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "SpeciesCALOC_DEC"
     },
-    "id" : "234",
+    "id" : "256",
     "superClasses" : [ "381", "373", "136" ]
   }, {
     "iri" : "http://purl.bioontology.org/ontology/NCBITAXON/3512",
@@ -5961,8 +5961,8 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Macedonian Pine",
+        "language" : "es",
+        "value" : "Pino de Macedonia",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -5971,20 +5971,20 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Pino de Macedonia",
-        "type" : "label"
-      } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481889",
+        "language" : "en",
+        "value" : "Macedonian Pine",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Pinus_peuce",
+        "type" : "label"
+      } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0000481889",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -6055,7 +6055,7 @@
     "label" : {
       "IRI-based" : "38865"
     },
-    "subClasses" : [ "26" ],
+    "subClasses" : [ "145" ],
     "attributes" : [ "external" ],
     "id" : "333"
   }, {
@@ -6079,14 +6079,24 @@
     "attributes" : [ "external" ],
     "id" : "221"
   }, {
+    "iri" : "http://www.wikidata.org/entity/Q2900918",
+    "baseIri" : "http://www.wikidata.org/entity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Q2900918"
+    },
+    "subClasses" : [ "156" ],
+    "attributes" : [ "external" ],
+    "id" : "194"
+  }, {
     "iri" : "http://virtualforests.gsic.uva.es/GenusLIQUI",
     "baseIri" : "http://virtualforests.gsic.uva.es",
     "instances" : 0,
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "fr",
-        "value" : "Liquidambar",
+        "language" : "en",
+        "value" : "Sweetgum",
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
@@ -6095,8 +6105,8 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Sweetgum",
+        "language" : "fr",
+        "value" : "Liquidambar",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -6140,24 +6150,19 @@
       "IRI-based" : "GenusLIQUI"
     },
     "subClasses" : [ "104" ],
-    "id" : "255",
+    "id" : "252",
     "superClasses" : [ "214" ]
-  }, {
-    "iri" : "http://www.wikidata.org/entity/Q2900918",
-    "baseIri" : "http://www.wikidata.org/entity",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Q2900918"
-    },
-    "subClasses" : [ "156" ],
-    "attributes" : [ "external" ],
-    "id" : "194"
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/HybridEUCAL_GDA",
     "baseIri" : "http://virtualforests.gsic.uva.es",
     "instances" : 0,
     "annotations" : {
       "vulgarName" : [ {
+        "identifier" : "vulgarName",
+        "language" : "es",
+        "value" : "Eucalipto gundal",
+        "type" : "label"
+      }, {
         "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Eucalyptus gundal",
@@ -6166,11 +6171,6 @@
         "identifier" : "vulgarName",
         "language" : "en",
         "value" : "Gundal gum",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "es",
-        "value" : "Eucalipto gundal",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -6203,25 +6203,25 @@
         "type" : "label"
       }, {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Holm oak",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "fr",
         "value" : "Chêne vert",
         "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Quercus_rotundifolia",
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Holm oak",
         "type" : "label"
       } ],
       "scientificSynonymWithoutAuthor" : [ {
         "identifier" : "scientificSynonymWithoutAuthor",
         "language" : "la",
         "value" : "Quercus ilex subsp. rotundifolia",
+        "type" : "label"
+      } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Quercus_rotundifolia",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
@@ -6271,16 +6271,6 @@
     "attributes" : [ "external" ],
     "id" : "126"
   }, {
-    "iri" : "http://purl.bioontology.org/ontology/NCBITAXON/28977",
-    "baseIri" : "http://purl.bioontology.org/ontology/NCBITAXON",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "28977"
-    },
-    "subClasses" : [ "11" ],
-    "attributes" : [ "external" ],
-    "id" : "128"
-  }, {
     "iri" : "http://www.wikidata.org/entity/Q146048",
     "baseIri" : "http://www.wikidata.org/entity",
     "instances" : 0,
@@ -6291,11 +6281,26 @@
     "attributes" : [ "external" ],
     "id" : "118"
   }, {
+    "iri" : "http://purl.bioontology.org/ontology/NCBITAXON/28977",
+    "baseIri" : "http://purl.bioontology.org/ontology/NCBITAXON",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "28977"
+    },
+    "subClasses" : [ "11" ],
+    "attributes" : [ "external" ],
+    "id" : "129"
+  }, {
     "iri" : "http://virtualforests.gsic.uva.es/VarietyPINUS_BRU_ELD",
     "baseIri" : "http://virtualforests.gsic.uva.es",
     "instances" : 0,
     "annotations" : {
       "vulgarName" : [ {
+        "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Afghan pine",
+        "type" : "label"
+      }, {
         "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Pino de Calabria",
@@ -6305,22 +6310,17 @@
         "language" : "fr",
         "value" : "Pin de Turquie eldarica",
         "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Afghan pine",
+      } ],
+      "WikispeciesPage" : [ {
+        "identifier" : "WikispeciesPage",
+        "language" : "undefined",
+        "value" : "https://species.wikimedia.org/wiki/Pinus_brutia_subsp._eldarica",
         "type" : "label"
       } ],
       "hasThePlantListPage" : [ {
         "identifier" : "hasThePlantListPage",
         "language" : "undefined",
         "value" : "http://www.worldfloraonline.org/taxon/wfo-0000482302",
-        "type" : "label"
-      } ],
-      "WikispeciesPage" : [ {
-        "identifier" : "WikispeciesPage",
-        "language" : "undefined",
-        "value" : "https://species.wikimedia.org/wiki/Pinus_brutia_subsp._eldarica",
         "type" : "label"
       } ],
       "acceptedNameWithoutAuthor" : [ {
@@ -6395,16 +6395,6 @@
     "annotations" : {
       "vulgarName" : [ {
         "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "Common oak",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
-        "language" : "en",
-        "value" : "English oak",
-        "type" : "label"
-      }, {
-        "identifier" : "vulgarName",
         "language" : "es",
         "value" : "Roble pedunculado",
         "type" : "label"
@@ -6413,17 +6403,27 @@
         "language" : "fr",
         "value" : "Chêne pédonculé",
         "type" : "label"
-      } ],
-      "hasThePlantListPage" : [ {
-        "identifier" : "hasThePlantListPage",
-        "language" : "undefined",
-        "value" : "http://www.worldfloraonline.org/taxon/wfo-0001275587",
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "English oak",
+        "type" : "label"
+      }, {
+        "identifier" : "vulgarName",
+        "language" : "en",
+        "value" : "Common oak",
         "type" : "label"
       } ],
       "WikispeciesPage" : [ {
         "identifier" : "WikispeciesPage",
         "language" : "undefined",
         "value" : "https://species.wikimedia.org/wiki/Quercus_robur",
+        "type" : "label"
+      } ],
+      "hasThePlantListPage" : [ {
+        "identifier" : "hasThePlantListPage",
+        "language" : "undefined",
+        "value" : "http://www.worldfloraonline.org/taxon/wfo-0001275587",
         "type" : "label"
       } ],
       "scientificSynonymWithoutAuthor" : [ {
@@ -6438,17 +6438,17 @@
         "value" : "Quercus robur",
         "type" : "label"
       } ],
-      "hasWikipediaPage" : [ {
-        "identifier" : "hasWikipediaPage",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Quercus_robur",
-        "type" : "label"
-      } ],
       "hasAcceptedName" : [ {
         "identifier" : "hasAcceptedName",
         "language" : "undefined",
         "value" : "http://virtualforests.gsic.uva.es/AcceptedNameSpeciesQUERC_ROB",
         "type" : "iri"
+      } ],
+      "hasWikipediaPage" : [ {
+        "identifier" : "hasWikipediaPage",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Quercus_robur",
+        "type" : "label"
       } ],
       "acceptedNameWithAuthor" : [ {
         "identifier" : "acceptedNameWithAuthor",
@@ -6557,7 +6557,7 @@
     "id" : "127",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "129",
+    "id" : "128",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "130",
@@ -6593,7 +6593,7 @@
     "id" : "151",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "154",
+    "id" : "153",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "157",
@@ -6713,13 +6713,10 @@
     "id" : "225",
     "type" : "rdf:Property"
   }, {
-    "id" : "226",
-    "type" : "rdf:Property"
-  }, {
     "id" : "227",
     "type" : "rdf:Property"
   }, {
-    "id" : "229",
+    "id" : "228",
     "type" : "rdf:Property"
   }, {
     "id" : "230",
@@ -6732,6 +6729,9 @@
     "type" : "rdf:Property"
   }, {
     "id" : "233",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "234",
     "type" : "rdf:Property"
   }, {
     "id" : "236",
@@ -6767,7 +6767,7 @@
     "id" : "249",
     "type" : "rdf:Property"
   }, {
-    "id" : "251",
+    "id" : "250",
     "type" : "rdf:Property"
   }, {
     "id" : "253",
@@ -6990,10 +6990,10 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "366",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "367",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "368",
     "type" : "rdfs:SubClassOf"
@@ -7327,15 +7327,15 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "125"
   }, {
-    "range" : "128",
-    "domain" : "11",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "127"
-  }, {
     "range" : "118",
     "domain" : "49",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "129"
+    "id" : "127"
+  }, {
+    "range" : "129",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "128"
   }, {
     "range" : "131",
     "domain" : "64",
@@ -7399,13 +7399,13 @@
     "id" : "150"
   }, {
     "range" : "152",
-    "domain" : "26",
+    "domain" : "145",
     "attributes" : [ "anonymous", "object" ],
     "id" : "151"
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/hasISO3166-2",
     "baseIri" : "http://virtualforests.gsic.uva.es",
-    "range" : "155",
+    "range" : "154",
     "label" : {
       "IRI-based" : "hasISO3166-2",
       "en" : "ISO 3166-2 code",
@@ -7419,7 +7419,7 @@
       "es" : "Código de las principales subdivisiones de los países codificados en ISO 3166-2"
     },
     "attributes" : [ "datatype" ],
-    "id" : "154"
+    "id" : "153"
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/hasLastAnnualPrecipitationInMilimeters",
     "baseIri" : "http://virtualforests.gsic.uva.es",
@@ -7530,7 +7530,7 @@
     "id" : "192"
   }, {
     "range" : "37",
-    "domain" : "145",
+    "domain" : "26",
     "attributes" : [ "anonymous", "object" ],
     "id" : "193"
   }, {
@@ -7570,7 +7570,7 @@
     "id" : "205"
   }, {
     "range" : "198",
-    "domain" : "145",
+    "domain" : "26",
     "attributes" : [ "anonymous", "object" ],
     "id" : "206"
   }, {
@@ -7609,7 +7609,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "217"
   }, {
-    "range" : "153",
+    "range" : "155",
     "domain" : "30",
     "attributes" : [ "anonymous", "object" ],
     "id" : "218"
@@ -7620,7 +7620,7 @@
     "id" : "219"
   }, {
     "domain" : "42",
-    "range" : "85",
+    "range" : "91",
     "id" : "222",
     "label" : {
       "IRI-based" : "30",
@@ -7628,7 +7628,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "16",
+    "range" : "226",
     "id" : "225",
     "label" : {
       "IRI-based" : "29",
@@ -7636,24 +7636,24 @@
     }
   }, {
     "domain" : "42",
-    "range" : "33",
-    "id" : "226",
+    "range" : "145",
+    "id" : "227",
     "label" : {
       "IRI-based" : "28",
       "undefined" : "is a"
     }
   }, {
     "domain" : "42",
-    "range" : "23",
-    "id" : "227",
+    "range" : "156",
+    "id" : "228",
     "label" : {
       "IRI-based" : "25",
       "undefined" : "is a"
     }
   }, {
     "domain" : "42",
-    "range" : "31",
-    "id" : "229",
+    "range" : "44",
+    "id" : "230",
     "label" : {
       "IRI-based" : "24",
       "undefined" : "is a"
@@ -7661,38 +7661,38 @@
   }, {
     "domain" : "42",
     "range" : "109",
-    "id" : "230",
+    "id" : "231",
     "label" : {
       "IRI-based" : "27",
       "undefined" : "is a"
     }
   }, {
     "domain" : "42",
-    "range" : "34",
-    "id" : "231",
+    "range" : "85",
+    "id" : "232",
     "label" : {
       "IRI-based" : "26",
       "undefined" : "is a"
     }
   }, {
     "domain" : "42",
-    "range" : "13",
-    "id" : "232",
+    "range" : "123",
+    "id" : "233",
     "label" : {
       "IRI-based" : "21",
       "undefined" : "is a"
     }
   }, {
     "domain" : "42",
-    "range" : "234",
-    "id" : "233",
+    "range" : "198",
+    "id" : "234",
     "label" : {
       "IRI-based" : "20",
       "undefined" : "is a"
     }
   }, {
     "domain" : "42",
-    "range" : "1",
+    "range" : "64",
     "id" : "236",
     "label" : {
       "IRI-based" : "23",
@@ -7700,7 +7700,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "20",
+    "range" : "77",
     "id" : "237",
     "label" : {
       "IRI-based" : "22",
@@ -7730,7 +7730,7 @@
     "id" : "238"
   }, {
     "domain" : "42",
-    "range" : "54",
+    "range" : "33",
     "id" : "241",
     "label" : {
       "IRI-based" : "18",
@@ -7738,7 +7738,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "4",
+    "range" : "93",
     "id" : "242",
     "label" : {
       "IRI-based" : "17",
@@ -7754,7 +7754,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "156",
+    "range" : "20",
     "id" : "244",
     "label" : {
       "IRI-based" : "14",
@@ -7762,7 +7762,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "44",
+    "range" : "168",
     "id" : "246",
     "label" : {
       "IRI-based" : "13",
@@ -7783,7 +7783,7 @@
     "id" : "247"
   }, {
     "domain" : "42",
-    "range" : "26",
+    "range" : "54",
     "id" : "248",
     "label" : {
       "IRI-based" : "16",
@@ -7791,23 +7791,23 @@
     }
   }, {
     "domain" : "42",
-    "range" : "250",
+    "range" : "39",
     "id" : "249",
     "label" : {
       "IRI-based" : "15",
       "undefined" : "is a"
     }
   }, {
-    "domain" : "252",
-    "range" : "9",
-    "id" : "251",
+    "domain" : "251",
+    "range" : "252",
+    "id" : "250",
     "label" : {
       "IRI-based" : "10",
       "undefined" : "is a"
     }
   }, {
     "domain" : "42",
-    "range" : "7",
+    "range" : "34",
     "id" : "253",
     "label" : {
       "IRI-based" : "12",
@@ -7815,7 +7815,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "11",
+    "range" : "23",
     "id" : "254",
     "label" : {
       "IRI-based" : "11",
@@ -7823,7 +7823,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "111",
+    "range" : "30",
     "id" : "258",
     "label" : {
       "IRI-based" : "47",
@@ -7831,7 +7831,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "39",
+    "range" : "16",
     "id" : "259",
     "label" : {
       "IRI-based" : "46",
@@ -7839,7 +7839,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "120",
+    "range" : "11",
     "id" : "263",
     "label" : {
       "IRI-based" : "43",
@@ -7847,7 +7847,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "104",
+    "range" : "120",
     "id" : "264",
     "label" : {
       "IRI-based" : "42",
@@ -7855,7 +7855,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "77",
+    "range" : "88",
     "id" : "265",
     "label" : {
       "IRI-based" : "45",
@@ -7863,7 +7863,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "198",
+    "range" : "104",
     "id" : "266",
     "label" : {
       "IRI-based" : "44",
@@ -7871,7 +7871,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "49",
+    "range" : "4",
     "id" : "267",
     "label" : {
       "IRI-based" : "41",
@@ -7879,7 +7879,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "186",
+    "range" : "7",
     "id" : "269",
     "label" : {
       "IRI-based" : "40",
@@ -7908,7 +7908,7 @@
     "id" : "270"
   }, {
     "domain" : "42",
-    "range" : "168",
+    "range" : "111",
     "id" : "272",
     "label" : {
       "IRI-based" : "39",
@@ -7916,7 +7916,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "171",
+    "range" : "1",
     "id" : "274",
     "label" : {
       "IRI-based" : "36",
@@ -7924,7 +7924,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "123",
+    "range" : "31",
     "id" : "275",
     "label" : {
       "IRI-based" : "35",
@@ -7932,7 +7932,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "91",
+    "range" : "256",
     "id" : "276",
     "label" : {
       "IRI-based" : "38",
@@ -7958,7 +7958,7 @@
     "id" : "277"
   }, {
     "domain" : "42",
-    "range" : "88",
+    "range" : "49",
     "id" : "279",
     "label" : {
       "IRI-based" : "37",
@@ -7974,7 +7974,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "30",
+    "range" : "186",
     "id" : "281",
     "label" : {
       "IRI-based" : "31",
@@ -7982,7 +7982,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "93",
+    "range" : "171",
     "id" : "282",
     "label" : {
       "IRI-based" : "34",
@@ -7990,7 +7990,7 @@
     }
   }, {
     "domain" : "42",
-    "range" : "64",
+    "range" : "13",
     "id" : "283",
     "label" : {
       "IRI-based" : "33",
@@ -8082,7 +8082,7 @@
     "id" : "310"
   }, {
     "range" : "214",
-    "domain" : "255",
+    "domain" : "252",
     "attributes" : [ "anonymous", "object" ],
     "id" : "311"
   }, {
@@ -8153,7 +8153,7 @@
       "IRI-based" : "hasMeasureinDegrees"
     },
     "domain" : "46",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "327"
   }, {
     "range" : "63",
@@ -8220,7 +8220,7 @@
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/hasUPOVCode",
     "baseIri" : "http://virtualforests.gsic.uva.es",
-    "range" : "256",
+    "range" : "255",
     "label" : {
       "IRI-based" : "hasUPOVCode",
       "en" : "UPOV code",
@@ -8257,7 +8257,7 @@
     },
     "domain" : "46",
     "subproperty" : [ "342", "334", "343", "344", "238", "345", "346" ],
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "239"
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/hasGSDD",
@@ -8323,7 +8323,7 @@
     "id" : "357"
   }, {
     "range" : "333",
-    "domain" : "26",
+    "domain" : "145",
     "attributes" : [ "anonymous", "object" ],
     "id" : "358"
   }, {
@@ -8350,18 +8350,18 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "361"
   }, {
-    "range" : "255",
-    "domain" : "104",
+    "range" : "194",
+    "domain" : "156",
     "attributes" : [ "anonymous", "object" ],
     "id" : "362"
   }, {
-    "range" : "194",
-    "domain" : "156",
+    "range" : "252",
+    "domain" : "104",
     "attributes" : [ "anonymous", "object" ],
     "id" : "363"
   }, {
     "range" : "304",
-    "domain" : "250",
+    "domain" : "226",
     "attributes" : [ "anonymous", "object" ],
     "id" : "364"
   }, {
@@ -8369,24 +8369,6 @@
     "domain" : "156",
     "attributes" : [ "anonymous", "object" ],
     "id" : "365"
-  }, {
-    "iri" : "http://virtualforests.gsic.uva.es/hasLastMeanAnnualTempInDegreesCelsius",
-    "baseIri" : "http://virtualforests.gsic.uva.es",
-    "range" : "294",
-    "label" : {
-      "IRI-based" : "hasLastMeanAnnualTempInDegreesCelsius",
-      "en" : "Last mean annual temperature in °C",
-      "fr" : "Derniere moyenne température annuel en °C",
-      "es" : "Última temperatura media anual en °C"
-    },
-    "domain" : "46",
-    "comment" : {
-      "en" : "last numeric value of mean annual temperature in °C",
-      "fr" : "derniere valeur de la moyenne température annuel en °C",
-      "es" : "valor numérico más reciente de la temperatura media anual en °C"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "366"
   }, {
     "iri" : "http://virtualforests.gsic.uva.es/hasProvenance",
     "baseIri" : "http://virtualforests.gsic.uva.es",
@@ -8405,8 +8387,26 @@
       "fr" : "comme provenance",
       "es" : "tiene procedencia"
     },
-    "domain" : "228",
+    "domain" : "229",
     "attributes" : [ "object" ],
+    "id" : "366"
+  }, {
+    "iri" : "http://virtualforests.gsic.uva.es/hasLastMeanAnnualTempInDegreesCelsius",
+    "baseIri" : "http://virtualforests.gsic.uva.es",
+    "range" : "294",
+    "label" : {
+      "IRI-based" : "hasLastMeanAnnualTempInDegreesCelsius",
+      "en" : "Last mean annual temperature in °C",
+      "fr" : "Derniere moyenne température annuel en °C",
+      "es" : "Última temperatura media anual en °C"
+    },
+    "domain" : "46",
+    "comment" : {
+      "en" : "last numeric value of mean annual temperature in °C",
+      "fr" : "derniere valeur de la moyenne température annuel en °C",
+      "es" : "valor numérico más reciente de la temperatura media anual en °C"
+    },
+    "attributes" : [ "datatype" ],
     "id" : "367"
   }, {
     "range" : "260",
@@ -8415,7 +8415,7 @@
     "id" : "368"
   }, {
     "range" : "268",
-    "domain" : "250",
+    "domain" : "226",
     "attributes" : [ "anonymous", "object" ],
     "id" : "369"
   }, {
@@ -8462,7 +8462,7 @@
     "id" : "375"
   }, {
     "range" : "271",
-    "domain" : "250",
+    "domain" : "226",
     "attributes" : [ "anonymous", "object" ],
     "id" : "376"
   }, {
@@ -8482,7 +8482,7 @@
     "id" : "379"
   }, {
     "range" : "381",
-    "domain" : "234",
+    "domain" : "256",
     "attributes" : [ "anonymous", "object" ],
     "id" : "380"
   }, {
@@ -8497,7 +8497,7 @@
     "id" : "384"
   }, {
     "range" : "373",
-    "domain" : "234",
+    "domain" : "256",
     "attributes" : [ "anonymous", "object" ],
     "id" : "385"
   }, {
@@ -8512,7 +8512,7 @@
     "id" : "387"
   }, {
     "range" : "136",
-    "domain" : "234",
+    "domain" : "256",
     "attributes" : [ "anonymous", "object" ],
     "id" : "388"
   }, {
@@ -8664,7 +8664,7 @@
     "id" : "342"
   }, {
     "domain" : "99",
-    "range" : "145",
+    "range" : "26",
     "id" : "405",
     "label" : {
       "IRI-based" : "2",
@@ -8672,7 +8672,7 @@
     }
   }, {
     "domain" : "102",
-    "range" : "80",
+    "range" : "83",
     "id" : "406",
     "label" : {
       "IRI-based" : "3",
@@ -8680,7 +8680,7 @@
     }
   }, {
     "domain" : "102",
-    "range" : "83",
+    "range" : "80",
     "id" : "407",
     "label" : {
       "IRI-based" : "4",
@@ -8703,24 +8703,24 @@
       "undefined" : "is a"
     }
   }, {
-    "domain" : "252",
-    "range" : "136",
+    "domain" : "251",
+    "range" : "134",
     "id" : "410",
     "label" : {
       "IRI-based" : "7",
       "undefined" : "is a"
     }
   }, {
-    "domain" : "252",
-    "range" : "255",
+    "domain" : "251",
+    "range" : "136",
     "id" : "411",
     "label" : {
       "IRI-based" : "8",
       "undefined" : "is a"
     }
   }, {
-    "domain" : "252",
-    "range" : "134",
+    "domain" : "251",
+    "range" : "9",
     "id" : "412",
     "label" : {
       "IRI-based" : "9",

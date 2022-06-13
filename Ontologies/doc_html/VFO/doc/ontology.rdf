@@ -30,13 +30,13 @@
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
     </owl:Ontology>
     <rdf:Description rdf:nodeID="genid1">
-        <foaf:mbox rdf:resource="mailto:cmayo@gsic.uva.es"/>
-        <foaf:name>Cristina Mayo Sarmiento</foaf:name>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid2">
         <foaf:homepage rdf:resource="https://www.gsic.uva.es/personal/guiveg"/>
         <foaf:mbox rdf:resource="mailto:guiveg@gsic.uva.es"/>
         <foaf:name>Guillermo Vega-Gorgojo</foaf:name>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid2">
+        <foaf:mbox rdf:resource="mailto:cmayo@gsic.uva.es"/>
+        <foaf:name>Cristina Mayo Sarmiento</foaf:name>
     </rdf:Description>
     
 

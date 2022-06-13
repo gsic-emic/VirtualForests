@@ -2,12 +2,12 @@
 <http://virtualforests.gsic.uva.es/> <http://purl.org/dc/elements/1.1/abstract> "The Virtual Forests Ontology includes all the vocabulary needed to describe Virtual Forests and REINFFORCE datasets using W3C RDF Schema (RDFS) and the Web Ontology Language (OWL). The vocabulary provides data publishers to include detailed metadata about species taxonomy and their different provenances, specialization, arboretum sites, location, climatic conditions, survival and growth rates of trees."@en .
 <http://virtualforests.gsic.uva.es/> <http://purl.org/dc/elements/1.1/contributor> "Cristóbal Ordóñez, Rémi Borelle, Felipe Bravo, Irene Ruano, José Miguel Giménez, Christophe Orazio, ..." .
 <http://virtualforests.gsic.uva.es/> <http://purl.org/dc/elements/1.1/creator> _:genid1 .
-_:genid1 <http://xmlns.com/foaf/0.1/name> "Cristina Mayo Sarmiento" .
-_:genid1 <http://xmlns.com/foaf/0.1/mbox> <mailto:cmayo@gsic.uva.es> .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Guillermo Vega-Gorgojo" .
+_:genid1 <http://xmlns.com/foaf/0.1/mbox> <mailto:guiveg@gsic.uva.es> .
+_:genid1 <http://xmlns.com/foaf/0.1/homepage> <https://www.gsic.uva.es/personal/guiveg> .
 <http://virtualforests.gsic.uva.es/> <http://purl.org/dc/elements/1.1/creator> _:genid2 .
-_:genid2 <http://xmlns.com/foaf/0.1/name> "Guillermo Vega-Gorgojo" .
-_:genid2 <http://xmlns.com/foaf/0.1/mbox> <mailto:guiveg@gsic.uva.es> .
-_:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://www.gsic.uva.es/personal/guiveg> .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "Cristina Mayo Sarmiento" .
+_:genid2 <http://xmlns.com/foaf/0.1/mbox> <mailto:cmayo@gsic.uva.es> .
 <http://virtualforests.gsic.uva.es/> <http://purl.org/dc/elements/1.1/title> "Ontología Virtual Forests (VFO)"@es .
 <http://virtualforests.gsic.uva.es/> <http://purl.org/dc/elements/1.1/title> "Virtual Forests Ontology (VFO) "@en .
 <http://virtualforests.gsic.uva.es/> <http://purl.org/dc/terms/created> "2022-02-17"^^<http://www.w3.org/2001/XMLSchema#date> .

@@ -21,12 +21,12 @@
                                       owl:priorVersion 0.4 ;
                                       owl:versionInfo 0.5 .
 
-_:genid1 <http://xmlns.com/foaf/0.1/mbox> <mailto:cmayo@gsic.uva.es> ;
-          <http://xmlns.com/foaf/0.1/name> "Cristina Mayo Sarmiento" .
-
-_:genid2 <http://xmlns.com/foaf/0.1/homepage> <https://www.gsic.uva.es/personal/guiveg> ;
+_:genid1 <http://xmlns.com/foaf/0.1/homepage> <https://www.gsic.uva.es/personal/guiveg> ;
           <http://xmlns.com/foaf/0.1/mbox> <mailto:guiveg@gsic.uva.es> ;
           <http://xmlns.com/foaf/0.1/name> "Guillermo Vega-Gorgojo" .
+
+_:genid2 <http://xmlns.com/foaf/0.1/mbox> <mailto:cmayo@gsic.uva.es> ;
+          <http://xmlns.com/foaf/0.1/name> "Cristina Mayo Sarmiento" .
 
 #################################################################
 #    Annotation properties
